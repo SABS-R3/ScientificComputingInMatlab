@@ -1,0 +1,42 @@
+name: Deploy website to gh-pages branch
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout full repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        submodules: true
+
+    - name: Build the website
+      run: |
+        snap install hugo
+        hugo
+        
+
+    - name: Clean any unwanted files
+      run: |
+        rm _site/README.md
+
+    - name: Deploy contents of _site to gh-pages docs dir
+      run: |
+        git config user.name "github-action"
+        git config user.email "github-action"
+        git checkout gh-pages
+        rm -rf docs/*
+        cp -rT _site docs
+        rm docs/.gitignore
+        git add --all
+        git commit -m "deploy website" || echo "No changes to commit"
+        git push
