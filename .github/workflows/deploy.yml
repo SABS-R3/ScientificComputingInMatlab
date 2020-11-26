@@ -21,7 +21,7 @@ jobs:
 
     - name: Build the website
       run: |
-        snap install hugo
+        sudo snap install hugo
         hugo
       working-directory: hugo_site
 
