@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scientific Computing in MATLAB</title>
+    <link>https://sabs-r3.github.io/ScientificComputingInMatlab/</link>
+    <description>Recent content on Scientific Computing in MATLAB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 26 Nov 2020 16:52:22 +0000</lastBuildDate><atom:link href="https://sabs-r3.github.io/ScientificComputingInMatlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Course Overview</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/course_overview/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/course_overview/</guid>
+      <description>Welcome to &amp;lsquo;Scientific Computing in MATLAB&amp;rsquo;. We are delighted you have chosen this course and hope it will meet your expectations.
+In this preliminary unit we shall be looking at:
+ communications managing your learning activities.  If you are already familiar with online study, you will be able to skip through these sessions quickly and get onto the real stuff. If you are not, it may answer a few of your questions.</description>
+    </item>
+    
+  </channel>
+</rss>

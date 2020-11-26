@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/</loc>
+    <lastmod>2020-11-26T16:50:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/course_overview/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/tags/</loc>
+  </url>
+  
+</urlset>
