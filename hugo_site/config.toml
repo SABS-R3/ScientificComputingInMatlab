@@ -1,0 +1,16 @@
+baseURL = "https://sabs-r3.github.io/ScientificComputingInMatlab/"
+languageCode = "en-gb"
+title = "Scientific Computing in MATLAB"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "hugo-theme-learn"
+
+# Change default color scheme with a variant one. Can be "red", "blue", "green".
+themeVariant = "green"
+
+# If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic)
+disableMermaid = true
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]

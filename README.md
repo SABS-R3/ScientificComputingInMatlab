@@ -1,2 +1,3 @@
-# ScientificComputingInMatlab
-An online course on Scientific Computing in Matlab for the Oxford Doctoral Training Centre http://www.dtc.ox.ac.uk/
+# Scientific Computing in MATLAB
+
+An online course on Scientific Computing in MATLAB for the Oxford Doctoral Training Centre http://www.dtc.ox.ac.uk/
