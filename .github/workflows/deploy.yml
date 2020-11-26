@@ -9,7 +9,7 @@ jobs:
 
   build-and-deploy:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
 
@@ -21,7 +21,8 @@ jobs:
 
     - name: Build the website
       run: |
-        sudo snap install hugo
+        wget https://github.com/gohugoio/hugo/releases/download/v0.78.2/hugo_0.78.2_Linux-64bit.deb
+        sudo dpkg -i hugo_0.78.2_Linux-64bit.deb
         hugo
       working-directory: hugo_site
 
