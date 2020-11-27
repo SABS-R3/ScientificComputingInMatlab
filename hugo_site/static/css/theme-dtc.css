@@ -105,3 +105,10 @@ a:hover {
 #body img.matlab-logo {
     max-width: 10vw;
 }
+
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
