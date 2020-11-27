@@ -15,11 +15,15 @@
   <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/</loc>
     <lastmod>2020-11-27T16:10:31+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/01_course_overview/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/01_introduction/</loc>
     <lastmod>2020-11-26T16:52:22+00:00</lastmod>
   </url>
   
@@ -29,7 +33,17 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/02_what_is_matlab/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/</loc>
     <lastmod>2020-11-24T16:52:22+00:00</lastmod>
   </url>
   
