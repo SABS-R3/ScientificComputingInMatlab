@@ -1,6 +1,6 @@
 # Scientific Computing in MATLAB
 
-![DTC Logo](/ScientificComputingInMatlab/logos/matlab_logo.png?classes=matlab-logo)
+![MATLAB Logo](/ScientificComputingInMatlab/logos/matlab_logo.png?classes=matlab-logo)
 
 ## An online course from the DTC at the University of Oxford
 
