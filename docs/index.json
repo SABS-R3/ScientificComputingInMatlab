@@ -1,21 +1,42 @@
 [
 {
-	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/",
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
 	"content": "Chapter 0 Introduction Some text about the course intro.\n"
 },
 {
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/",
+	"title": "Basic introduction to MATLAB",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Basic introduction to MATLAB Lorem Ipsum.\n"
+},
+{
 	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/",
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": "Scientific Computing in MATLAB An online course from the DTC at the University of Oxford This is a new version of the exiting course, and is still under construction.\nThe existing course is available here: http://www.dtc.ox.ac.uk/online-learning/matlab/\nTweak.\n"
+	"content": "Scientific Computing in MATLAB An online course from the DTC at the University of Oxford This is a new version of the existing course, and is still under construction.\nThe existing course is available here: http://www.dtc.ox.ac.uk/online-learning/matlab/\n"
 },
 {
-	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/introduction/course_overview/",
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/01_course_overview/",
 	"title": "Course Overview",
+	"tags": [],
+	"description": "",
+	"content": "Welcome to \u0026lsquo;Scientific Computing in MATLAB\u0026rsquo;. We are delighted you have chosen this course and hope it will meet your expectations.\nIn this preliminary unit we shall be looking at:\n communications managing your learning activities.  If you are already familiar with online study, you will be able to skip through these sessions quickly and get onto the real stuff. If you are not, it may answer a few of your questions. If you have any remaining questions contact your tutor who will be happy to help.\nIf you have questions relating to the academic content or learning, please contact your course tutor, who will introduce him-or herself to you via email.\nMathematical prerequisites The course is a mathematically based one and we assume that you have studied mathematics to A level or equivalent. You should be familiar with the ideas of vectors, matrices, differentiation and integration along with basic probability and statistics. There will be reminders of the key mathematical ideas where they are used, along with appropriate references, but we will not be explaining everything from scratch.\nRequired reading There is no required reading for this course, which is relatively self-contained. References are given throughout the course where you can find more information on particular topics, many of which are online resources or help files. There are however certain places where no appropriate online sources are available, so we have given references to appropriate books.\nRequired software For this course you will need access to a computer with the MATLAB software installed. Section 0.3 contains details on how to get MATLAB. If you already have access to MATLAB then you can skip this section.\nUnits This course is divided into six units, each of which is designed to take between a few hours and a few days to cover, depending on your prior programming and mathematics experience. The units are as follows:\n Unit 1: Basic introduction to MATLAB Unit 2: Data analysis, image analysis and basic statistics in MATLAB Unit 3: Basic calculus in MATLAB Unit 4: Linear algebra in MATLAB Unit 5: Solving ODEs in MATLAB Unit 6: Software engineering and scientific computing  Each unit consists of:\n an introduction giving you an outline of the topic covered in the unit and its learning objectives information about the topic you are studying, giving you the context within which your reading should make sense a number of activities, some of which are pen and paper exercises, and the majority of which are MATLAB exercises (and both types contain hints and solutions) recommended resources for further exploration.  Learning expectations Depending on how the course you are taking is structured, you may be working full-time on this course, or only for a few hours a week. You will find that a lot of that time is spent working on the exercises in MATLAB and – we hope – discussing the issues with your fellow students. This will help you to share ideas and experiences and learn from others as you progress through the course.\nIn undertaking this course, you are committing yourself to:\n regularly reading the course materials working through all activities, which is especially important as this is the main mechanism for learning on this course completing the final assignment.  "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/",
+	"title": "Course Activities",
+	"tags": [],
+	"description": "",
+	"content": "The main teaching mechanism on this course is through activities and exercises. Each unit is composed of a number of such activities which will not only introduce the material to you but also enable you to demonstrate your understanding (or to express your lack of understanding – something you should never be afraid to do).\nRegular activities and resources There are several kinds of activity that you will be asked to complete while on this course. Some of these will be ongoing throughout the course, whereas others will relate to the topic of a particular week. Activity types include:\nReading: Doing this lets you explore the content of the course. Usually you will receive guidance about things you should be considering as you do the reading to help you get the most from it.\nIndividual activities: These will help you to consolidate the learning from your reading and further explore the ideas in the course. Much of the work you undertake on your own will feed into your assignments.\nThe activities are broken up into the following two categories:\nWalkthroughs: In each of these, you will be taken through an application of MATLAB. You should type all commands given into the MATLAB command window as you work your way through the activity.\nProblems: You will be given a problem to solve using MATLAB (and, very occasionally, pen and paper). This will require the creation of a figure or the development of an appropriate MATLAB function. Hints and solutions will be given.\nThe work you do for many of the exercises on this course will be directly useful in the assignment, which will therefore be much less onerous if you have completed the activities as you go along.\nCode and Mathematics Code will be written in typewriter font, this for example, and you should type these commands into the MATLAB command window when you see them, to see what they do.\nLonger code blocks will appear like this:\nb=ones(500,1); tic, x1=A\\b; toc tic, x2=B\\b; toc Mathematics will be presented in maths font, i.e. $\\Psi(\\mathbf{r},t)$, and longer equations may appear on on their own line, such as:\n$$i\\hbar\\frac{\\partial}{\\partial t} \\Psi(\\mathbf{r},t) = \\left [ \\frac{-\\hbar^2}{2\\mu}\\nabla^2 + V(\\mathbf{r},t)\\right ] \\Psi(\\mathbf{r},t).$$\n"
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/",
+	"title": "Getting MATLAB",
 	"tags": [],
 	"description": "",
 	"content": "Welcome to \u0026lsquo;Scientific Computing in MATLAB\u0026rsquo;. We are delighted you have chosen this course and hope it will meet your expectations.\nIn this preliminary unit we shall be looking at:\n communications managing your learning activities.  If you are already familiar with online study, you will be able to skip through these sessions quickly and get onto the real stuff. If you are not, it may answer a few of your questions. If you have any remaining questions contact your tutor who will be happy to help.\nIf you have questions relating to the academic content or learning, please contact your course tutor, who will introduce him-or herself to you via email.\n"
