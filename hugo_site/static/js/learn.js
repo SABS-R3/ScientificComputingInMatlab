@@ -179,7 +179,8 @@ jQuery(document).ready(function() {
         var code = $(this),
             text = code.text();
 
-        if (text.length > 5) {
+        var codeBlockIsActuallyMaths = text.endsWith("$") && text.startsWith("$");
+        if (text.length > 5 && !codeBlockIsActuallyMaths) {
             if (!clipInit) {
                 var text, clip = new ClipboardJS('.copy-to-clipboard', {
                     text: function(trigger) {
