@@ -48,6 +48,6 @@ tic, x1=A\b; toc
 tic, x2=B\b; toc
 ```
 
- Mathematics will be presented in maths font, i.e. `$\Psi(\mathbf{r},t)$`, and longer equations may appear on on their own line, such as:
+Mathematics will be presented in maths font, i.e. `$\Psi(\mathbf{r},t)$`, and longer equations may appear on on their own line, such as:
 
 $$i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t).$$
