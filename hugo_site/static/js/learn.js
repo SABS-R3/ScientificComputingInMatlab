@@ -180,15 +180,18 @@ jQuery(document).ready(function() {
             text = code.text();
 
         // If code ends with "!nc" then don't provide the clipboard
-        var noCopyDelimeterUsed = text.endsWith("!nc");
-        if (noCopyDelimeterUsed) {
+        var noclipDelimeterUsed = text.endsWith("!nc");
+        if (noclipDelimeterUsed) {
             $(this).text(text.replace("!nc", "").trim());
         }
 
         // If code is between $...$, it's actually maths: don't provide the clipboard
         var codeBlockIsActuallyMaths = text.endsWith("$") && text.startsWith("$");
 
-        if (!noCopyDelimeterUsed && !codeBlockIsActuallyMaths) {
+        // We don't want clipboard if the noclip delimeter is used, or it's a maths expression
+        var doNotAddClipboard = noclipDelimeterUsed || codeBlockIsActuallyMaths;
+
+        if (!doNotAddClipboard) {
             if (!clipInit) {
                 var text, clip = new ClipboardJS('.copy-to-clipboard', {
                     text: function(trigger) {
