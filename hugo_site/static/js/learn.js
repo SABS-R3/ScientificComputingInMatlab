@@ -179,8 +179,16 @@ jQuery(document).ready(function() {
         var code = $(this),
             text = code.text();
 
+        // If code ends with "!nc" then don't provide the clipboard
+        var noCopyDelimeterUsed = text.endsWith("!nc");
+        if (noCopyDelimeterUsed) {
+            $(this).text(text.replace("!nc", "").trim());
+        }
+
+        // If code is between $...$, it's actually maths: don't provide the clipboard
         var codeBlockIsActuallyMaths = text.endsWith("$") && text.startsWith("$");
-        if (text.length > 5 && !codeBlockIsActuallyMaths) {
+
+        if (!noCopyDelimeterUsed && !codeBlockIsActuallyMaths) {
             if (!clipInit) {
                 var text, clip = new ClipboardJS('.copy-to-clipboard', {
                     text: function(trigger) {
