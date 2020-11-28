@@ -2,6 +2,7 @@
 title: "Using MATLAB as a calculator"
 date: 2020-11-23T16:52:22Z
 draft: false
+pre: "4. "
 ---
 
 The first thing we will use MATLAB for is a calculator.
