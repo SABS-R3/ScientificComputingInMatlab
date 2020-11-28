@@ -111,6 +111,10 @@ a:hover {
     margin: 0vw;
 }
 
+#body img.matlab-screenshot {
+    max-width: 67%;
+}
+
 code.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;

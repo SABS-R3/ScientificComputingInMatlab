@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/ScientificComputingInMatlab/logos/dtc_hex.svg" type="image/x-icon" />
 
-    <title>Basic introduction to MATLAB   Scientific Computing in MATLAB</title>
+    <title>Vectors and matrices: part 1   Scientific Computing in MATLAB</title>
 
     
     <link href="/ScientificComputingInMatlab/css/nucleus.css?1606607961" rel="stylesheet">
@@ -62,7 +62,7 @@
 
 
   </head>
-  <body class="" data-url="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/">
+  <body class="" data-url="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/">
     <nav id="sidebar" class="">
 
 
@@ -206,7 +206,7 @@
     
     <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/" title="Basic introduction to MATLAB" class="dd-item
         parent
-        active
+        
         
         ">
       <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/">
@@ -336,7 +336,7 @@
  
   
     
-      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/" title="Vectors and matrices: part 1" class="dd-item ">
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/" title="Vectors and matrices: part 1" class="dd-item active">
         <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/">
         6. Vectors and matrices: part 1
         
@@ -384,7 +384,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_1_basic_introduction_to_matlab/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -399,6 +399,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -409,7 +411,13 @@
             
           
           
-            <a href='/ScientificComputingInMatlab/'></a> > Basic introduction to MATLAB
+            
+            
+          
+          
+            <a href='/ScientificComputingInMatlab/'></a> > <a href='/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/'>Basic introduction to MATLAB</a> > Vectors and matrices: part 1
+          
+        
           
         
           
@@ -418,6 +426,36 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vectors">Vectors</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#matrices">Matrices</a>
+      <ul>
+        <li><a href="#walkthrough-1">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#editing-vectors-and-matrices">Editing vectors and matrices</a>
+      <ul>
+        <li><a href="#walkthrough-2">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#looking-at-parts-of-matrices">Looking at parts of matrices</a>
+      <ul>
+        <li><a href="#walkthrough-3">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -425,28 +463,138 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Vectors and matrices: part 1
+            </h1>
           
 
         
 
 
 
-	<h3 id="chapter-1">Chapter 1</h3>
-<h1 id="basic-introduction-to-matlab">Basic introduction to MATLAB</h1>
+<div class="notices info" ><p>The main data structures in MATLAB are vectors and matrices.
+If you have never heard of these before, then look them up in an A-level textbook, on <a href="https://mathworld.wolfram.com/Matrix.html">the Wolfram MathWorld pages</a>, or on <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Wikipedia</a> before you continue.</p>
+</div>
+
+<h2 id="vectors">Vectors</h2>
+<p>Vectors in MATLAB are <code>$n\times 1$</code> or <code>$1\times n$</code> arrays of numbers.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Suppose the vector <code>$u$</code> is given by <code>$u=(1\;4\;9)$</code>. This may be entered into MATLAB in either of the following ways:</p>
+<ol>
+<li>
+<p>By entering each entry of the matrix individually.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u(<span style="color:#ae81ff">1</span>)=<span style="color:#ae81ff">1</span>;
+u(<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">4</span>;
+u(<span style="color:#ae81ff">3</span>)=<span style="color:#ae81ff">9</span>;
+</code></pre></div><p>Note that <code>u(1) !nc</code> corresponds to the first entry of <code>u !nc</code>, etc.</p>
+</li>
+<li>
+<p>By typing the entries inside square brackets separated by spaces:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">9</span>];
+</code></pre></div></li>
+</ol>
+<p>The transpose of <code>u !nc</code> may be printed by typing <code>u'</code>.</p>
+<p>Suppose the vector <code>$v$</code> is given by: <code>$$v=\begin{pmatrix}4\\5\\6\end{pmatrix}$$</code></p>
+<p>This may be entered by typing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">v = [<span style="color:#ae81ff">4</span>;<span style="color:#ae81ff">5</span>;<span style="color:#ae81ff">6</span>];
+</code></pre></div><p>Inside the square brackets the semicolon denotes a new row.</p>
+
+<div class="notices note" ><p>Vectors are sometimes referred to as arrays.
+This may be confusing so always look at the dimensions of the array to check the type.</p>
+</div>
+
+<p>The length of a vector <code>v !nc</code> can be found by using the command <code>length(v)</code>, which here gives:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; length(v)
+
+ans =
+
+     3
+</code></pre></div><p>The size of a vector <code>v !nc</code> can be found by using the command <code>size(v)</code>, which here gives:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; size(v)
+
+ans =
+
+     3     1
+</code></pre></div><p>This tells us that <code>v !nc</code> has 3 rows and 1 column, and thus allows us to distinguish it from <code>u !nc</code>, which has 1 row and 3 columns.</p>
+<p>Now look up the commands <code>length</code> and <code>size</code> in the help files:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">help length
+help size
+</code></pre></div><h2 id="matrices">Matrices</h2>
+<p>Matrices in MATLAB are <code>$m\times n$</code> arrays of numbers.</p>
+<h3 id="walkthrough-1">Walkthrough</h3>
+<p>Suppose the matrix <code>$A$</code> is given by: <code>$$A=\begin{pmatrix}1&amp;2\\3&amp;4\end{pmatrix}$$</code></p>
+<p>This may be entered into MATLAB in either of the following ways:</p>
+<ol>
+<li>
+<p>By entering each entry of the matrix individually</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)=<span style="color:#ae81ff">1</span>;
+A(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">2</span>;
+A(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)=<span style="color:#ae81ff">3</span>;
+A(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">4</span>;
+</code></pre></div></li>
+</ol>
+
+<div class="notices note" ><p>The entry <code>$A(i,j)$</code> corresponds to the entry in row <code>$i$</code> and column <code>$j$</code> of the matrix <code>$A$</code>.</p>
+</div>
+
+<ol start="2">
+<li>
+<p>By typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>; <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>];
+</code></pre></div></li>
+</ol>
+
+<div class="notices note" ><p>Use of <code>; !nc</code> inside the square brackets denotes a new row in the matrix.</p>
+</div>
+
+<p>The dimensions of a matrix <code>A !nc</code> can be found by using the command <code>size(A)</code>, which here gives</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; size(A)
+
+ans =
+
+     2     2
+</code></pre></div>
+<div class="notices note" ><p>Running the command <code>length(A)</code> on a matrix <code>A !nc</code> yields the result 2, which is the bigger dimension of the matrix, so if <code>A !nc</code> were a <code>$4\times 6$</code> or a <code>$6\times 4$</code> matrix, <code>length(A)</code> would yield the answer 6.</p>
+</div>
+
+<h2 id="editing-vectors-and-matrices">Editing vectors and matrices</h2>
+<h3 id="walkthrough-2">Walkthrough</h3>
+<p>Editing vectors and matrices can be done by specifying the individual element.
+For example, to change the value of 2 in the matrix <code>A !nc</code>, above, to 5 we can type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">5</span>;
+</code></pre></div><p>An alternative method is to double-click on <code>A !nc</code> in the Workspace window.
+This opens a window containing the contents of the matrix <code>A !nc</code>.
+Click on the entry in the first row, second column, and change it to 5.</p>
+<h2 id="looking-at-parts-of-matrices">Looking at parts of matrices</h2>
+<p>Sometimes we may wish to access only certain parts of a matrix or vector.
+There are a number of inbuilt MATLAB commands to help with this.</p>
+<h3 id="walkthrough-3">Walkthrough</h3>
+<p>The matrix <code>$$C=\begin{pmatrix}1&amp;2&amp;3&amp;4\\5&amp;6&amp;7&amp;8\\9&amp;10&amp;11&amp;12\end{pmatrix}$$</code></p>
+<p>may be entered in MATLAB as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>; <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span>; <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">11</span> <span style="color:#ae81ff">12</span>];
+</code></pre></div><p>To view the whole matrix we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C
+</code></pre></div><p>To view the second column we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C(:,<span style="color:#ae81ff">2</span>)
+</code></pre></div><p>To view the third row we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C(<span style="color:#ae81ff">3</span>,:)
+</code></pre></div><p>To view the first two rows we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">2</span>,:)
+</code></pre></div><p>To view the elements in both the last two rows and the last three columns we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">C(<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">4</span>)
+</code></pre></div>
+<div class="notices note" ><p>The following: <code>C(2:end,2:end)</code> would yield the same result.</p>
+</div>
 
 
 
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -642,6 +790,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -665,7 +814,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/" title="Getting MATLAB"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/" title="Using the inbuilt help"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/01_introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -693,3 +842,4 @@
 
   </body>
 </html>
+

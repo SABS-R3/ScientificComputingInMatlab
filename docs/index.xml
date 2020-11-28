@@ -79,5 +79,28 @@ For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following 
 3+4*(1+6/3) and you get the answer 15. Your Command Window should look just like:</description>
     </item>
     
+    <item>
+      <title>Using the inbuilt help</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/</guid>
+      <description>The help facility within MATLAB is very extensive. You will be using the help files throughout this course to find out what a new function does when you first come across it.
+If you know the name of the function in which you are interested, you can type help FunctionName.
+For instance, typing help fft will display
+&amp;gt;&amp;gt; help fft fft Discrete Fourier transform. fft(X) is the discrete Fourier transform (DFT) of vector X.</description>
+    </item>
+    
+    <item>
+      <title>Vectors and matrices: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</guid>
+      <description>The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia before you continue.
+ Vectors Vectors in MATLAB are $n\times 1$ or $1\times n$ arrays of numbers.
+Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entered into MATLAB in either of the following ways:</description>
+    </item>
+    
   </channel>
 </rss>
