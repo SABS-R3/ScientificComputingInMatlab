@@ -57,3 +57,17 @@ draft: false
    Note that you can use the `mkdir` command from within the MATLAB command window.
 
 {{% /expand%}}
+
+
+## Online
+![MATLAB Logo](/ScientificComputingInMatlab/logos/matlab_logo.png?classes=os-logos)
+
+{{%expand "Expand for web browser instructions"%}}
+
+1. Go to https://matlab.mathworks.com/.
+1. Log in with your MathWorks account.
+1. In the 'Current Folder' panel, right-click and select 'New' then 'Folder', and call this new folder 'MatlabCourse'.
+   Double-click to enter that folder, which will set it as the current working directory.
+1. You may wish to create some appropriately named sub-directories to store separately the files from each unit of the course, for example 'Unit1'.
+
+{{% /expand%}}
