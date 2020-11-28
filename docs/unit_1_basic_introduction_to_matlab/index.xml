@@ -36,5 +36,17 @@ When you see things written in typewriter font as in this for example, you shoul
       <description>Windows   Expand for Windows instructions    In the File Explorer, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;. To start MATLAB click on the &amp;lsquo;MATLAB&amp;rsquo; icon, and change the &amp;lsquo;Current Directory&amp;rsquo; to the one you just created. You may wish to create some appropriately named sub-directories to store separately the files from each unit of the course, for example &amp;lsquo;Unit1&amp;rsquo;.    macOS   Expand for macOS instructions    In Finder, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;.</description>
     </item>
     
+    <item>
+      <title>Using MATLAB as a calculator</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/</guid>
+      <description>The first thing we will use MATLAB for is a calculator.
+MATLAB uses the standard computer symbols for addition (&#39;+ !nc&#39;), subtraction (&#39;- !nc&#39;), multiplication (&#39;* !nc&#39;) and division (&#39;/ !nc&#39;). Brackets are also used (if required) to indicate which operations are to be performed first.
+For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following in the Command Window:
+3+4*(1+6/3) and you get the answer 15. Your Command Window should look just like:</description>
+    </item>
+    
   </channel>
 </rss>

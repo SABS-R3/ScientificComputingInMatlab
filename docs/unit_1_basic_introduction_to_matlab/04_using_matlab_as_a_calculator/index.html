@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/ScientificComputingInMatlab/logos/dtc_hex.svg" type="image/x-icon" />
 
-    <title>Basic introduction to MATLAB   Scientific Computing in MATLAB</title>
+    <title>Using MATLAB as a calculator   Scientific Computing in MATLAB</title>
 
     
     <link href="/ScientificComputingInMatlab/css/nucleus.css?1606580538" rel="stylesheet">
@@ -62,7 +62,7 @@
 
 
   </head>
-  <body class="" data-url="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/">
+  <body class="" data-url="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/">
     <nav id="sidebar" class="">
 
 
@@ -206,7 +206,7 @@
     
     <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/" title="Basic introduction to MATLAB" class="dd-item
         parent
-        active
+        
         
         ">
       <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/">
@@ -294,7 +294,7 @@
  
   
     
-      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/" title="Using MATLAB as a calculator" class="dd-item ">
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/" title="Using MATLAB as a calculator" class="dd-item active">
         <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/">
         Using MATLAB as a calculator
         
@@ -342,7 +342,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_1_basic_introduction_to_matlab/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -357,6 +357,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -367,7 +369,13 @@
             
           
           
-            <a href='/ScientificComputingInMatlab/'></a> > Basic introduction to MATLAB
+            
+            
+          
+          
+            <a href='/ScientificComputingInMatlab/'></a> > <a href='/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/'>Basic introduction to MATLAB</a> > Using MATLAB as a calculator
+          
+        
           
         
           
@@ -376,6 +384,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -383,28 +398,53 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Using MATLAB as a calculator
+            </h1>
           
 
         
 
 
+<p>The first thing we will use MATLAB for is a calculator.</p>
+<p>MATLAB uses the standard computer symbols for addition ('<code>+ !nc</code>'), subtraction ('<code>- !nc</code>'), multiplication ('<code>* !nc</code>') and division ('<code>/ !nc</code>').
+Brackets are also used (if required) to indicate which operations are to be performed first.</p>
+<p>For example, to evaluate <code>$3 + 4\left(1 + \frac{6}{3}\right)$</code> type the following in the Command Window:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>)
+</code></pre></div><p>and you get the answer 15.
+Your Command Window should look just like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt;&gt; 3+4*(1+6/3)
 
-	<h3 id="chapter-1">Chapter 1</h3>
-<h1 id="basic-introduction-to-matlab">Basic introduction to MATLAB</h1>
+ans =
 
+    15
+</code></pre></div><p>Suppose we wished to set the variable <code>x !nc</code> equal to  <code>$3 + 4\left(1 + \frac{6}{3}\right)$</code>.
+Then we would type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=<span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>)
+</code></pre></div><p>and get the answer <code>x = 15 !nc</code>.
+In long calculations it is often unnecessary for the value of <code>x !nc</code> to be output to the screen.
+If we wanted to calculate <code>x !nc</code> but not output the answer to the screen we would end the line with a semicolon</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=<span style="color:#ae81ff">3</span><span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>);
+</code></pre></div><p>The value of <code>x !nc</code> may now, if desired, be printed out by typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x
+</code></pre></div><p>To evaluate a power we use the &lsquo;<code>^ !nc</code>&rsquo; symbol. For example, to evaluate <code>$3^4 !nc$</code> type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#ae81ff">3</span>^<span style="color:#ae81ff">4</span>
+</code></pre></div><p>Finally, you can clear the variable <code>x !nc</code> by typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><p>Now typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x
+</code></pre></div><p>shows that the variable <code>x !nc</code> has been deleted:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt;&gt; x
+Unrecognized function or variable &#39;x&#39;.
+</code></pre></div>
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -568,6 +608,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -591,7 +632,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/" title="Getting MATLAB"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/" title="Starting MATLAB"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/01_introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -619,3 +660,4 @@
 
   </body>
 </html>
+
