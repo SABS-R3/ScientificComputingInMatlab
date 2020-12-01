@@ -439,8 +439,10 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/</guid>
-      <description> Question Page under construction.
- </description>
+      <description>Now that we know how to handle matrices and vectors in MATLAB, we will look at how to perform operations on them.
+Addition, subtraction and multiplication of vectors and matrices If two vectors or matrices are of the correct size, then they may be added, subtracted or multiplied using the standard operators + !nc, - !nc and * !nc.
+Walkthrough For example, enter the following vectors and matrices:
+u=[1 2]; v=[3; 4]; A=[1 2; 3 4]; B=[5 6; 7 8]; The following are valid operations:</description>
     </item>
     
     <item>
@@ -449,8 +451,11 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Info MATLAB can also handle complex numbers. If you have never heard of these before, then look them up in:
+ an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia  before you continue.
+ Walkthrough Complex numbers may be entered as, for example,
+z=3+4i The real part, imaginary part, magnitude, argument (in radians) and complex conjugate of z may be evaluated using the following commands:
+real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results of the above operations?</description>
     </item>
     
     <item>

@@ -12,21 +12,21 @@
     <title>Vectors and matrices: part 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1606861157" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606861157" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606864897" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606861157" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606864897" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606861157"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606864897"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606861157"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606861157"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606864897"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606861157"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606864897"></script>
 
     
   </div>
@@ -1690,7 +1690,30 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#addition-subtraction-and-multiplication-of-vectors-and-matrices">Addition, subtraction and multiplication of vectors and matrices</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#element-wise-operations">Element-wise operations</a>
+      <ul>
+        <li><a href="#walkthrough-1">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#generating-vectors">Generating vectors</a>
+      <ul>
+        <li><a href="#walkthrough-2">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-special-matrices-and-vectors">Some special matrices and vectors</a>
+      <ul>
+        <li><a href="#walkthrough-3">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1736,119 @@
         
 
 
+<p>Now that we know how to handle matrices and vectors in MATLAB, we will look at how to perform operations on them.</p>
+<h2 id="addition-subtraction-and-multiplication-of-vectors-and-matrices">Addition, subtraction and multiplication of vectors and matrices</h2>
+<p>If two vectors or matrices are of the correct size, then they may be added, subtracted or multiplied using the standard operators <code>+ !nc</code>, <code>- !nc</code> and <code>* !nc</code>.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>For example, enter the following vectors and matrices:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>];
+v=[<span style="color:#ae81ff">3</span>; <span style="color:#ae81ff">4</span>];
+A=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>; <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>];
+B=[<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>; <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span>];
+</code></pre></div><p>The following are valid operations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u<span style="color:#f92672">*</span>v
+v<span style="color:#f92672">*</span>u
+A<span style="color:#f92672">+</span>B
+A<span style="color:#f92672">-</span>B
+A<span style="color:#f92672">*</span>B
+A<span style="color:#f92672">*</span>v
+u<span style="color:#f92672">*</span>A
+(A<span style="color:#f92672">+</span>B)<span style="color:#f92672">*</span>v
+</code></pre></div><p>but</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A<span style="color:#f92672">*</span>u
+</code></pre></div><p>is not.
+Try entering the above operations in the command line.</p>
 
 <div class="notices question" >
   <div class="label">Question</div>
-  <p>Page under construction.</p>
+  <p>What do the above operations represent and what is the result: a matrix; a vector; or a scalar?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <ul>
+<li><code>u*v</code> – inner product (dot product) – scalar (1 x 1).</li>
+<li><code>v*u</code> – vector outer product – matrix (2 x 2).</li>
+<li><code>A+B</code> – matrix addition – matrix (2 x 2).</li>
+<li><code>A-B</code> – matrix subtraction – matrix (2 x 2).</li>
+<li><code>A*B</code> – matrix multiplication – matrix (2 x 2).</li>
+<li><code>A*v</code> – right multiplication of a matrix by a vector – vector (2 x 1).</li>
+<li><code>u*A</code> – left multiplication of a matrix by a vector – vector (1 x 2).</li>
+<li><code>(A+B)*v</code> – matrix addition and right multiplication – vector (2 x 1).</li>
+</ul>
+</details>
 
 </div>
 
 
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Why is <code>A*u</code> not a valid operation?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <p>The product <code>A*u</code> would represent right multiplication of a 2 x 2 matrix by a 1 x 2 vector, which is an incompatible matrix multiplication.
+The appropriate dimensions must agree to use the <code>* !nc</code> operator.
+Similarly, <code>v*A</code> would also fail.</p>
+<p>Attempting an incompatible matrix multiplication will result in an error like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; A*u
+Error using  * 
+Incorrect dimensions for matrix multiplication. Check that the number of columns in the first matrix matches the number of rows in the second matrix.
+</code></pre></div>
+</details>
+
+</div>
+
+<h2 id="element-wise-operations">Element-wise operations</h2>
+<p>Often we wish to perform operations on elements of a vector or a matrix.
+We may, for example, have a vector of numbers and wish to calculate their squares.
+This is done using the &lsquo;dot&rsquo; command, <code>'.' !nc</code></p>
+<h3 id="walkthrough-1">Walkthrough</h3>
+<p>For example, enter the following vectors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>];
+v=[<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span>];
+</code></pre></div><p>To calculate the square of all elements of <code>u !nc</code> use the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span>
+</code></pre></div><p>To multiply each element of <code>u !nc</code> by the corresponding element of <code>v !nc</code> use:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u<span style="color:#f92672">.*</span>v
+</code></pre></div><p>This also works with matrices, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span>
+</code></pre></div>
+<div class="notices note" >
+  <div class="label">Note</div>
+  <p>This only works if the sizes of the vectors/matrices are the same.
+It is good practice to clear your variables once you have finished using them.</p>
+
+</div>
+
+<h2 id="generating-vectors">Generating vectors</h2>
+<p>It can be tedious to input vectors by specifying all the entries manually; the following are two methods to define vectors more quickly.</p>
+<h3 id="walkthrough-2">Walkthrough</h3>
+<p>A row vector <code>x !nc</code> consisting of integers from 1 to 10 inclusive may be generated by typing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">10</span>
+</code></pre></div><p>Furthermore, a row vector <code>x !nc</code> consisting of every odd integer from 1 to 9 inclusive may be generated by typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">9</span>
+</code></pre></div><p>The central variable indicates the step size, so</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=<span style="color:#ae81ff">10</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">1</span>
+</code></pre></div><p>would yield a row vector consisting of the integers from 1 to 10 inclusive, but in descending order.</p>
+<p>A vector <code>y !nc</code> consisting of 100 points equally spaced between 5 and 15 may be generated by typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">y=linspace(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>look up the <code>linspace</code> command in the MATLAB help system.</p>
+<h2 id="some-special-matrices-and-vectors">Some special matrices and vectors</h2>
+<p>MATLAB has inbuilt commands that can be used to create some simple matrices, which can be adapted using your own code to construct matrices of interest to you.
+You will see examples of this in later units.</p>
+<h3 id="walkthrough-3">Walkthrough</h3>
+<p>The 3 x 4 matrix with all entries equal to 0 may be produced using the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">zeros(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>)
+</code></pre></div><p>The 5 x 2 matrix with all entries equal to 1 may be produced using the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">ones(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>)
+</code></pre></div><p>The 4 x 6 matrix with diagonal entries equal to 1 and all other entries equal to 0 is given by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">eye(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>)
+</code></pre></div><p>The 2 x 1 matrix (that is, a column vector of length 2) with entries that are distributed randomly with a uniform distribution on the interval <code>$[0,1]$</code> is given by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">rand(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)
+</code></pre></div><p>The 1 x 3 matrix (that is, a row vector of length 3) with entries uniformly distributed with mean 0 and standard deviation 1 is given by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">randn(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>)
+</code></pre></div><p>If the matrix required with any of the commands in this section is square, then the second index is not required, as for example with</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">ones(<span style="color:#ae81ff">4</span>)
+rand(<span style="color:#ae81ff">2</span>)
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +3001,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606861157"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606864897"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1606861157"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606861157"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606864897"></script>
     
     
 
