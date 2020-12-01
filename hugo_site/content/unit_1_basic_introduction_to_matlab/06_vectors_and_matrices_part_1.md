@@ -6,9 +6,15 @@ pre: "6. "
 ---
 
 
-{{% notice info %}}
+{{% notice info asdas %}}
 The main data structures in MATLAB are vectors and matrices.
-If you have never heard of these before, then look them up in an A-level textbook, on [the Wolfram MathWorld pages](https://mathworld.wolfram.com/Matrix.html), or on [Wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics)) before you continue.
+If you have never heard of these before, then look them up in:
+
+- an A-level textbook,
+- on [the Wolfram MathWorld pages](https://mathworld.wolfram.com/Matrix.html),
+- or on [Wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics))
+
+before you continue.
 {{% /notice %}}
 
 
