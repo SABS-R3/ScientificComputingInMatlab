@@ -1,14 +1,14 @@
 +++
-title = "Basic introduction to MATLAB"
+title = "Basic calculus"
 date = 2020-11-27T16:10:31Z
-weight = 9
+weight = 11
 chapter = true
-pre = "<b>1. </b>"
+pre = "<b>3. </b>"
 +++
 
-### Chapter 1
+### Chapter 3
 
-# Basic introduction to MATLAB
+# Basic calculus
 
 
 {{% notice warning %}}
