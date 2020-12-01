@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software engineering on Scientific Computing in MATLAB</title>
+    <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/</link>
+    <description>Recent content in Software engineering on Scientific Computing in MATLAB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Nov 2020 16:10:31 +0000</lastBuildDate><atom:link href="https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>GUIs: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>GUIs: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Making movies in MATLAB</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Speeding up code: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Speeding up code: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</link>
+      <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</link>
+      <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

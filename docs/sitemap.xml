@@ -13,6 +13,31 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/</loc>
+    <lastmod>2020-11-27T16:10:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/</loc>
+    <lastmod>2020-11-27T16:10:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/</loc>
+    <lastmod>2020-11-27T16:10:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/</loc>
+    <lastmod>2020-11-27T16:10:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/</loc>
+    <lastmod>2020-11-27T16:10:31+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/</loc>
     <lastmod>2020-11-27T16:10:31+00:00</lastmod>
   </url>
@@ -28,7 +53,57 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</loc>
+    <lastmod>2020-11-26T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/</loc>
+    <lastmod>2020-11-25T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/</loc>
     <lastmod>2020-11-25T16:52:22+00:00</lastmod>
   </url>
   
@@ -38,7 +113,32 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/</loc>
+    <lastmod>2020-11-24T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/</loc>
     <lastmod>2020-11-24T16:52:22+00:00</lastmod>
   </url>
   
@@ -48,8 +148,58 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/</loc>
+    <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</loc>
+    <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</loc>
+    <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</loc>
+    <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/</loc>
+    <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/</loc>
     <lastmod>2020-11-23T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/</loc>
+    <lastmod>2020-11-22T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/</loc>
+    <lastmod>2020-11-22T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</loc>
+    <lastmod>2020-11-22T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</loc>
+    <lastmod>2020-11-22T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</loc>
+    <lastmod>2020-11-22T16:52:22+00:00</lastmod>
   </url>
   
   <url>
@@ -58,8 +208,48 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</loc>
+    <lastmod>2020-11-21T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</loc>
+    <lastmod>2020-11-21T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</loc>
+    <lastmod>2020-11-21T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/</loc>
+    <lastmod>2020-11-21T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</loc>
     <lastmod>2020-11-21T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</loc>
+    <lastmod>2020-11-20T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</loc>
+    <lastmod>2020-11-20T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</loc>
+    <lastmod>2020-11-20T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/</loc>
+    <lastmod>2020-11-20T16:52:22+00:00</lastmod>
   </url>
   
   <url>
@@ -73,13 +263,68 @@
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/</loc>
+    <lastmod>2020-11-19T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</loc>
+    <lastmod>2020-11-19T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</loc>
+    <lastmod>2020-11-19T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</loc>
+    <lastmod>2020-11-19T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</loc>
+    <lastmod>2020-11-18T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</loc>
+    <lastmod>2020-11-18T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</loc>
     <lastmod>2020-11-18T16:52:22+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</loc>
+    <lastmod>2020-11-18T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</loc>
+    <lastmod>2020-11-17T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</loc>
     <lastmod>2020-11-17T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</loc>
+    <lastmod>2020-11-17T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</loc>
+    <lastmod>2020-11-16T16:52:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</loc>
+    <lastmod>2020-11-16T16:52:22+00:00</lastmod>
   </url>
   
   <url>

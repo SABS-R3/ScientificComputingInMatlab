@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solving ODEs on Scientific Computing in MATLAB</title>
+    <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/</link>
+    <description>Recent content in Solving ODEs on Scientific Computing in MATLAB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Nov 2020 16:10:31 +0000</lastBuildDate><atom:link href="https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction and definitions</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Analytical methods: 1st order</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Analytical methods: 2nd order</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Reducing higher order ODEs</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical methods</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Initial value problems</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Boundary value problems</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</link>
+      <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 4</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</link>
+      <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

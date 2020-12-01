@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear algebra on Scientific Computing in MATLAB</title>
+    <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/</link>
+    <description>Recent content in Linear algebra on Scientific Computing in MATLAB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Nov 2020 16:10:31 +0000</lastBuildDate><atom:link href="https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Vectors and matrices</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Eigenvalues and eigenvectors</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Sparse matrices</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solving $Ax=b$: basic</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solving $Ax=b$: iterative</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

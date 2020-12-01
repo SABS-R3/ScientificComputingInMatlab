@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basic calculus on Scientific Computing in MATLAB</title>
+    <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/</link>
+    <description>Recent content in Basic calculus on Scientific Computing in MATLAB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Nov 2020 16:10:31 +0000</lastBuildDate><atom:link href="https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction and definitions</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical differentiation</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical integration</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solution of nonlinear equations</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Fourier series</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 4</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

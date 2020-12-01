@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.78.2" />
+    <meta name="description" content="An online course on Scientific Computing in Matlab for the Oxford Doctoral Training Centre http://www.dtc.ox.ac.uk/">
+<meta name="author" content="Fergus Cooper">
+
+    <link rel="shortcut icon" href="/ScientificComputingInMatlab/logos/dtc_hex.svg" type="image/x-icon" />
+
+    <title>Sparse matrices   Scientific Computing in MATLAB</title>
+
+    
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1606836429" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606836429" rel="stylesheet">
+    
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606836429" rel="stylesheet">
+    
+    
+
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606836429"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function (x) {
+            x.parentElement.classList += 'has-jax'
+        })
+    });
+
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+
+
+  </head>
+  <body class="" data-url="/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://sabs-r3.github.io/ScientificComputingInMatlab/">
+    <img src="/ScientificComputingInMatlab/logos/dtc_hex.svg" alt="DTC logo">
+</a>
+  
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606836429"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606836429"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
+    
+</script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606836429"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_0_introduction/" title="Course introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_0_introduction/">
+          <b>0. </b>Course introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_0_introduction/01_course_overview/" title="Course Overview" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_0_introduction/01_course_overview/">
+        1. Course Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/" title="Course Activities" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/">
+        2. Course Activities
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/" title="Getting MATLAB" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/">
+        3. Getting MATLAB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/" title="Basic introduction to MATLAB" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/">
+          <b>1. </b>Basic introduction to MATLAB
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/01_introduction/" title="Introduction" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/01_introduction/">
+        1. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/02_what_is_matlab/" title="What is MATLAB?" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/02_what_is_matlab/">
+        2. What is MATLAB?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/" title="Starting MATLAB" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/">
+        3. Starting MATLAB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/" title="Using MATLAB as a calculator" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/">
+        4. Using MATLAB as a calculator
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/" title="Using the inbuilt help" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/">
+        5. Using the inbuilt help
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/" title="Vectors and matrices: part 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/">
+        6. Vectors and matrices: part 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/" title="Vectors and matrices: part 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/">
+        7. Vectors and matrices: part 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/" title="Complex numbers" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/">
+        8. Complex numbers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/" title="Simple M-files: scripts" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/">
+        9. Simple M-files: scripts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/" title="Flow control" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/">
+        10. Flow control
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/" title="Simple graphics" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/">
+        11. Simple graphics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/" title="Plotting 3D data" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/">
+        12. Plotting 3D data
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/" title="Functions" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/">
+        13. Functions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/" title="Exercises" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/">
+        14. Exercises
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/" title="Data and image analysis" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/">
+          <b>2. </b>Data and image analysis
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/" title="Introduction" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/">
+        1. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/" title="Simple summary statistics" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/">
+        2. Simple summary statistics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/" title="Linear regression" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/">
+        3. Linear regression
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/" title="Basic data and image processing" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/">
+        4. Basic data and image processing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/" title="Exercises" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/">
+        5. Exercises
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/" title="Basic calculus" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/">
+          <b>3. </b>Basic calculus
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/" title="Introduction and definitions" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/">
+        1. Introduction and definitions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/" title="Numerical differentiation" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/">
+        2. Numerical differentiation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/" title="Exercises 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/">
+        3. Exercises 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/" title="Numerical integration" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/">
+        4. Numerical integration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/" title="Exercises 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/">
+        5. Exercises 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/" title="Solution of nonlinear equations" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/">
+        6. Solution of nonlinear equations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/" title="Exercises 3" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/">
+        7. Exercises 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/" title="Fourier series" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/">
+        8. Fourier series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/" title="Exercises 4" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/">
+        9. Exercises 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/" title="Linear algebra" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/">
+          <b>4. </b>Linear algebra
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/" title="Introduction" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/">
+        1. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/" title="Vectors and matrices" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/">
+        2. Vectors and matrices
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/" title="Eigenvalues and eigenvectors" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/">
+        3. Eigenvalues and eigenvectors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/" title="Sparse matrices" class="dd-item active">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/">
+        4. Sparse matrices
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/" title="Exercises 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/">
+        5. Exercises 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/" title="Solving $Ax=b$: basic" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/">
+        6. Solving $Ax=b$: basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/" title="Solving $Ax=b$: iterative" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/">
+        7. Solving $Ax=b$: iterative
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/" title="Exercises 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/">
+        8. Exercises 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/" title="Solving ODEs" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_5_solving_odes/">
+          <b>5. </b>Solving ODEs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/" title="Introduction and definitions" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/">
+        1. Introduction and definitions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/" title="Analytical methods: 1st order" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/">
+        2. Analytical methods: 1st order
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/" title="Analytical methods: 2nd order" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/">
+        3. Analytical methods: 2nd order
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/" title="Reducing higher order ODEs" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/">
+        4. Reducing higher order ODEs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/" title="Exercises 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/">
+        5. Exercises 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/" title="Numerical methods" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/">
+        6. Numerical methods
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/" title="Exercises 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/">
+        7. Exercises 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/" title="Initial value problems" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/">
+        8. Initial value problems
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/" title="Exercises 3" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/">
+        9. Exercises 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/" title="Boundary value problems" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/">
+        10. Boundary value problems
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/" title="Exercises 4" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/">
+        11. Exercises 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/" title="Software engineering" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/unit_6_software_engineering/">
+          <b>6. </b>Software engineering
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/" title="Introduction" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/">
+        1. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/" title="Formatting code: part 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/">
+        2. Formatting code: part 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/" title="Formatting code: part 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/">
+        3. Formatting code: part 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/" title="Formatting code: part 3" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/">
+        4. Formatting code: part 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/" title="GUIs: part 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/">
+        5. GUIs: part 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/" title="GUIs: part 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/">
+        6. GUIs: part 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/" title="Exercises 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/">
+        7. Exercises 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/" title="Making movies in MATLAB" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/">
+        8. Making movies in MATLAB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/" title="Speeding up code: part 1" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/">
+        9. Speeding up code: part 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/" title="Speeding up code: part 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/">
+        10. Speeding up code: part 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/" title="Exercises 2" class="dd-item ">
+        <a href="/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/">
+        11. Exercises 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_4_linear_algebra/04_sparse_matrices.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ScientificComputingInMatlab/'></a> > <a href='/ScientificComputingInMatlab/unit_4_linear_algebra/'>Linear algebra</a> > Sparse matrices
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Sparse matrices
+            </h1>
+          
+
+        
+
+
+
+<div class="notices warning" ><p>Page under construction.</p>
+</div>
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/" title="Eigenvalues and eigenvectors"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/" title="Exercises 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606836429"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1606836429"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606836429"></script>
+    
+    
+
+  </body>
+</html>
+

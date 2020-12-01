@@ -29,6 +29,66 @@ When you see things written in typewriter font as in this for example, you shoul
     </item>
     
     <item>
+      <title>Introduction</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/01_introduction/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Introduction and definitions</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Introduction and definitions</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</link>
+      <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Analytical methods: 1st order</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Course Activities</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/</link>
       <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
@@ -36,6 +96,46 @@ When you see things written in typewriter font as in this for example, you shoul
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/02_course_activities/</guid>
       <description>The main teaching mechanism on this course is through activities and exercises. Each unit is composed of a number of such activities which will not only introduce the material to you but also enable you to demonstrate your understanding (or to express your lack of understanding – something you should never be afraid to do).
 Regular activities and resources There are several kinds of activity that you will be asked to complete while on this course.</description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical differentiation</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Simple summary statistics</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Vectors and matrices</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/</link>
+      <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/02_vectors_and_matrices/</guid>
+      <description> Page under construction.
+ </description>
     </item>
     
     <item>
@@ -49,6 +149,46 @@ Regular activities and resources There are several kinds of activity that you wi
     </item>
     
     <item>
+      <title>Analytical methods: 2nd order</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Eigenvalues and eigenvectors</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/03_eigenvalues_and_eigenvectors/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Getting MATLAB</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_0_introduction/03_getting_matlab/</link>
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
@@ -59,12 +199,72 @@ Checking for MATLAB If you are using a departmental computer then MATLAB may alr
     </item>
     
     <item>
+      <title>Linear regression</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/</link>
+      <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Starting MATLAB</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/</link>
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/</guid>
       <description>Windows   Expand for Windows instructions    In the File Explorer, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;. To start MATLAB click on the &amp;lsquo;MATLAB&amp;rsquo; icon, and change the &amp;lsquo;Current Directory&amp;rsquo; to the one you just created. You may wish to create some appropriately named sub-directories to store separately the files from each unit of the course, for example &amp;lsquo;Unit1&amp;rsquo;.    macOS   Expand for macOS instructions    In Finder, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Basic data and image processing</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Formatting code: part 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical integration</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Reducing higher order ODEs</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Sparse matrices</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/</link>
+      <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/04_sparse_matrices/</guid>
+      <description> Page under construction.
+ </description>
     </item>
     
     <item>
@@ -80,6 +280,56 @@ For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following 
     </item>
     
     <item>
+      <title>Exercises</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>GUIs: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</link>
+      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Using the inbuilt help</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/05_using_the_inbuilt_help/</link>
       <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
@@ -92,6 +342,46 @@ For instance, typing help fft will display
     </item>
     
     <item>
+      <title>GUIs: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Numerical methods</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solution of nonlinear equations</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solving $Ax=b$: basic</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/</link>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/06_solving_axb_basic/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Vectors and matrices: part 1</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</link>
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
@@ -100,6 +390,46 @@ For instance, typing help fft will display
       <description>The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia before you continue.
  Vectors Vectors in MATLAB are $n\times 1$ or $1\times n$ arrays of numbers.
 Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entered into MATLAB in either of the following ways:</description>
+    </item>
+    
+    <item>
+      <title>Exercises 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Solving $Ax=b$: iterative</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/07_solving_axb_iterative/</guid>
+      <description> Page under construction.
+ </description>
     </item>
     
     <item>
@@ -123,6 +453,66 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
     </item>
     
     <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_4_linear_algebra/08_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Fourier series</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Initial value problems</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Making movies in MATLAB</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 3</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 4</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Simple M-files: scripts</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</link>
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
@@ -133,11 +523,61 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
     </item>
     
     <item>
+      <title>Speeding up code: part 1</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Boundary value problems</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</link>
+      <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
       <title>Flow control</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</link>
       <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Speeding up code: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</link>
+      <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</link>
+      <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises 4</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</link>
+      <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</guid>
       <description> Page under construction.
  </description>
     </item>
