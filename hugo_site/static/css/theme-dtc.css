@@ -130,7 +130,11 @@ code.has-jax {
 /*************************************************************************/
 
 div.notices p {
-    all: inherit;
+    padding: 0px 15px;
+    display: block;
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: inherit;
 }
 div.notices p:first-child:before {
     content: none;
@@ -237,4 +241,8 @@ div.notices.question {
 }
 div.notices.question > div.label:first-child:before {
     content: "\f059";
+}
+
+summary {
+    padding: 0.5rem 0px;
 }
