@@ -6,7 +6,7 @@ pre: "6. "
 ---
 
 
-{{% notice info asdas %}}
+{{% notice info %}}
 The main data structures in MATLAB are vectors and matrices.
 If you have never heard of these before, then look them up in:
 
