@@ -2,6 +2,7 @@
 title: "Getting MATLAB"
 date: 2020-11-24T16:52:22Z
 draft: false
+pre: "3. "
 ---
 
 A pre-requisite for the course is to have the program MATLAB installed on your computer.

@@ -2,6 +2,7 @@
 title: "Course Overview"
 date: 2020-11-26T16:52:22Z
 draft: false
+pre: "1. "
 ---
 
 Welcome to 'Scientific Computing in MATLAB'. We are delighted you have chosen this course and hope it will meet your expectations.
