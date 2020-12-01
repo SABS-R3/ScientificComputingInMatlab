@@ -84,6 +84,62 @@
 	"content": " The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia before you continue.\n Vectors Vectors in MATLAB are $n\\times 1$ or $1\\times n$ arrays of numbers.\nWalkthrough Suppose the vector $u$ is given by $u=(1\\;4\\;9)$. This may be entered into MATLAB in either of the following ways:\n  By entering each entry of the matrix individually.\nu(1)=1; u(2)=4; u(3)=9; Note that u(1) !nc corresponds to the first entry of u !nc, etc.\n  By typing the entries inside square brackets separated by spaces:\nu=[1 4 9];   The transpose of u !nc may be printed by typing u'.\nSuppose the vector $v$ is given by: $$v=\\begin{pmatrix}4\\\\5\\\\6\\end{pmatrix}$$\nThis may be entered by typing:\nv = [4;5;6]; Inside the square brackets the semicolon denotes a new row.\nVectors are sometimes referred to as arrays. This may be confusing so always look at the dimensions of the array to check the type.\n The length of a vector v !nc can be found by using the command length(v), which here gives:\n\u0026gt;\u0026gt; length(v) ans = 3 The size of a vector v !nc can be found by using the command size(v), which here gives:\n\u0026gt;\u0026gt; size(v) ans = 3 1 This tells us that v !nc has 3 rows and 1 column, and thus allows us to distinguish it from u !nc, which has 1 row and 3 columns.\nNow look up the commands length and size in the help files:\nhelp length help size Matrices Matrices in MATLAB are $m\\times n$ arrays of numbers.\nWalkthrough Suppose the matrix $A$ is given by: $$A=\\begin{pmatrix}1\u0026amp;2\\\\3\u0026amp;4\\end{pmatrix}$$\nThis may be entered into MATLAB in either of the following ways:\n  By entering each entry of the matrix individually\nA(1,1)=1; A(1,2)=2; A(2,1)=3; A(2,2)=4;   The entry $A(i,j)$ corresponds to the entry in row $i$ and column $j$ of the matrix $A$.\n  By typing\nA=[1 2; 3 4];   Use of ; !nc inside the square brackets denotes a new row in the matrix.\n The dimensions of a matrix A !nc can be found by using the command size(A), which here gives\n\u0026gt;\u0026gt; size(A) ans = 2 2  Running the command length(A) on a matrix A !nc yields the result 2, which is the bigger dimension of the matrix, so if A !nc were a $4\\times 6$ or a $6\\times 4$ matrix, length(A) would yield the answer 6.\n Editing vectors and matrices Walkthrough Editing vectors and matrices can be done by specifying the individual element. For example, to change the value of 2 in the matrix A !nc, above, to 5 we can type\nA(1,2)=5; An alternative method is to double-click on A !nc in the Workspace window. This opens a window containing the contents of the matrix A !nc. Click on the entry in the first row, second column, and change it to 5.\nLooking at parts of matrices Sometimes we may wish to access only certain parts of a matrix or vector. There are a number of inbuilt MATLAB commands to help with this.\nWalkthrough The matrix $$C=\\begin{pmatrix}1\u0026amp;2\u0026amp;3\u0026amp;4\\\\5\u0026amp;6\u0026amp;7\u0026amp;8\\\\9\u0026amp;10\u0026amp;11\u0026amp;12\\end{pmatrix}$$\nmay be entered in MATLAB as\nC=[1 2 3 4; 5 6 7 8; 9 10 11 12]; To view the whole matrix we would type\nC To view the second column we would type\nC(:,2) To view the third row we would type\nC(3,:) To view the first two rows we would type\nC(1:2,:) To view the elements in both the last two rows and the last three columns we would type\nC(2:3,2:4)  The following: C(2:end,2:end) would yield the same result.\n "
 },
 {
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/",
+	"title": "Vectors and matrices: part 2",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/",
+	"title": "Complex numbers",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/",
+	"title": "Simple M-files: scripts",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/",
+	"title": "Flow control",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/",
+	"title": "Simple graphics",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/",
+	"title": "Plotting 3D data",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/",
+	"title": "Functions",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
+	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/",
+	"title": "Exercises",
+	"tags": [],
+	"description": "",
+	"content": " Page under construction.\n "
+},
+{
 	"uri": "https://sabs-r3.github.io/ScientificComputingInMatlab/categories/",
 	"title": "Categories",
 	"tags": [],

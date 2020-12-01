@@ -94,12 +94,92 @@ For instance, typing help fft will display
     <item>
       <title>Vectors and matrices: part 1</title>
       <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</link>
-      <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
+      <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</guid>
       <description>The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia before you continue.
  Vectors Vectors in MATLAB are $n\times 1$ or $1\times n$ arrays of numbers.
 Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entered into MATLAB in either of the following ways:</description>
+    </item>
+    
+    <item>
+      <title>Vectors and matrices: part 2</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/</link>
+      <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Complex numbers</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/</link>
+      <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Simple M-files: scripts</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</link>
+      <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Flow control</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</link>
+      <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Simple graphics</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/</link>
+      <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Plotting 3D data</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/</link>
+      <pubDate>Sun, 15 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/</link>
+      <pubDate>Sat, 14 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/</guid>
+      <description> Page under construction.
+ </description>
+    </item>
+    
+    <item>
+      <title>Exercises</title>
+      <link>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/</link>
+      <pubDate>Fri, 13 Nov 2020 16:52:22 +0000</pubDate>
+      
+      <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/</guid>
+      <description> Page under construction.
+ </description>
     </item>
     
   </channel>
