@@ -6,7 +6,7 @@ pre: "7. "
 ---
 
 
-{{% notice warning %}}
+{{% notice question %}}
 Page under construction.
 {{% /notice %}}
 

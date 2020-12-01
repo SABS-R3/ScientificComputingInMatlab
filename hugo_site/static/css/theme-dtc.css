@@ -223,3 +223,18 @@ div.notices.tip > div.label:first-child:before {
 /*************************************************************************/
 /*************************************************************************/
 /*************************************************************************/
+
+div.notices.question p {
+    border-top: none;
+    background: inherit;
+}
+div.notices.question p:first-child:after {
+    content: none;
+}
+div.notices.question {
+    border-color: rgba(92, 184, 92, 0.8);
+    background: #E6F9E6;
+}
+div.notices.question > div.label:first-child:before {
+    content: "\f059";
+}
