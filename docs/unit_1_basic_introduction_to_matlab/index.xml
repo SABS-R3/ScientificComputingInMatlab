@@ -33,7 +33,7 @@ When you see things written in typewriter font as in this for example, you shoul
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/03_starting_matlab/</guid>
-      <description>Windows   Expand for Windows instructions    In the File Explorer, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;. To start MATLAB click on the &amp;lsquo;MATLAB&amp;rsquo; icon, and change the &amp;lsquo;Current Directory&amp;rsquo; to the one you just created. You may wish to create some appropriately named sub-directories to store separately the files from each unit of the course, for example &amp;lsquo;Unit1&amp;rsquo;.    macOS   Expand for macOS instructions    In Finder, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;.</description>
+      <description>Windows  Expand for Windows instructions  In the File Explorer, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;. To start MATLAB click on the &amp;lsquo;MATLAB&amp;rsquo; icon, and change the &amp;lsquo;Current Directory&amp;rsquo; to the one you just created. You may wish to create some appropriately named sub-directories to store separately the files from each unit of the course, for example &amp;lsquo;Unit1&amp;rsquo;.   macOS  Expand for macOS instructions  In Finder, right-click and select &amp;lsquo;New&amp;rsquo; then &amp;lsquo;Folder&amp;rsquo;, and call this new folder &amp;lsquo;MatlabCourse&amp;rsquo;.</description>
     </item>
     
     <item>
@@ -66,7 +66,8 @@ For instance, typing help fft will display
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/06_vectors_and_matrices_part_1/</guid>
-      <description>The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia before you continue.
+      <description>Info The main data structures in MATLAB are vectors and matrices. If you have never heard of these before, then look them up in:
+ an A-level textbook, on the Wolfram MathWorld pages, or on Wikipedia  before you continue.
  Vectors Vectors in MATLAB are $n\times 1$ or $1\times n$ arrays of numbers.
 Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entered into MATLAB in either of the following ways:</description>
     </item>
@@ -77,7 +78,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/</guid>
-      <description> Page under construction.
+      <description> Question Page under construction.
  </description>
     </item>
     
@@ -87,7 +88,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/08_complex_numbers/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -97,7 +98,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -107,7 +108,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -117,7 +118,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -127,7 +128,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Sun, 15 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -137,7 +138,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Sat, 14 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
@@ -147,7 +148,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Fri, 13 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/</guid>
-      <description> Page under construction.
+      <description> Warning Page under construction.
  </description>
     </item>
     
