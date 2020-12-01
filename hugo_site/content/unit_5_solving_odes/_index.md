@@ -1,14 +1,14 @@
 +++
-title = "Linear algebra"
+title = "Solving ODEs"
 date = 2020-11-27T16:10:31Z
-weight = 12
+weight = 13
 chapter = true
-pre = "<b>4. </b>"
+pre = "<b>5. </b>"
 +++
 
-### Chapter 4
+### Chapter 5
 
-# Linear algebra
+# Solving ODEs
 
 
 {{% notice warning %}}
