@@ -12,21 +12,21 @@
     <title>Simple M-files: scripts   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606929846" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606929846" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606929846"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606864897"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606929846"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606929846"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606929846"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#opening-a-new-m-file">Opening a new M-file</a></li>
+    <li><a href="#writing-an-m-file">Writing an M-file</a></li>
+    <li><a href="#running-the-m-file">Running the M-file</a></li>
+    <li><a href="#breaking-code-across-multiple-lines">Breaking code across multiple lines</a></li>
+    <li><a href="#comments">Comments</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1721,61 @@
         
 
 
+<p>Instead of typing the commands into the Command Window, they may be typed into a file with a <code>.m !nc</code> extension, which allows commands to be built up into a high-level computer program.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices info" >
+  <div class="label">Info</div>
+  <p>Most of the time when you use MATLAB, you will write scripts, which are just text files with a <code>.m !nc</code> extension, rather than typing commands directly into the Command Window.</p>
 
 </div>
 
+<h2 id="opening-a-new-m-file">Opening a new M-file</h2>
+<p>From the &lsquo;Home&rsquo; tab, click &lsquo;New Script&rsquo;, or, from the &lsquo;Editor&rsquo; tab, select &lsquo;New&rsquo; and then &lsquo;Script&rsquo;.</p>
+<p>This will open a new window that is a text editor.
+You can also type the following command in the Command Window:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">edit
+</code></pre></div><p>to open the MATLAB editor.</p>
+<h2 id="writing-an-m-file">Writing an M-file</h2>
+<p>In a MATLAB script, you can type exactly the commands that you type into the Command Window, but you can write and run multiple commands at once.
+In the text editor type the following lines of code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>; <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>]
+B=[<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>; <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span>]
+C=A<span style="color:#f92672">+</span>B
+</code></pre></div><p>Click on the &lsquo;Save&rsquo; button on the toolbar and save the file as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">mymfile.m
+</code></pre></div><h2 id="running-the-m-file">Running the M-file</h2>
+<p>Return to the Command Window and type</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">mymfile
+</code></pre></div><p>This has the same output as if you had entered the three lines of the M-file in the Command Window.</p>
 
+<div class="notices warning" >
+  <div class="label">Warning</div>
+  <p>You must make sure not to name your file the same as a pre-existing MATLAB function.
+You can use the <code>exist</code> command (see <code>doc exist</code>) to find out if your function name is being used for an existing function.</p>
+
+</div>
+
+<h2 id="breaking-code-across-multiple-lines">Breaking code across multiple lines</h2>
+<p>While writing M-files you will often have to write long lines of code like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>eye(<span style="color:#ae81ff">500</span>)<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">499</span>,<span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">499</span>,<span style="color:#ae81ff">1</span>),<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</code></pre></div><p>In order to make it easier to see what the code is doing and to prevent artificial line breaks (where the editor decides where to break the code across multiple lines) you can use the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>eye(<span style="color:#ae81ff">500</span>) <span style="color:#75715e">... ;</span>
+<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">499</span>,<span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">1</span>) <span style="color:#75715e">... ;</span>
+<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">499</span>,<span style="color:#ae81ff">1</span>),<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</code></pre></div><p>The dots <code>... !nc</code> indicate that we wish to continue the current line of code on the next line of the file, when you run the file it is as if all the commands are on the same line.</p>
+<h2 id="comments">Comments</h2>
+<p>If you are writing lots of different M-files it is handy to insert comments into the code.
+Anything in the M-file preceded by a <code>% !nc</code> will be ignored when the M-file is executed.
+For example, the following code runs exactly the same commands as the mymfile.m file we created earlier.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%%% Code to add two matrices together %%%</span>
+
+A=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>; <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>] <span style="color:#75715e">% the first matrix</span>
+
+B=[<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>; <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span>] <span style="color:#75715e">% the second matrix</span>
+
+<span style="color:#75715e">% The sum of the two matrices</span>
+C=A<span style="color:#f92672">+</span>B
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2928,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606929846"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606929846"></script>
     
     
 

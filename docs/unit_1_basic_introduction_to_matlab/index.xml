@@ -103,8 +103,9 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Instead of typing the commands into the Command Window, they may be typed into a file with a .m !nc extension, which allows commands to be built up into a high-level computer program.
+Info Most of the time when you use MATLAB, you will write scripts, which are just text files with a .m !nc extension, rather than typing commands directly into the Command Window.
+ Opening a new M-file From the &amp;lsquo;Home&amp;rsquo; tab, click &amp;lsquo;New Script&amp;rsquo;, or, from the &amp;lsquo;Editor&amp;rsquo; tab, select &amp;lsquo;New&amp;rsquo; and then &amp;lsquo;Script&amp;rsquo;.</description>
     </item>
     
     <item>
@@ -113,8 +114,10 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/10_flow_control/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>For loops If a collection of statements need to be executed a fixed number of times, a for loop may be used.
+Walkthrough For example, the following commands print out the integers between 1 and 10 inclusive:
+for i=1:10 i end While loops If a collection of statements need to be executed until a stopping criteria is reached a while loop may be used.
+Walkthrough For example the following commands print out the integers between 1 and 10 inclusive:</description>
     </item>
     
     <item>
@@ -123,8 +126,10 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/11_simple_graphics/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>MATLAB incorporates many powerful graphic tools and can provide visualisations in two or three dimensions, and most books on MATLAB have whole chapters devoted to producing graphics.
+Single plots We will now go through how to plot a simple function in MATLAB and save the figure to a file you can use in a report.
+Walkthrough To plot the function $sin(x)$ for $x$ between 0 and 10 type:
+fplot(&amp;#39;sin(x)&amp;#39;,[0 10]) This gives you the following figure on screen:</description>
     </item>
     
     <item>
@@ -133,8 +138,11 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Sun, 15 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/12_plotting_3d_data/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>MATLAB can also plot functions and data in 3D. The following commands are used to plot in 3D:
+plot3 surf mesh contour Before you continue, look at the help files for those commands.
+The following walkthrough is an example of producing a plot of a 3D function.
+Walkthrough First create a mesh on which to plot the surface
+x = linspace(0,20,100); y = linspace(0,10,100); [X,Y] = meshgrid(x,y); Then define a surface by defining a &amp;lsquo;z-value&amp;rsquo; for each point on the mesh:</description>
     </item>
     
     <item>
@@ -143,8 +151,9 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Sat, 14 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>A particularly useful feature of MATLAB is the ability to define functions.
+Walkthrough The syntax for defining the function $y=x^2$ is as follows:
+function [y] = xsquared(x) y = x^2;  Info  The [y] !nc indicates the variables that will be returned from the function: there may be multiple, e.g. [y1, y2] !nc. The (x) !nc indicates the parameters that are passed to the function: there may be multiple, e.</description>
     </item>
     
     <item>
@@ -153,8 +162,9 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Fri, 13 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>The unit closes with a few simple exercises for you to test the skills you have learned throughout the unit.
+Question Problem 1: Hint based problem
+ Write functions to calculate the maximum and minimum of an array of numbers, without using the commands max !nc or min !nc. Your functions should take in a vector and return values for the maximum and minimum.   Expand for hint Hint The following if !</description>
     </item>
     
   </channel>

@@ -12,21 +12,21 @@
     <title>Exercises   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606929846" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606929846" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606929846"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606864897"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606929846"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606929846"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606929846"></script>
 
     
   </div>
@@ -1713,10 +1713,124 @@
         
 
 
+<p>The unit closes with a few simple exercises for you to test the skills you have learned throughout the unit.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Problem 1: Hint based problem</p>
+<ol>
+<li>Write functions to calculate the maximum and minimum of an array of numbers, without using the commands <code>max !nc</code> or <code>min !nc</code>.
+Your functions should take in a vector and return values for the maximum and minimum.</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>The following <code>if !nc</code> statement will find the maximum between <code>max_x !nc</code> and <code>x(i) !nc</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">if</span> x(i)<span style="color:#f92672">&gt;</span>max_x
+    max_x=x(i);
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+</div>
+</details>
+<ol start="2">
+<li>Combine the functions from part 1. to make one function that returns both the maximum and the minimum.
+See <code>doc function</code> for help on how to return multiple values.</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>
+<p>The following code will calculate the maximum of an array passed to it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [max_x] = <span style="color:#a6e22e">maximum</span>(x)
+    max_x=x(<span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:length(x)
+        <span style="color:#66d9ef">if</span> x(i)<span style="color:#f92672">&gt;</span>max_x
+            max_x=x(i);
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+</code></pre></div><p>The following code will calculate the minimum of an array passed to it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [min_x] = <span style="color:#a6e22e">minimum</span>(x)
+    min_x=x(<span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:length(x)
+        <span style="color:#66d9ef">if</span> x(i)<span style="color:#f92672">&lt;</span>min_x
+            min_x=x(i);
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+</code></pre></div><p>To use these, save the above a <code>.m !nc</code> files with the appropriate names, and run the commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">minimum(x)
+maximum(x)
+</code></pre></div><p>where <code>x !nc</code> is a vector.</p>
+</li>
+<li>
+<p>The following code will calculate the minimum and the maximum of an array passed to it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [min_x,max_x] = <span style="color:#a6e22e">minmax</span>(x)
+    min_x=x(<span style="color:#ae81ff">1</span>);
+    max_x=x(<span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:length(x)
+        <span style="color:#66d9ef">if</span> x(i)<span style="color:#f92672">&lt;</span>min_x
+            min_x=x(i);
+        <span style="color:#66d9ef">end</span>
+        <span style="color:#66d9ef">if</span> x(i)<span style="color:#f92672">&gt;</span>max_x
+            max_x=x(i);
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+</code></pre></div><p>To call the function, save the above as <code>minmax.m !nc</code>, and run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[minimum,maximum] = minmax(x)
+</code></pre></div></li>
+</ol>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Problem 2: Hint based problem</p>
+<ol>
+<li>Plot the functions <code>$y=x^3$</code> and <code>$y=x^5$</code>, on the interval <code>$[-2,\,2]$</code>, on the same graph.
+Where are the intersections of the curves?</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>You may want to create the following vectors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">100</span>);
+y1=x<span style="color:#f92672">.^</span><span style="color:#ae81ff">3</span>;
+</code></pre></div><p>and use the plot functionality you learned in this unit.</p>
+</div>
+</details>
+<ol start="2">
+<li>Add a title and legend to the graph, label the axes, and save the figure as a <code>.png !nc</code> file.</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>
+<p>Intersections occur at <code>$(x,\,y)=(−1,\,−1),(0,\,0),(1,\,1)$</code>.
+The following commands plot the curves:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">100</span>);
+y1=x<span style="color:#f92672">.^</span><span style="color:#ae81ff">3</span>;
+y2=x<span style="color:#f92672">.^</span><span style="color:#ae81ff">5</span>;
+plot(x,y1,<span style="color:#e6db74">&#39;-&#39;</span>,x,y2,<span style="color:#e6db74">&#39;--&#39;</span>);
+</code></pre></div></li>
+<li>
+<p>The following commands will add a label and legend to the figure:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">legend(<span style="color:#e6db74">&#39;y=x^3&#39;</span>,<span style="color:#e6db74">&#39;y=x^5&#39;</span>);
+xlabel(<span style="color:#e6db74">&#39;x&#39;</span>);
+ylabel(<span style="color:#e6db74">&#39;y&#39;</span>);
+</code></pre></div><p>You can save the file by using &lsquo;Save As&rsquo; in the &lsquo;File&rsquo; menu or by using the following command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">print ExampleFigure.png <span style="color:#f92672">-</span>dpng
+</code></pre></div></li>
+</ol>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +2987,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606929846"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606929846"></script>
     
     
 

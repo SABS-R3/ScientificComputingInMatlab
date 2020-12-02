@@ -12,21 +12,21 @@
     <title>Functions   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1606864897" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1606929846" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1606929846" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606864897" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1606929846" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1606929846"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606864897"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1606929846"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1606929846"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606864897"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1606929846"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1721,37 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<p>A particularly useful feature of MATLAB is the ability to define functions.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>The syntax for defining the function <code>$y=x^2$</code> is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [y] = <span style="color:#a6e22e">xsquared</span>(x)
+    
+    y = x^<span style="color:#ae81ff">2</span>;
+</code></pre></div>
+<div class="notices info" >
+  <div class="label">Info</div>
+  <ol>
+<li>The <code>[y] !nc</code> indicates the variables that will be returned from the function: there may be multiple, e.g. <code>[y1, y2] !nc</code>.</li>
+<li>The <code>(x) !nc</code> indicates the parameters that are passed to the function: there may be multiple, e.g. <code>(x1, x2) !nc</code>.</li>
+</ol>
 
 </div>
 
-
+<p>Type these commands into an M-file called <code>xsquared.m</code> and save this file.
+Now type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">xsquared(<span style="color:#ae81ff">5</span>)
+</code></pre></div><p>and then</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">d=<span style="color:#ae81ff">7</span>;
+xsquared(d)
+</code></pre></div><p>Note that MATLAB also allows you to apply functions to arrays.
+To do this with the power function we modify the above by placing a <code>'.' !nc</code> before the <code>'^' !nc</code> in the above:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [y] = <span style="color:#a6e22e">xsquared</span>(x)
+    
+    y = x<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span>;
+</code></pre></div><p>Now type on the command line</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">e=[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>];
+xsquared(e)
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2904,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1606929846"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1606864897"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606864897"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1606929846"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1606929846"></script>
     
     
 
