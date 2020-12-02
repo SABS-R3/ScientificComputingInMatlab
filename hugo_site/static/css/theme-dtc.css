@@ -236,11 +236,41 @@ div.notices.question p:first-child:after {
     content: none;
 }
 div.notices.question {
-    border-color: rgba(92, 184, 92, 0.8);
-    background: #E6F9E6;
+    border-color: #93c47d;
+    background: #d9ead3;
 }
 div.notices.question > div.label:first-child:before {
     content: "\f059";
+}
+
+div.notices.hint p {
+    border-top: none;
+    background: inherit;
+}
+div.notices.hint p:first-child:after {
+    content: none;
+}
+div.notices.hint {
+    border-color: #6AB0DE;
+    background: #E7F2FA;
+}
+div.notices.hint > div.label:first-child:before {
+    content: "\f05a";
+}
+
+div.notices.solution p {
+    border-top: none;
+    background: inherit;
+}
+div.notices.solution p:first-child:after {
+    content: none;
+}
+div.notices.solution {
+    border-color: #8e7cc3;
+    background: #d9d2e9;
+}
+div.notices.solution > div.label:first-child:before {
+    content: "\f0ae";
 }
 
 summary {
