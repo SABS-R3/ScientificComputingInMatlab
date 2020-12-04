@@ -9,8 +9,3 @@ pre = "<b>1. </b>"
 ### Chapter 1
 
 # Basic introduction to MATLAB
-
-
-{{% notice warning %}}
-Chapter under construction. Original course [available here](http://www.dtc.ox.ac.uk/online-learning/matlab/).
-{{% /notice %}}
