@@ -129,7 +129,7 @@ Walkthrough For example the following commands print out the integers between 1 
       <description>MATLAB incorporates many powerful graphic tools and can provide visualisations in two or three dimensions, and most books on MATLAB have whole chapters devoted to producing graphics.
 Single plots We will now go through how to plot a simple function in MATLAB and save the figure to a file you can use in a report.
 Walkthrough To plot the function $sin(x)$ for $x$ between 0 and 10 type:
-fplot(&amp;#39;sin(x)&amp;#39;,[0 10]) This gives you the following figure on screen:</description>
+fplot(@(x)sin(x),[0 10]) This gives you the following figure on screen:</description>
     </item>
     
     <item>

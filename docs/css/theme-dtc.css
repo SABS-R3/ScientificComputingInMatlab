@@ -115,6 +115,18 @@ a:hover {
     max-width: 67%;
 }
 
+#body img.matlab-screenshot-50 {
+    max-width: 50%;
+}
+
+#body img.matlab-screenshot-40 {
+    max-width: 40%;
+}
+
+#body img.matlab-screenshot-30 {
+    max-width: 30%;
+}
+
 code.has-jax {
     -webkit-font-smoothing: antialiased;
     background: inherit !important;
