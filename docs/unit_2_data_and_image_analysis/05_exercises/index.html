@@ -12,21 +12,21 @@
     <title>Exercises   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100362" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100362" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100362"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607088181"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100362"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100362"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100362"></script>
 
     
   </div>
@@ -1713,10 +1713,110 @@
         
 
 
+<p>This unit closes with a few simple exercises for you to test the skills you have learned.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <ol>
+<li>
+<p>Download the files <a href="/ScientificComputingInMatlab/docs/unit_02/Data1.txt">Data1.txt</a> and <a href="/ScientificComputingInMatlab/docs/unit_02/Data2.txt">Data2.txt</a> to the current working directory and load them into MATLAB.</p>
+</li>
+<li>
+<p>Using the statistical tools you learned earlier, try to identify what the data could be from.</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <p>Plot a histogram of the two data-sets and calculate their means and standard deviations.
+You should be able to recognise an underlying probability distribution.</p>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>You can load the files with the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">dataset1 = load(<span style="color:#e6db74">&#39;Data1.txt&#39;</span>);
+dataset2 = load(<span style="color:#e6db74">&#39;Data2.txt&#39;</span>); 
+</code></pre></div><p>and you can plot the histograms of both datasets using</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>); hist(dataset1); title(<span style="color:#e6db74">&#39;Data1&#39;</span>);
+subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>); hist(dataset2); title(<span style="color:#e6db74">&#39;Data2&#39;</span>);
+</code></pre></div><p>which yields the plots below.</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_02/2_05_1.svg?classes=matlab-screenshot-40" alt="Dataset histograms"></p>
+<p>It is clear that the first data-set is from a normal distribution and the mean and standard deviation are found by using</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">mean(dataset1)
+std(dataset1)
+</code></pre></div><p><code>mean = 175.3321 !nc</code> and <code>std=10.0953 !nc</code></p>
+<p>For the second data-set it is not clear what the distribution is, as there is a relatively low number of data points, but it is still drawn from a normal distribution, whose mean and standard deviation are</p>
+<p><code>mean = 192.0019 !nc</code> and <code>std = 5.2121 !nc</code></p>
+<p>The data are simulated height data.
+The first dataset represents heights of 10,000 men in the UK population, while the second represents the heights of 50 Olympic rowers, so the average height is larger in the second group than in the normal population.</p>
+<p>Code which brings all this together is given below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear; close all;
+<span style="color:#75715e">%</span>
+dataset1 = load(<span style="color:#e6db74">&#39;Data1.txt&#39;</span>);
+dataset2 = load(<span style="color:#e6db74">&#39;Data2.txt&#39;</span>);
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% plot the data as histograms</span>
+subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>); hist(dataset1); title(<span style="color:#e6db74">&#39;Data1&#39;</span>);
+subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>); hist(dataset2); title(<span style="color:#e6db74">&#39;Data2&#39;</span>);
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% calculate the mean and standard deviation of the data</span>
+mean(dataset1)
+std(dataset1) 
+mean(dataset2)
+std(dataset2)
+</code></pre></div>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <ol>
+<li>
+<p>Download the image file <a href="/ScientificComputingInMatlab/docs/unit_02/TestImage.png">TestImage.png</a> to the current working directory and load it into MATLAB.</p>
+</li>
+<li>
+<p>Perform &lsquo;thresholding&rsquo; on the image to remove the noise within it.
+Thresholding is an image analysis technique designed to remove noise from image to pick out its features, in this case by adjusting the intensity to 255 for any pixel in which it is already over 125, and to 0 for any pixel in which it is already below 125.</p>
+</li>
+<li>
+<p>Save the resulting image to file.</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Use <code>imread !nc</code> and <code>imwrite !nc</code> to load and save the image.</p>
+<p>Once the image is loaded in, you can treat it like a traditional matrix so you can perform operations such as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">find(A<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">125</span>)
+</code></pre></div><p>which will give you all the entries of <code>A !nc</code> that are greater than 125, and use this to set them all to 255.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Code that loads the image and performs the thresholding is given below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear; close all;
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Load image</span>
+TestImage = imread(<span style="color:#e6db74">&#39;TestImage.png&#39;</span>);
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Threshold image as instructed in question</span>
+TestImage(TestImage <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">125</span>) = <span style="color:#ae81ff">255</span>;
+TestImage(TestImage <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">125</span>) = <span style="color:#ae81ff">0</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Save thresholded image</span>
+imwrite(TestImage,<span style="color:#e6db74">&#39;ThresholdedImage.png&#39;</span>);
+</code></pre></div><p>The original image is given first and the thresholded image is below, as you can see the noise is removed.</p>
+<p><img src="/ScientificComputingInMatlab/docs/unit_02/TestImage.png" alt="TestImage.png">
+<img src="/ScientificComputingInMatlab/images/unit_02/2_05_ThresholdedImage.png" alt="ThresholdedImage.png"></p>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +2973,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100362"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100362"></script>
     
     
 

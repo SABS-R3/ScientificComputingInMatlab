@@ -34,8 +34,7 @@ When you see things written in typewriter font as in this for example, you shoul
       <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/01_introduction/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Learning objectives Data analysis and statistics are the cornerstones of most quantitative disciplines. MATLAB has many inbuilt commands for calculating statistics from large data-sets. In this unit we will look at some of MATLAB’s inbuilt statistical commands and also use MATLAB to perform some common data analysis techniques. By the end of the unit you should be able to perform simple statistical analyses on data-sets and have gained an understanding of how to use MATLAB to generate various types of random samples.</description>
     </item>
     
     <item>
@@ -124,8 +123,8 @@ Regular activities and resources There are several kinds of activity that you wi
       <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/02_simple_summary_statistics/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Useful MATLAB commands There are many inbuilt MATLAB commands for calculating statistical properties of data. Some of them are listed below:
+ max - returns the maximum value of an array. min – returns the minimum value of an array. mean – returns the mean (average) value of the array. median – returns the median value of an array. mode – returns the mode value of an array. std – returns the standard deviation of an array.</description>
     </item>
     
     <item>
@@ -204,8 +203,8 @@ Checking for MATLAB If you are using a departmental computer then MATLAB may alr
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/03_linear_regression/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>When presented with a data-set, one way to analyse the data is to perform linear regression. The most common form of linear regression is known as ‘least squares fitting’, whose aim is to fit a polynomial curve to the data such that the sum of the squares of the distance from the data points to the line is minimised.
+Info If you have never come across this before then look it up.</description>
     </item>
     
     <item>
@@ -223,8 +222,9 @@ Checking for MATLAB If you are using a departmental computer then MATLAB may alr
       <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/04_basic_data_and_image_processing/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>MATLAB has many powerful tools to read in files and manipulate data, and we will use this functionality here to read in some data and image files to undertake some basic processing.
+There are many MATLAB commands that are used to read in data from files and write data to files, for example
+ load save imread imwrite  Info Before you continue, take a look at the help files for these commands.</description>
     </item>
     
     <item>
@@ -285,8 +285,10 @@ For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following 
       <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_2_data_and_image_analysis/05_exercises/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This unit closes with a few simple exercises for you to test the skills you have learned.
+Question   Download the files Data1.txt and Data2.txt to the current working directory and load them into MATLAB.
+  Using the statistical tools you learned earlier, try to identify what the data could be from.
+   Expand for hint Plot a histogram of the two data-sets and calculate their means and standard deviations.</description>
     </item>
     
     <item>

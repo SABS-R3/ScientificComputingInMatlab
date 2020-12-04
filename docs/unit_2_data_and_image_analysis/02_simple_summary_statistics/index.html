@@ -12,21 +12,21 @@
     <title>Simple summary statistics   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100362" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100362" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100362"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607088181"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100362"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100362"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100362"></script>
 
     
   </div>
@@ -1690,7 +1690,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#useful-matlab-commands">Useful MATLAB commands</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,10 +1717,105 @@
         
 
 
+<h2 id="useful-matlab-commands">Useful MATLAB commands</h2>
+<p>There are many inbuilt MATLAB commands for calculating statistical properties of data.
+Some of them are listed below:</p>
+<ul>
+<li><code>max</code> - returns the maximum value of an array.</li>
+<li><code>min</code> – returns the minimum value of an array.</li>
+<li><code>mean</code> – returns the mean (average) value of the array.</li>
+<li><code>median</code> – returns the median value of an array.</li>
+<li><code>mode</code> – returns the mode value of an array.</li>
+<li><code>std</code> – returns the standard deviation of an array.</li>
+<li><code>var</code> – returns the variance of an array.</li>
+<li><code>hist</code> – plots the values in the array as a histogram.</li>
+<li><code>sort</code> – sorts the elements of the array in ascending order.</li>
+<li><code>sum</code> – returns the sum of all the elements of the array.</li>
+<li><code>rand</code> – generates uniformly distributed random numbers.</li>
+<li><code>randn</code> – generates normally distributed random numbers with mean 0 and variance 1.</li>
+</ul>
+<p>The following activities will help you use these basic commands.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Look at the MATLAB help files (<code>doc max</code> etc) for each of the above commands and apply them all (except rand and randn) to the following vector:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x = [<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">29</span> <span style="color:#ae81ff">37</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">22</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">18</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">53</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">12</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span> <span style="color:#ae81ff">28</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">22</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">70</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">32</span> <span style="color:#ae81ff">47</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">6</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">17</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">22</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">21</span>];
+</code></pre></div><p>What happens if you apply these to a matrix?
+For example, try applying them to the following matrix:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">randn(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">5</span>)
+</code></pre></div><details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The operations yield the following:</p>
+<ul>
+<li><code>max(x)</code> : 47</li>
+<li><code>min(x)</code> : -70</li>
+<li><code>mean(x)</code> : -7.2333</li>
+<li><code>median(x)</code> : -6.5</li>
+<li><code>mode(x)</code> : -22</li>
+<li><code>std(x)</code> : 27.6314</li>
+<li><code>var(x)</code> : 763.4954</li>
+<li><code>hist(x)</code> : <img src="/ScientificComputingInMatlab/images/unit_02/2_02_1.svg?classes=matlab-screenshot-40" alt="Histogram example"></li>
+<li><code>sort(x)</code> :
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; sort(x)
+ans =
+Columns 1 through 17
+-70   -53   -47   -39   -35   -32   -29   -22   -22   -21   -19   -18   -12    -7    -7    -6    -6
+Columns 18 through 30
+    -5     3     4     8     9    12    12    17    22    28    34    37    47
+</code></pre></div></li>
+<li><code>sum(x)</code> : -217</li>
+</ul>
+<p>Applying them to matrices will perform the operation on columns.
+For example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">sum(rand(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">5</span>))
+</code></pre></div><p>will yield a row vector with five elements which are the sums of each column.</p>
+<p>Moreover</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">hist(randn(<span style="color:#ae81ff">1000</span>,<span style="color:#ae81ff">5</span>))
+</code></pre></div><p>will yield the following multiple histogram with each colour representing a column of the matrix.</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_02/2_02_2.svg?classes=matlab-screenshot-40" alt="Histogram example"></p>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Generate a series of random samples of data of increasing size drawn from (i) a uniform distribution and (ii) a normal distribution.
+Draw histograms of each sample and, by calculating the mean and standard deviation of each sample, verify that these two statistics tend to their theoretical limit values as the size of the sample increases.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>The mean and variance for a uniform <code>$U(0,1)$</code> distribution are <code>$\mu=0.5 \,,\, \sigma=1/\sqrt{12}$</code></p>
+<p>The mean and variance for a normal <code>$N(0,1)$</code> distribution are <code>$\mu=0 \,,\, \sigma=1$</code>.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>To generate the data for 1,000 samples use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">X=rand(<span style="color:#ae81ff">1000</span>,<span style="color:#ae81ff">1</span>);
+Y=randn(<span style="color:#ae81ff">1000</span>,<span style="color:#ae81ff">1</span>); 
+</code></pre></div><p>To plot the histograms use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">figure;
+hist(X);
+title(<span style="color:#e6db74">&#39;Data from Uniform&#39;</span>);
+figure;
+hist(Y);
+title(<span style="color:#e6db74">&#39;Data from Normal&#39;</span>);
+</code></pre></div><p>To calculate the mean and standard deviation use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">mean(X)
+std(X)
+mean(Y)
+std(Y)
+</code></pre></div><p>which should be close to the theoretical values of <code>$\mu=0.5 \,,\, \sigma=1/\sqrt{12}$</code> for the <code>$U(0,1)$</code> data and <code>$\mu=0 \,,\, \sigma=1$</code> for the <code>$N(0,1)$</code> data.
+These values should get closer as the sample size increases.</p>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +2972,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100362"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100362"></script>
     
     
 

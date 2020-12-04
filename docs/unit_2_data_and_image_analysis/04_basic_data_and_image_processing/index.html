@@ -12,21 +12,21 @@
     <title>Basic data and image processing   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607088181" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607100362" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100362" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607088181" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100362" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100362"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607088181"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100362"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100362"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607088181"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100362"></script>
 
     
   </div>
@@ -1690,7 +1690,25 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#loading-and-saving-data-files">Loading and saving data files</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#loading-and-saving-the-whole-workspace">Loading and saving the whole workspace</a>
+      <ul>
+        <li><a href="#walkthrough-1">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#loading-and-saving-images">Loading and saving images</a>
+      <ul>
+        <li><a href="#walkthrough-2">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1731,76 @@
         
 
 
+<p>MATLAB has many powerful tools to read in files and manipulate data, and we will use this functionality here to read in some data and image files to undertake some basic processing.</p>
+<p>There are many MATLAB commands that are used to read in data from files and write data to files, for example</p>
+<ul>
+<li><code>load</code></li>
+<li><code>save</code></li>
+<li><code>imread</code></li>
+<li><code>imwrite</code></li>
+</ul>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices info" >
+  <div class="label">Info</div>
+  <p>Before you continue, take a look at the help files for these commands.</p>
 
 </div>
 
+<h2 id="loading-and-saving-data-files">Loading and saving data files</h2>
+<p>In the following example we will load in data from one file and write out the data to a different file.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Download the <a href="/ScientificComputingInMatlab/docs/unit_02/Data1.txt">Data1.txt</a> to the current working directory.</p>
+<p>To load in data from the file &lsquo;Data1.txt&rsquo; we use the load command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">load Data1.txt
+</code></pre></div><p>which creates the variable Data1.txt which is a <code>$10000\times1$</code> vector (seen by using the <code>whos</code> command).</p>
+<p>Alternatively, you could load the file by using the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">data = load(<span style="color:#e6db74">&#39;Data1.txt&#39;</span>);
+</code></pre></div><p>which allows you to specify the variable name.
+If you want to load a file in a different directory, then you need to use the second command as you can pass the file location as a string.
+If, for example, you were storing your data in a different directory (in the current working directory) called &lsquo;Data&rsquo;, you could use the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">data = load(<span style="color:#e6db74">&#39;Data/Data1.txt&#39;</span>);
+</code></pre></div><p>To save data to a file you use the <code>save</code> command, which works in a similar way.
+The following command will save the variable <code>data</code> as a file &lsquo;TestSave.txt&rsquo; in plain text as specified by the <code>–ascii</code> option.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">save <span style="color:#e6db74">&#39;TestSave.txt&#39;</span> data <span style="color:#f92672">-</span>ascii
+</code></pre></div><h2 id="loading-and-saving-the-whole-workspace">Loading and saving the whole workspace</h2>
+<p>You can also use <code>save</code> and <code>load</code> to save all the variables in your workspace as a <code>.mat !nc</code> file.
+Note that this file can only be read by MATLAB, unlike the <code>.txt !nc</code> files we made in the previous example.</p>
+<h3 id="walkthrough-1">Walkthrough</h3>
+<p>We begin with an empty workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><p>and define some variables</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=rand(<span style="color:#ae81ff">10</span>);
+y=rand(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>);
+whos
+</code></pre></div><p>To save all these variables we use the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">save AllVariables.mat;
+</code></pre></div><p>Now if we clear all the variables</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear;
+whos
+</code></pre></div><p>you can see the workspace is now empty.
+The command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">load AllVariables.mat;
+</code></pre></div><p>will load back all the saved variables, as can be seen by typing</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">whos
+</code></pre></div><p>You can also load image files using the &lsquo;imread&rsquo; command as shown in the following example.</p>
+<h2 id="loading-and-saving-images">Loading and saving images</h2>
+<h3 id="walkthrough-2">Walkthrough</h3>
+<p>Download the file <a href="/ScientificComputingInMatlab/docs/unit_02/TestImage.png">TestImage.png</a> to the current working directory.</p>
+<p>This is the image you are saving:</p>
+<p><img src="/ScientificComputingInMatlab/docs/unit_02/TestImage.png" alt="TestImage.png"></p>
+<p>The following command will load the image into MATLAB and store it as a matrix in which each entry is a number between 0 and 255 that represents the intensity of that pixel.
+Note that this is a black-and-white image so there is only one intensity value for each pixel.
+If the image were in colour then there would be three such matrices (one for each base colour).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=imread(<span style="color:#e6db74">&#39;TestImage.png&#39;</span>);
+</code></pre></div><p>You can view the image in MATLAB by typing the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">image(A)
+</code></pre></div><p>Suppose we had made some modifications to the image, for example by cropping the image</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(:,[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">114</span>:<span style="color:#66d9ef">end</span>])=[];
+image(A);
+</code></pre></div><p>The matrix <code>A !nc</code> could be saved as an image by using the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">imwrite(A,<span style="color:#e6db74">&#39;TestCroppedImage.png&#39;</span>);
+</code></pre></div><p>which produces a file &lsquo;TestCroppedImage.png&rsquo; which looks like the following figure</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_02/2_04_TestCroppedImage.png" alt="TestCroppedImage.png"></p>
 
 
 <footer class="footline">
@@ -2873,16 +2954,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100362"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607088181"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607088181"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607100362"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100362"></script>
     
     
 
