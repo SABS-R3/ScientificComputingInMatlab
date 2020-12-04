@@ -288,7 +288,7 @@ For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following 
       <description>This unit closes with a few simple exercises for you to test the skills you have learned.
 Question   Download the files Data1.txt and Data2.txt to the current working directory and load them into MATLAB.
   Using the statistical tools you learned earlier, try to identify what the data could be from.
-   Expand for hint Plot a histogram of the two data-sets and calculate their means and standard deviations.</description>
+   Expand for hint Hint Plot a histogram of the two data-sets and calculate their means and standard deviations.</description>
     </item>
     
     <item>
