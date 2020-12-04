@@ -14,8 +14,10 @@ This unit closes with a few simple exercises for you to test the skills you have
 2. Using the statistical tools you learned earlier, try to identify what the data could be from.
 
 {{% expand "Expand for hint" %}}
+{{% notice hint %}}
 Plot a histogram of the two data-sets and calculate their means and standard deviations.
 You should be able to recognise an underlying probability distribution.
+{{% /notice %}}
 {{% /expand %}}
 
 {{% expand "Expand for solution" %}}
