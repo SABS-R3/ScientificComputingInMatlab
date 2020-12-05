@@ -12,21 +12,21 @@
     <title>Solving $Ax=b$: basic   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100515"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1721,97 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<p>Much of linear algebra is concerned with solving the linear system <code>$Ax=b$</code>.
+MATLAB has many inbuilt functions to do this, and in this section you will learn how to use them.</p>
+<p>The two easiest methods for calculating the solution to <code>$Ax=b$</code> are to calculate the inverse, using <code>inv</code> or the <code>\</code> (backslash) operator.
+The former calculates the inverse explicitly while the latter calculates the solution to <code>$Ax=b$</code> using an appropriate numerical technique, such as Gaussian elimination.
+If you are not familiar with Gaussian elimination, see any textbook on linear algebra, or the <a href="https://mathworld.wolfram.com/GaussianElimination.html">Wolfram Mathworld page</a>.</p>
+<p>We will now go through an example of using these two solution methods.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Let</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">4096</span>);
+b=randn(<span style="color:#ae81ff">4096</span>,<span style="color:#ae81ff">1</span>);
+</code></pre></div>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$Ax=b$</code> using both of the methods described above and time how long each method takes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">tic, x1=inv(A)<span style="color:#f92672">*</span>b; toc
+tic, x2=A<span style="color:#f92672">\</span>b; toc
+plot(x1<span style="color:#f92672">-</span>x2)
+</code></pre></div><p>What is the error between the two solutions and which was quicker?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Depending on your computer, the <code>\</code> backslash operator will probably take less than half the time of explicitly calculating the inverse.
+Plotting <code>x1-x2 !nc</code></p>
+<p><img src="/ScientificComputingInMatlab/images/unit_04/4_06_1.svg?classes=matlab-screenshot-40" alt="Backslash vs inverse"></p>
+<p>shows that the maximum error is roughly 1e-12, which can be confirmed by calculating <code>max(abs(x1-x2))</code> which, for this random linear system, yields 1.0467e-12.</p>
+<p>Your answer will be different due to the randomness of <code>A !nc</code> and <code>b !nc</code>.</p>
+</div>
+</details>
 
 </div>
 
+<p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><p>The following code calculates the efficiency of the two solution methods for progressively larger systems.
+(Note that this plots the data using a log vs. log plot (<code>help loglog</code>) as the values grow exponentially.)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">% we will perform 20 repeats on 12 problem sizes</span>
+num_repeats=<span style="color:#ae81ff">20</span>;
+num_problems=<span style="color:#ae81ff">12</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% 2, 4, 8, 16, ..., 4096</span>
+problem_sizes=<span style="color:#ae81ff">2.</span>^(<span style="color:#ae81ff">1</span>:num_problems);
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% pre-allocate two matrices to store the times in</span>
+times_inv=zeros(num_repeats,num_problems);
+times_slash=zeros(num_repeats,num_problems);
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">for</span> problem=<span style="color:#ae81ff">1</span>:num_problems
+    problem_size=problem_sizes(problem);
+    <span style="color:#66d9ef">for</span> repeat=<span style="color:#ae81ff">1</span>:num_repeats
+        <span style="color:#75715e">% create the random matrix A and vector b</span>
+        A=randn(problem_size);
+        b=randn(problem_size,<span style="color:#ae81ff">1</span>);
+        <span style="color:#75715e">% time the two methods of solving Ax=b</span>
+        tic; x1=inv(A)<span style="color:#f92672">*</span>b; times_inv(repeat,problem)=toc;
+        tic; x2=A<span style="color:#f92672">\</span>b; times_slash(repeat,problem)=toc;
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Plot a log-log plot of average time vs problem size</span>
+loglog(problem_sizes,mean(times_inv),<span style="color:#e6db74">&#39;rx&#39;</span>,<span style="color:#75715e">...</span>
+    problem_sizes,mean(times_slash),<span style="color:#e6db74">&#39;bo&#39;</span>)
+ylabel(<span style="color:#e6db74">&#39;Elapsed time&#39;</span>)
+title(<span style="color:#e6db74">&#39;Comparison of times to solve a matrix problem using inv and backslash&#39;</span>)
+legend(<span style="color:#e6db74">&#39;inv(A)*b&#39;</span>,<span style="color:#e6db74">&#39;A\\b&#39;</span>,<span style="color:#e6db74">&#39;Location&#39;</span>,<span style="color:#e6db74">&#39;NorthWest&#39;</span>)
+</code></pre></div><p>First, read the code above and make sure you understand what it does.
+Next, run the code.
+It may take up to a minute, depending on your computer.</p>
 
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>What does the resulting plot tell you about the speeds of the two methods?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Running the above code produces the following figure:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_04/4_06_2.svg?classes=matlab-screenshot-40" alt="Backslash vs inverse loglog"></p>
+<p>This shows that, once the linear system is large enough (about 16x16), then backslash is always faster than calculating the inverse.
+Because the matrices are generated randomly, the code averages over a number of repeats to try and understand the average behaviour.</p>
+<p>This is an artificial problem, but later you will see how an approach to a &lsquo;real world&rsquo; problem is affected by the choice of solution methods.</p>
+<p>Can you think of any reasons that 4x4 systems might be quicker to solve than 2x2 systems?
+Why might the inverse be faster than backslash for 4x4 systems?</p>
+</div>
+</details>
+
+</div>
+
+<p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2964,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
     
     
 

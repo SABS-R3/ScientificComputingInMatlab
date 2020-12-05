@@ -12,21 +12,21 @@
     <title>Introduction   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100515"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
 
     
   </div>
@@ -1690,7 +1690,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning objectives</a></li>
+    <li><a href="#reading-list">Reading list</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1718,23 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<h2 id="learning-objectives">Learning objectives</h2>
+<p>The solution of systems of linear equations forms the basis of many techniques in applied mathematics and statistics, so numerical linear algebra forms perhaps the most important set of tools in scientific programming.
+MATLAB has been developed specifically to handle matrix and vector operations (hence its name – a portmanteau of &lsquo;matrix&rsquo; and &lsquo;laboratory&rsquo;).
+It has some particularly efficient and effective inbuilt commands to enable the easy manipulation of matrices and vectors, and very straightforward solutions of linear systems (and hence of nonlinear systems).</p>
+<p>The aim of this unit is to show you how to use the inbuilt functionality to manipulate vectors and matrices and to solve the linear system <code>$A\mathbf{x}=\mathbf{b}$</code>.
+More importantly, you will see which methods are appropriate in which situation.</p>
+<p>The unit begins with a walkthrough of the basics of matrix manipulation in MATLAB which will give you a good introduction to its inbuilt functionality.
+There are some exercises at the end to test your understanding.
+The second half of the unit is concerned with the solution of the linear system <code>$A\mathbf{x}=\mathbf{b}$</code>, and will require you to use the basic commands you learned in the first half in order to solve some typical linear systems that arise in solving partial differential equations.
+(Note: You will not need to understand where the linear systems come from, but they are from a &lsquo;real world problem&rsquo; so they will give you an insight into the power of MATLAB.)</p>
+<p>This unit assumes you are already familiar with manipulating vectors and matrices, and with concepts such as eigenvalues and determinants.
+This material is covered at A level and in the first year of undergraduate mathematics degrees, so any introductory linear algebra book will contain the material.
+Some examples are listed below.</p>
+<h2 id="reading-list">Reading list</h2>
+<p>There are many undergraduate texts on linear algebra, which are mainly theoretical.
+One that is particularly recommended is <a href="http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph016130511"><em>Linear Algebra and its Applications</em> by Gilbert Strang</a>.
+Again, all ideas will be introduced where they are needed, and references will be given.</p>
 
 
 <footer class="footline">
@@ -2870,16 +2885,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
     
     
 

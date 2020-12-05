@@ -12,21 +12,21 @@
     <title>Vectors and matrices   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100515"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
 
     
   </div>
@@ -1690,7 +1690,25 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-vector-and-matrix-manipulation">Basic vector and matrix manipulation</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#size-of-vectors-and-matrices">Size of vectors and matrices</a>
+      <ul>
+        <li><a href="#walkthrough-1">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#parts-of-vectors-and-matrices">Parts of vectors and matrices</a>
+      <ul>
+        <li><a href="#walkthrough-2">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1731,95 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<p>The following walkthrough exercises contain a number of activities designed to teach you the basics of using MATLAB for working with vectors and matrices.</p>
+<h2 id="basic-vector-and-matrix-manipulation">Basic vector and matrix manipulation</h2>
+<p>You have already learned many basic matrix manipulation commands in the first unit.
+This walkthrough provides a quick review of this material with a few new commands added.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Let</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+y=[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>]<span style="color:#f92672">&#39;</span>
+z=[<span style="color:#ae81ff">2</span>;<span style="color:#ae81ff">4</span>;<span style="color:#ae81ff">6</span>]
+</code></pre></div><p>Enter the following commands on the command line and make sure you understand what they do.
+If you are unsure use the MATLAB help files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x<span style="color:#f92672">*</span>y
+y<span style="color:#f92672">*</span>x
+y<span style="color:#f92672">*</span>z
+y<span style="color:#f92672">.*</span>z
+sum(x)
+prod(y)
+</code></pre></div>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Do all of the operations work? If one doesn&rsquo;t then why not.</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p><code>y*z</code> will not work as this is multiplying two column vectors together.</p>
+</div>
+</details>
 
 </div>
 
-
+<p>Now let</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>;<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>;<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>]
+</code></pre></div><p>Enter the following commands on the command line and make sure you understand what they do.
+If you are unsure use the MATLAB help files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">B=A<span style="color:#f92672">&#39;</span>
+A<span style="color:#f92672">*</span>y
+A<span style="color:#f92672">*</span>B
+det(A)
+inv(B)
+B<span style="color:#f92672">*</span>inv(B)
+trace(A)
+A(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
+A(:,<span style="color:#ae81ff">2</span>)
+A(<span style="color:#ae81ff">1</span>,:)
+A(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">3</span>)
+A([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>],:)
+A^<span style="color:#ae81ff">2</span>
+A<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span>
+sum(A,<span style="color:#ae81ff">1</span>)
+prod(A,<span style="color:#ae81ff">2</span>)
+C=[A,z]
+ones(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>)
+ones(<span style="color:#ae81ff">5</span>)
+zeros(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>)
+</code></pre></div><p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><h2 id="size-of-vectors-and-matrices">Size of vectors and matrices</h2>
+<p>You also learned lots of commands for finding the size of vectors and matrices.</p>
+<h3 id="walkthrough-1">Walkthrough</h3>
+<p>Let</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">512</span>);
+b=randn(<span style="color:#ae81ff">512</span>,<span style="color:#ae81ff">1</span>);
+</code></pre></div><p>Enter the following commands on the command line and make sure you understand what they do.
+If you are unsure, use the MATLAB help files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">length(A)
+size(A)
+size(b)
+b(<span style="color:#66d9ef">end</span>)
+b(<span style="color:#66d9ef">end</span><span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>:<span style="color:#66d9ef">end</span>)
+</code></pre></div><p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><h2 id="parts-of-vectors-and-matrices">Parts of vectors and matrices</h2>
+<p>We often wish to look at certain parts of matrices: the diagonal entries, for example.
+The following will introduce some commands that will allow you to select specific entries.</p>
+<h3 id="walkthrough-2">Walkthrough</h3>
+<p>Let</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A= randn(<span style="color:#ae81ff">10</span>);
+</code></pre></div><p>Enter the following commands on the command line and use <code>spy</code> to visualise the non-zero entries of the resulting matrices.
+What do you see?</p>
+<p>Make sure you understand what all the commands do. If you are unsure, use the MATLAB help files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">triu(A)
+tril(A)
+diag(A)
+diag(A,<span style="color:#ae81ff">2</span>)
+diag(diag(A))
+</code></pre></div><p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2972,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
     
     
 

@@ -12,21 +12,21 @@
     <title>Solving $Ax=b$: iterative   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100515"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1721,100 @@
         
 
 
+<p>This section is appropriate if you have a background in mathematics and have encountered matrices before.
+If not then feel free to attempt this section however the material assumes a relatively high level of knowledge of linear algebra.</p>
+<p>MATLAB has many inbuilt methods for solving <code>$Ax=b$</code>.
+Many of these are iterative and suitable for different kinds of matrices.
+If you have information about the structure of <code>$A$</code> and know which iterative solver is the best to use (see <a href="http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph016130511"><em>Linear Algebra and its Applications</em> by Gilbert Strang</a> for details), you can specify the solver in MATLAB.
+The help files will specify the types of matrix to which they should be applied.
+We will now use two of these solvers based on the &lsquo;conjugate gradient&rsquo; method.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Create a Symmetric Positive Definite (SPD) matrix (and check that it is SPD) by using the following commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">50</span>);
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<span style="color:#75715e">% Make sure A is SPD</span>
+A=A<span style="color:#f92672">*</span>A<span style="color:#f92672">&#39;</span>;
+
+<span style="color:#75715e">% Verify that this gives us a symmetric matrix</span>
+spy(A<span style="color:#f92672">-</span>A<span style="color:#f92672">&#39;</span>)
+find((A<span style="color:#f92672">-</span>A<span style="color:#f92672">&#39;</span>)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1e-10</span>)
+
+<span style="color:#75715e">% check positive definite: all eigenvalues &gt; 0</span>
+e=eig(A);
+min(e)
+</code></pre></div><p>Create a suitable right-hand side <code>$b$</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">b=sum(A,<span style="color:#ae81ff">2</span>);
+</code></pre></div>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>With <code>$A$</code> and <code>$b$</code> defined as above, what is the exact solution to <code>$Ax=b$</code>?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Every element of <code>$x$</code> should be exactly 1.
+If this is not clear, make sure you understand what <code>sum(A,2)</code> is doing, and try writing out a 3x3 system by hand.</p>
+</div>
+</details>
 
 </div>
 
+<p>Calculate <code>$x$</code> using the preconditioned Conjugate Gradient method (CG) (see <a href="http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph016130511"><em>Linear Algebra and its Applications</em> by Gilbert Strang</a> for details if you are interested).
+Note that  <code>$A$</code> must be SPD to use this solver.
+Try using it on a non-SPD matrix.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x1=pcg(A,b);
+x2=pcg(A,b,<span style="color:#ae81ff">1e-6</span>,<span style="color:#ae81ff">100</span>);
+</code></pre></div><p>What does the second command do differently?
+Look at <code>doc pcg</code>.
+Now look at the solutions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">format long
+max(abs(x1<span style="color:#f92672">-</span>x2))
+plot(x1<span style="color:#f92672">-</span>x2)
+</code></pre></div><p>This gives the following figure for the error <code>$x1-x2$</code>:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_04/4_07_1.svg?classes=matlab-screenshot-40" alt="pcg error"></p>
+<p>which shows that the solutions are not the same.</p>
 
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Why is this?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>When running the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x1=pcg(A,b);
+</code></pre></div><p>you should have received the following output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; x1=pcg(A,b);
+pcg stopped at iteration 20 without converging to the desired tolerance 1e-06
+because the maximum number of iterations was reached.
+The iterate returned (number 19) has relative residual 0.0019.
+</code></pre></div><p>Therefore the method did not converge in the given maximum number of steps.
+It defaults to 20.
+The command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x2=pcg(A,b,<span style="color:#ae81ff">1e-6</span>,<span style="color:#ae81ff">100</span>);
+</code></pre></div><p>sets the maximum number of iterations at 100, which is enough for the method to converge.</p>
+</div>
+</details>
+
+</div>
+
+<p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><p>The <a href="https://mathworld.wolfram.com/BiconjugateGradientMethod.html">Biconjugate Gradient method</a> can be used in a similar way.
+Note that <code>$A$</code> does not have to be SPD in this case.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">50</span>);
+b=sum(A,<span style="color:#ae81ff">2</span>);
+x=bicg(A,b,<span style="color:#ae81ff">1e-6</span>,<span style="color:#ae81ff">100</span>);
+
+plot(x)
+</code></pre></div><p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div><p>To learn more about these iterative methods, see:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">doc pcg
+doc bicg
+doc bicgstab
+doc gmres
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2967,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
     
     
 

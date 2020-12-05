@@ -12,21 +12,21 @@
     <title>Eigenvalues and eigenvectors   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607100515" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607100515" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607100515"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607100515"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,14 +1721,91 @@
         
 
 
+<p>Key properties of square matrices are their eigenvalues and eigenvectors, which enable them to be written in a simpler form, through a process known as eigenvalue decomposition.
+This is useful for performing mathematical and numerical analysis of matrices in order to identify their key features.
+A similar process is available for non-square matrices, known as singular value decomposition (SVD).
+(Note that SVD also exists for square matrices.)
+There are inbuilt tools within MATLAB that may be used to perform both of these decompositions.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices info" >
+  <div class="label">Info</div>
+  <p>For more details on the theory of eigenvalues and singular value decomposition see <a href="http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph016130511"><em>Linear Algebra and its Applications</em> by Gilbert Strang</a>, or the following web pages:</p>
+<ul>
+<li><a href="http://mathworld.wolfram.com/Eigenvalue.html">http://mathworld.wolfram.com/Eigenvalue.html</a></li>
+<li><a href="http://mathworld.wolfram.com/Eigenvector.html">http://mathworld.wolfram.com/Eigenvector.html</a></li>
+<li><a href="http://mathworld.wolfram.com/EigenDecomposition.html">http://mathworld.wolfram.com/EigenDecomposition.html</a></li>
+<li><a href="http://mathworld.wolfram.com/SingularValueDecomposition.html">http://mathworld.wolfram.com/SingularValueDecomposition.html</a></li>
+</ul>
+
+</div>
+
+<p>We now look at the commands in MATLAB that enable us to calculate these decompositions.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>Consider the square matrix</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">10</span>);
+</code></pre></div><p>The following commands calculate the eigenvalues and eigenvectors of the matrix (enter the commands):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">e=eig(A);
+[V,D]=eig(A);
+</code></pre></div><p>Print <code>e !nc</code>, <code>V !nc</code> and <code>D !nc</code>.</p>
+<p>Evaluate the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A<span style="color:#f92672">*</span>V <span style="color:#f92672">-</span> V<span style="color:#f92672">*</span>D
+</code></pre></div>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>What does this give you?
+Why is this?
+Use the MATLAB help files to work out what <code>V !nc</code> and <code>D !nc</code> are.</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>This gives you a matrix that is zero to machine precision (that is, all their entries are less than <code>$10^{−12}$</code>).
+This is because the eigenvalue decomposition of <code>$A$</code> is <code>$A=VDV^{-1}$</code>, where <code>$V$</code> is a matrix whose columns are the eigenvectors of <code>$A$</code> and <code>$D$</code> is a diagonal matrix containing the eigenvalues of <code>$A$</code>.</p>
+</div>
+</details>
+
+</div>
+
+<p>Now consider the non-square matrix:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=randn(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">5</span>);
+</code></pre></div><p>The following commands calculate the singular value decomposition (SVD) of the matrix:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[U,S,V]=svd(A);
+</code></pre></div><p>Evaluate the following</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A <span style="color:#f92672">-</span> U<span style="color:#f92672">*</span>S<span style="color:#f92672">*</span>V<span style="color:#f92672">&#39;</span>
+</code></pre></div>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>What does this give you?
+Why is this?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Again, this gives you a matrix that is zero to machine precision (all entries are less than <code>$10^{−12}$</code>).
+This is because the singular value decomposition of <code>$A$</code> is <code>$A=USV^{T}$</code>, where <code>$U$</code> and <code>$V$</code> are square orthogonal matrices of different sizes and <code>$S$</code> is a matrix of the same size as <code>$A$</code> whose diagonal entries are the singular values of <code>$A$</code>, with extra rows or columns of zeros depending on the size of <code>$A$</code>.</p>
+</div>
+</details>
 
 </div>
 
 
+<div class="notices info" >
+  <div class="label">Info</div>
+  <p>Note that the command <code>[U,S,V]=svd(A,0)</code> calculates the economic version of the SVD.
+What is this?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The economic form just removes the zero rows/columns from <code>$S$</code>.</p>
+</div>
+</details>
+
+</div>
+
+<p>Now clear the workspace</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -2873,16 +2958,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607100515"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607100515"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
     
     
 
