@@ -9,8 +9,3 @@ pre = "<b>4. </b>"
 ### Chapter 4
 
 # Linear algebra
-
-
-{{% notice warning %}}
-Chapter under construction. Original course [available here](http://www.dtc.ox.ac.uk/online-learning/matlab/).
-{{% /notice %}}
