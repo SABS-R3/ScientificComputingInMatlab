@@ -90,7 +90,7 @@ loglog(problem_sizes,mean(times_inv),'rx',...
     problem_sizes,mean(times_slash),'bo')
 ylabel('Elapsed time')
 title('Comparison of times to solve a matrix problem using inv and backslash')
-legend('inv(A)*b','A\b','Location','NorthWest')
+legend('inv(A)*b','A\\b','Location','NorthWest')
 ```
 
 First, read the code above and make sure you understand what it does.
