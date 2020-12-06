@@ -26,7 +26,7 @@ end
 We will consider manipulation of the matrix `$A$`, which will be used again in later exercises as the solution to the linear system containing this `$A$`.
 This corresponds to a finite difference solution to Poisson's equation:
 
-$$-\nabla^2u=f$$
+`$$-\nabla^2u=f$$`
 
 on the unit square with zero [Dirichlet boundary conditions](https://en.wikipedia.org/wiki/Dirichlet_boundary_condition).
 
