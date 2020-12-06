@@ -53,7 +53,7 @@ An approximation to `$f(x)=0$` may be calculated using the following algorithm:
 1. Start with an initial guess `$x_0$`.
 
 2. Calculate the next solution using:
-    $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+    `$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$`
 
 3. Repeat step 2 until you have the root to the required accuracy.
 

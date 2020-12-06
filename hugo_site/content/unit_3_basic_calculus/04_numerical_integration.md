@@ -19,7 +19,7 @@ Let the points `$x_0,x_1,x_2,\ldots,x_N$` be equally spaced points on the interv
 Now let `$y_i=f(x_i)$`.
 The Trapezium rule for approximating integrals is:
 
-$$\int_a^b f(x) \,dx \approx h\left( \frac{1}{2}y_0+y_1+y_2+\ldots+y_{N_1}+\frac{1}{2}y_N \right).$$
+`$$\int_a^b f(x) \,dx \approx h\left( \frac{1}{2}y_0+y_1+y_2+\ldots+y_{N_1}+\frac{1}{2}y_N \right).$$`
 
 This is equivalent to breaking up the area under the curve into a series of trapezia and calculating their areas, as shown in the following figure, where `$y_i=f(x_i)$`.
 The figure is from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/d1/Integration_num_trapezes_notation.svg), unmodified, shared under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
@@ -28,6 +28,6 @@ The figure is from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/
 
 Assuming that `$N$` is even, Simpson's rule for approximating integrals is
 
-$$\int_a^b f(x) \,dx \approx \frac{h}{3}\left( y_0 + 4\left( y_1+y_3+\ldots+y_{N-1} \right) + 2\left( y_2+y_4+\ldots+y_{N-2} + y_N \right)\right). $$
+`$$\int_a^b f(x) \,dx \approx \frac{h}{3}\left( y_0 + 4\left( y_1+y_3+\ldots+y_{N-1} \right) + 2\left( y_2+y_4+\ldots+y_{N-2} + y_N \right)\right). $$`
 
 This is derived in a similar way to the Trapezium rule, but by approximating the function by a quadratic curve on each interval, rather than the linear curve used by the Trapezium rule.

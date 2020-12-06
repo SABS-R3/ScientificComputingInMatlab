@@ -11,16 +11,16 @@ Hints and solutions are available.
 {{% notice question %}}
 Do the following problem with pen and paper.
 Using the Taylor series expansion of the form:
-$$y(t)=y(a)+(t−a)y'(a)+(t−a)^2y''(a)+(t−a)^3\frac{y'''(a)}{3!}+\ldots$$
+`$$y(t)=y(a)+(t−a)y'(a)+(t−a)^2y''(a)+(t−a)^3\frac{y'''(a)}{3!}+\ldots$$`
 
 1. Derive the forward difference formula,
-    $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h}$$
+    `$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h}$$`
 2. Derive the backward difference formula,
-    $$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h}$$
+    `$$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h}$$`
 3. Derive the central difference formula,
-    $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h}$$
+    `$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h}$$`
 4. Optional: If you are feeling adventurous derive the second derivative approximation,
-    $$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2}$$
+    `$$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2}$$`
 
 Hint: you will need to include more terms in your Taylor expansion.
 
@@ -28,25 +28,25 @@ Hint: you will need to include more terms in your Taylor expansion.
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
 1. Let `$t=x_{i+1}$` and `$a=x_i$`. Then the first two terms of the Taylor expansion give:
-    $$y_{i+1} \approx y_i+hy'(x_i)$$
+    `$$y_{i+1} \approx y_i+hy'(x_i)$$`
     Rearranging this gives:
-    $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h},$$
+    `$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h},$$`
     the forward difference rule.  
 
 2. Similarly, using `$t=x_{i−1}$` and `$a=x_i$` gives, on rearranging:
-    $$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h},$$
+    `$$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h},$$`
     the backward difference rule.  
 
 3. Adding the two previous formulae together and dividing by 2 gives:
-    $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h},$$
+    `$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h},$$`
     the central difference rule.  
 
 4. Finally, if we include the third term in the expansions in 1. and 2. then we get:
-    $$y_{i+1} \approx y_i+hy'(x_i)+\frac{h^2}{2}y''(x_i)$$
+    `$$y_{i+1} \approx y_i+hy'(x_i)+\frac{h^2}{2}y''(x_i)$$`
     and
-    $$y_{i−1} \approx y_i−hy'(x_i)+\frac{h^2}{2}y''(x_i).$$
+    `$$y_{i−1} \approx y_i−hy'(x_i)+\frac{h^2}{2}y''(x_i).$$`
     Adding these together and rearranging gives:
-    $$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2},$$
+    `$$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2},$$`
     the second derivative approximation.  
 {{% /notice %}}
 {{% /expand %}}
