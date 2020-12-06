@@ -24,7 +24,7 @@ $$\int_a^b f(x) \,dx \approx h\left( \frac{1}{2}y_0+y_1+y_2+\ldots+y_{N_1}+\frac
 This is equivalent to breaking up the area under the curve into a series of trapezia and calculating their areas, as shown in the following figure, where `$y_i=f(x_i)$`.
 The figure is from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/d1/Integration_num_trapezes_notation.svg), unmodified, shared under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
-![Trapezium Rule](/ScientificComputingInMatlab/images/unit_03/3_04_1_trapezium.svg?classes=matlab-screenshot-40)  
+![Trapezium Rule](/ScientificComputingInMatlab/images/unit_03/3_04_1_trapezium.svg?classes=matlab-screenshot-40)
 
 Assuming that `$N$` is even, Simpson's rule for approximating integrals is
 
