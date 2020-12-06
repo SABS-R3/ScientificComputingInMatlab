@@ -12,21 +12,21 @@
     <title>Solution of nonlinear equations   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1690,7 +1690,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary-of-mathematics-used">Summary of mathematics used</a>
+      <ul>
+        <li><a href="#interval-bisection">Interval bisection</a></li>
+        <li><a href="#newton-raphson">Newton-Raphson</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1722,68 @@
         
 
 
+<p>We very often need to find the zero of a complex non-linear function when working with mathematical modelling problems, perhaps most frequently when we wish to find the value (or values) of <code>$x$</code> such that two functions, say <code>$f$</code> and <code>$g$</code>, are equal, that is <code>$f(x)=g(x)$</code>.
+This problem is equivalent to letting <code>$y(x)=f(x)−g(x)$</code> and determining the value(s) of <code>$x$</code> such that <code>$y(x)=0$</code>.</p>
+<p>Here we will use the numerical methods of interval bisection and Newton&rsquo;s method (also known as Newton–Raphson) to find the zero of a function.</p>
+<h2 id="summary-of-mathematics-used">Summary of mathematics used</h2>
+<h3 id="interval-bisection">Interval bisection</h3>
+<p>Suppose <code>$f(x)$</code> is a continuous function, such that <code>$f(a)&lt;0$</code> and <code>$f(b)&gt;0$</code>.
+An approximation to <code>$f(x)=0$</code> may be calculated using the following algorithm:</p>
+<ol>
+<li>
+<p>Let <code>$c = \frac{(a+b)}{2}$</code></p>
+</li>
+<li>
+<p>If <code>$f(c)&lt;0$</code>, then the root lies in the interval <code>$[c,b]$</code>, so let <code>$a=c$</code>.
+If <code>$f(c)&gt;0$</code>, then the root lies in the interval <code>$[a,c]$</code>, so let <code>$b=c$</code>. If <code>$f(c)=0$</code> then the root is at <code>$x=c$</code></p>
+</li>
+<li>
+<p>Repeat this process until you have a root to the desired accuracy.</p>
+</li>
+</ol>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Do this problem with pen and paper.</p>
+<p>Modify this algorithm for the case <code>$f(a)&gt;0$</code> and <code>$f(b)&lt;0$</code></p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>
+<p>Let <code>$c = \frac{(a+b)}{2}$</code></p>
+</li>
+<li>
+<p>If <code>$f(c)&lt;0$</code>, then the root lies in the interval <code>$[c,b]$</code>, so let <code>$a=c$</code>.
+If <code>$f(c)&gt;0$</code>, then the root lies in the interval <code>$[a,c]$</code>, so let <code>$b=c$</code>.
+If <code>$f(c)=0$</code> then the root is at <code>$x=c$</code>.</p>
+</li>
+<li>
+<p>Repeat this process until you have a root to the desired accuracy.</p>
+</li>
+</ol>
+</div>
+</details>
 
 </div>
 
+<h3 id="newton-raphson">Newton-Raphson</h3>
+<p>Suppose that <code>$f(x)$</code> is a continuous function.
+An approximation to <code>$f(x)=0$</code> may be calculated using the following algorithm:</p>
+<ol>
+<li>
+<p>Start with an initial guess <code>$x_0$</code>.</p>
+</li>
+<li>
+<p>Calculate the next solution using:
+<code>$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$</code></p>
+</li>
+<li>
+<p>Repeat step 2 until you have the root to the required accuracy.</p>
+</li>
+</ol>
+<p>For more details on Newton–Raphson see: <a href="https://mathworld.wolfram.com/NewtonsMethod.html">https://mathworld.wolfram.com/NewtonsMethod.html</a></p>
 
 
 <footer class="footline">
@@ -2873,16 +2937,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

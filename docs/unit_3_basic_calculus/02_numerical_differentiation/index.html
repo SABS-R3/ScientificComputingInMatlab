@@ -12,21 +12,21 @@
     <title>Numerical differentiation   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1690,7 +1690,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary-of-mathematics-used">Summary of mathematics used</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1717,29 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>You should already be familiar with the idea of analytical differentiation and be able to differentiate simple functions like <code>$y=x^n$</code> and <code>$y=sin(x)$</code>.
+If you don’t know how to do this, look it up now in any A level textbook or the relevant section of the <a href="https://en.wikibooks.org/wiki/Calculus/Differentiation/Differentiation_Defined">Calculus Wikibook</a>.</p>
+<p>Sometimes functions are highly non-linear and a closed form for the derivative may be difficult to calculate.
+For example</p>
+<p><code>$$y=x^{\ln x}$$</code></p>
+<p>Alternatively, <code>$y$</code> can be defined as the solution to an equation, so we can not calculate a closed form for <code>$y=f(x)$</code> to which the traditional rules of differentiation may be applied.
+In such cases we may calculate a numerical approximation for the derivative using the following difference formulae.</p>
+<h2 id="summary-of-mathematics-used">Summary of mathematics used</h2>
+<p>Suppose <code>$y=f(x)$</code>.
+Let the points <code>$x_0,x_1,x_2,\ldots,x_N$</code> be equally spaced over the interval <code>$\left[a,b\right]$</code>, and let <code>$h=\frac{1}{N}\left(x_N−x_0\right)=x_{i+1}−x_i$</code>.
+Now let <code>$y_i=f(x_i)$</code>.</p>
+<ul>
+<li>The forward difference approximation to the first derivative at <code>$x=x_i$</code> is given by:
+<code>$$\frac{y_{i+1}-y_i}{h}$$</code></li>
+<li>The backward difference approximation to the first derivative at <code>$x=x_i$</code> is given by:
+<code>$$\frac{y_i−y_{i−1}}{h}$$</code></li>
+<li>The central difference approximation to the first derivative at <code>$x=x_i$</code> is given by:
+<code>$$\frac{y_{i+1}−y_{i−1}}{2h}$$</code></li>
+<li>An approximation to the second derivative at <code>$x=x_i$</code> is given by:
+<code>$$\frac{y_{i+1}−2y_i+y_{i−1}}{h^2}$$</code></li>
+</ul>
+<p>Where <code>$h$</code> is assumed to be small, the smaller <code>$h$</code> is, the better the approximation becomes.
+The derivation of these forms is undertaken in the next exercise.</p>
 
 
 <footer class="footline">
@@ -2873,16 +2893,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

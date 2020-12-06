@@ -12,21 +12,21 @@
     <title>Exercises 3   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1714,9 +1714,164 @@
 
 
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Let <code>$f(x) = x^3 - 1 $</code>.</p>
+<ol>
+<li>
+<p>Use the bisection method on the interval <code>$[−1,10]$</code> to calculate the root of <code>$f(x)=0$</code> correct to two decimal places.
+How many bisections were necessary?</p>
+</li>
+<li>
+<p>Use Newton–Raphson with <code>$x_0=10$</code> to calculate the root of <code>$f(x)=0$</code> correct to two decimal places.
+How many iterations were necessary?</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>
+<p>14 bisections are required for interval bisection:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Interval bisection method</span>
+<span style="color:#75715e">% Firstly define the ends of the interval [-1,10]</span>
+a=<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+b=<span style="color:#ae81ff">10</span>;
+NumberOfBisections=<span style="color:#ae81ff">0</span>;   <span style="color:#75715e">% Initialising</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (b<span style="color:#f92672">-</span>a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.001</span>) <span style="color:#75715e">% Want root correct to 2 decimal places</span>
+    c=(a<span style="color:#f92672">+</span>b)<span style="color:#f92672">*</span><span style="color:#ae81ff">0.5</span>;
+    f0=a^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at a</span>
+    f1=c^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at c</span>
+    f2=b^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at b</span>
+    <span style="color:#66d9ef">if</span> (f0<span style="color:#f92672">*</span>f1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+        a=c;
+    <span style="color:#66d9ef">elseif</span> (f0<span style="color:#f92672">*</span>f1 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+        b=c;
+    <span style="color:#66d9ef">else</span>
+        b=a;
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Increment number of bisections</span>
+    NumberOfBisections=NumberOfBisections<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+root = c
+NumberOfBisections
+</code></pre></div></li>
+<li>
+<p>9 iterations are required for Newton–Raphson.
+Example code to solve this is given below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Newton-Raphson method</span>
+<span style="color:#75715e">%</span>
+x=<span style="color:#ae81ff">10</span>;       <span style="color:#75715e">% Approximation to solution, x0</span>
+diff=<span style="color:#ae81ff">1</span>;                 <span style="color:#75715e">% Initialising</span>
+NumberOfIterations=<span style="color:#ae81ff">0</span>;   <span style="color:#75715e">% Initialising</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> ( diff <span style="color:#f92672">&gt;</span>= <span style="color:#ae81ff">0.001</span> )
+    y=x<span style="color:#f92672">-</span>(x^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">/</span>(<span style="color:#ae81ff">3</span><span style="color:#f92672">*</span>x<span style="color:#f92672">*</span>x);
+    diff=abs(y<span style="color:#f92672">-</span>x);  <span style="color:#75715e">% calculate |x_(n+1) - x_n|</span>
+    x=y;            <span style="color:#75715e">% Update solution approximation</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Increment number of iterations</span>
+    NumberOfIterations=NumberOfIterations<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+root = x
+NumberOfIterations
+</code></pre></div></li>
+</ol>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <ol>
+<li>Repeat the previous question for <code>$f(x)=x^5+ \frac{x}{1000000}$</code>.</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Modify the code from the previous answer.
+All you need to change is the function definitions.</p>
+</div>
+</details>
+<ol start="2">
+<li>Comment on the convergence speed for Newton–Raphson in this question in comparison with that in the previous question.
+What is the reason for the difference.</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>14 bisections are required for the bisection method and 23 iterations are required for Newton–Raphson in this case.</p>
+<ol>
+<li>
+<p>Example code to solve this using the bisection method is given below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Interval bisection method</span>
+<span style="color:#75715e">% Firstly define the ends of the interval [-1,10]</span>
+a=<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+b=<span style="color:#ae81ff">10</span>;
+NumberOfBisections=<span style="color:#ae81ff">0</span>;   <span style="color:#75715e">% Initialising</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (b<span style="color:#f92672">-</span>a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.001</span>) <span style="color:#75715e">% Want root correct to 2 decimal places</span>
+    c=(a<span style="color:#f92672">+</span>b)<span style="color:#f92672">*</span><span style="color:#ae81ff">0.5</span>;
+    f0=a^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at a</span>
+    f1=c^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at c</span>
+    f2=b^<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">% function evaluated at b</span>
+    <span style="color:#66d9ef">if</span> (f0<span style="color:#f92672">*</span>f1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+        a=c;
+    <span style="color:#66d9ef">elseif</span> (f0<span style="color:#f92672">*</span>f1 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+        b=c;
+    <span style="color:#66d9ef">else</span>
+        b=a;
+    <span style="color:#75715e">%</span>
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Increment number of bisections</span>
+    NumberOfBisections=NumberOfBisections<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+root = c
+NumberOfBisections
+</code></pre></div><p>Example code to solve this using Newton–Raphson is given below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Newton-Raphson method</span>
+<span style="color:#75715e">%</span>
+x=<span style="color:#ae81ff">10</span>;       <span style="color:#75715e">% Approximation to solution, x0</span>
+diff=<span style="color:#ae81ff">1</span>;                 <span style="color:#75715e">% Initialising</span>
+NumberOfIterations=<span style="color:#ae81ff">0</span>;   <span style="color:#75715e">% Initialising</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> ( diff <span style="color:#f92672">&gt;</span>= <span style="color:#ae81ff">0.001</span> )
+    y=x<span style="color:#f92672">-</span>(x^<span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>x<span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span>)<span style="color:#f92672">/</span>((<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>x^<span style="color:#ae81ff">4</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span>);
+    diff=abs(y<span style="color:#f92672">-</span>x);  <span style="color:#75715e">% calculate |x_(n+1) - x_n|</span>
+    x=y;            <span style="color:#75715e">% Update solution approximation</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Increment number of iterations</span>
+    NumberOfIterations=NumberOfIterations<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+root = x
+NumberOfIterations
+</code></pre></div></li>
+<li>
+<p>The convergence speed is slower for Newton–Raphson because the derivative of this function is very small in the region of the root.</p>
+</li>
+</ol>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +3028,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

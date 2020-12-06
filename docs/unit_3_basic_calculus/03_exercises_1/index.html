@@ -12,21 +12,21 @@
     <title>Exercises 1   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1713,10 +1713,232 @@
         
 
 
+<p>This set of exercises is designed to give you a familiarity with numerical differentiation.
+Hints and solutions are available.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Do the following problem with pen and paper.
+Using the Taylor series expansion of the form:
+<code>$$y(t)=y(a)+(t−a)y'(a)+(t−a)^2y''(a)+(t−a)^3\frac{y'''(a)}{3!}+\ldots$$</code></p>
+<ol>
+<li>Derive the forward difference formula,
+<code>$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h}$$</code></li>
+<li>Derive the backward difference formula,
+<code>$$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h}$$</code></li>
+<li>Derive the central difference formula,
+<code>$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h}$$</code></li>
+<li>Optional: If you are feeling adventurous derive the second derivative approximation,
+<code>$$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2}$$</code></li>
+</ol>
+<p>Hint: you will need to include more terms in your Taylor expansion.</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>
+<p>Let <code>$t=x_{i+1}$</code> and <code>$a=x_i$</code>. Then the first two terms of the Taylor expansion give:
+<code>$$y_{i+1} \approx y_i+hy'(x_i)$$</code>
+Rearranging this gives:
+<code>$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h},$$</code>
+the forward difference rule.</p>
+</li>
+<li>
+<p>Similarly, using <code>$t=x_{i−1}$</code> and <code>$a=x_i$</code> gives, on rearranging:
+<code>$$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h},$$</code>
+the backward difference rule.</p>
+</li>
+<li>
+<p>Adding the two previous formulae together and dividing by 2 gives:
+<code>$$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h},$$</code>
+the central difference rule.</p>
+</li>
+<li>
+<p>Finally, if we include the third term in the expansions in 1. and 2. then we get:
+<code>$$y_{i+1} \approx y_i+hy'(x_i)+\frac{h^2}{2}y''(x_i)$$</code>
+and
+<code>$$y_{i−1} \approx y_i−hy'(x_i)+\frac{h^2}{2}y''(x_i).$$</code>
+Adding these together and rearranging gives:
+<code>$$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2},$$</code>
+the second derivative approximation.</p>
+</li>
+</ol>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Let <code>$x_0,x_1,x_2,\ldots,x_N$</code> be equally spaced points over the interval <code>$[−3,3]$</code>.
+Let <code>$h=6/N$</code>, so that <code>$x_{i+1}−x_i=h$</code>.
+Let <code>$f(x)=x^4$</code>, and so <code>$f'(x)=4x^3$</code> and <code>$f''(x)=12x^2$</code>.</p>
+<p>Begin by choosing <code>$N=10$</code>:</p>
+<ol>
+<li>Approximate the first derivative at the points <code>$x_0,x_1,x_2,...,x_{N−1}$</code> using forward differences.</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>The following code calculates the derivative and produces the following plot:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">N=<span style="color:#ae81ff">10</span>;
+h=<span style="color:#ae81ff">6</span><span style="color:#f92672">/</span>N;
+x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+y=x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;
+yprime=<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:N
+    forwarddiff(i) = (y(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>y(i))<span style="color:#f92672">/</span>h;
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+plot(x,yprime,x(<span style="color:#ae81ff">1</span>:N),forwarddiff)
+legend(<span style="color:#e6db74">&#39;True&#39;</span>,<span style="color:#e6db74">&#39;Forward&#39;</span>)
+</code></pre></div><p><img src="/ScientificComputingInMatlab/images/unit_03/3_03_1.svg?classes=matlab-screenshot-40" alt="True derivative vs forward difference"></p>
+</div>
+</details>
+<ol start="2">
+<li>Approximate the first derivative at the points <code>$x_1,x_2,x_3,\ldots,x_N$</code> using backward differences.</li>
+</ol>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Modify the code from part 1.</p>
+</div>
+</details>
+<ol start="3">
+<li>
+<p>Approximate the first derivative at the points <code>$x_1,x_2,x_3,\ldots,x_{N−1}$</code> using central differences.</p>
+</li>
+<li>
+<p>Approximate the second derivative at the points <code>$x_1,x_2,x_3,\ldots,x_{N−1}$</code>.</p>
+</li>
+<li>
+<p>Plot your approximations and the true values of <code>$f'(x)$</code>
+and <code>$f''(x)$</code> on the same graphs (one for <code>$f'(x)$</code> and one for <code>$f''(x)$</code>).</p>
+</li>
+<li>
+<p>What is the maximum absolute error for each approximation?</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The code below will calculate all the approximations and plot them on the same graph as the exact solutions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+close all
+N=<span style="color:#ae81ff">10</span>;   <span style="color:#75715e">% The number of intervals to use</span>
+h=<span style="color:#ae81ff">6</span><span style="color:#f92672">/</span>N;  <span style="color:#75715e">% the step size</span>
+x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">%% Calculate the exact solutions</span>
+y=x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;
+yprime=<span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;
+yprimeprime=<span style="color:#ae81ff">12</span><span style="color:#f92672">*</span>x<span style="color:#f92672">.*</span>x;
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">%% Calculate the approximations</span>
+forwarddiff(<span style="color:#ae81ff">1</span>) = (y(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">-</span>y(<span style="color:#ae81ff">1</span>))<span style="color:#f92672">/</span>h
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">2</span>:N
+    forwarddiff(i) = (y(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>y(i))<span style="color:#f92672">/</span>h;
+    backwarddiff(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) = (y(i)<span style="color:#f92672">-</span>y(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))<span style="color:#f92672">/</span>(h);
+    centraldiff(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)=(y(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>y(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))<span style="color:#f92672">/</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>h);
+    secondderiv(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)=(y(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>y(i)<span style="color:#f92672">+</span>y(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))<span style="color:#f92672">/</span>(h<span style="color:#f92672">*</span>h);
+<span style="color:#66d9ef">end</span>
+backwarddiff(N) = (y(N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>y(N))<span style="color:#f92672">/</span>h
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">%% Evaluate the maximum error for each approximation</span>
+MaxErrorInForwardDifference=max(abs(yprime(<span style="color:#ae81ff">1</span>:N)<span style="color:#f92672">-</span>forwarddiff))
+MaxErrorInBackwardDifference=max(abs(yprime(<span style="color:#ae81ff">2</span>:N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>backwarddiff))
+MaxErrorInCentralDifference=max(abs(yprime(<span style="color:#ae81ff">2</span>:N)<span style="color:#f92672">-</span>centraldiff))
+MaxErrorInSecondDerivative=max(abs(yprimeprime(<span style="color:#ae81ff">2</span>:N)<span style="color:#f92672">-</span>secondderiv))
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">%% Plot the approximations witht the actual derivatives</span>
+plot(x,yprime,x(<span style="color:#ae81ff">1</span>:N),forwarddiff,x(<span style="color:#ae81ff">2</span>:N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>),backwarddiff,x(<span style="color:#ae81ff">2</span>:N),centraldiff)
+title(<span style="color:#e6db74">&#39;First Derivative&#39;</span>)
+xlabel(<span style="color:#e6db74">&#39;x&#39;</span>)
+ylabel(<span style="color:#e6db74">&#39;y&#39;</span>)
+legend(<span style="color:#e6db74">&#39;True&#39;</span>,<span style="color:#e6db74">&#39;Forward&#39;</span>,<span style="color:#e6db74">&#39;Back&#39;</span>,<span style="color:#e6db74">&#39;Central&#39;</span>)
+<span style="color:#75715e">%</span>
+figure
+plot(x,yprimeprime,x(<span style="color:#ae81ff">2</span>:N),secondderiv)
+title(<span style="color:#e6db74">&#39;Second Derivative&#39;</span>)
+xlabel(<span style="color:#e6db74">&#39;x&#39;</span>)
+ylabel(<span style="color:#e6db74">&#39;y&#39;</span>)
+legend(<span style="color:#e6db74">&#39;True&#39;</span>,<span style="color:#e6db74">&#39;Approx&#39;</span>)
+</code></pre></div><p>The maximum error for each approximation is:</p>
+<ul>
+<li>Forward Difference = 28.2960</li>
+<li>Backward Difference = 28.2960</li>
+<li>Central Difference = 3.4560</li>
+<li>Second Derivative = 0.7200</li>
+</ul>
+<p>The following plots are generated:
+<img src="/ScientificComputingInMatlab/images/unit_03/3_03_2.svg?classes=matlab-screenshot-40" alt="True first derivative vs approximations">
+<img src="/ScientificComputingInMatlab/images/unit_03/3_03_3.svg?classes=matlab-screenshot-40" alt="True second derivative vs approximations"></p>
+</div>
+</details>
+<ol start="2">
+<li>
+<p>Repeat for <code>$N=20$</code> and <code>$N=40$</code>.</p>
+<p>i) In each case, how big does <code>$N$</code> need to be so that the maximum absolute error of the derivative at each discrete point is less than 0.01?</p>
+<p>ii) Comment on how the maximum absolute error for each scheme decreases as <code>$N$</code> is doubled.</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The maximum errors for different values of <code>$N$</code> can be calculated by modifying the code from a) above and are given in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th style="text-align:center">Forward Difference</th>
+<th style="text-align:center">Backward Difference</th>
+<th style="text-align:center">Central Difference</th>
+<th style="text-align:center">Second Derivative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td style="text-align:center">28.2960</td>
+<td style="text-align:center">28.2960</td>
+<td style="text-align:center">3.4560</td>
+<td style="text-align:center">0.7200</td>
+</tr>
+<tr>
+<td>20</td>
+<td style="text-align:center">15.1470</td>
+<td style="text-align:center">15.1470</td>
+<td style="text-align:center">0.9720</td>
+<td style="text-align:center">0.1800</td>
+</tr>
+<tr>
+<td>40</td>
+<td style="text-align:center">7.8344</td>
+<td style="text-align:center">7.8344</td>
+<td style="text-align:center">0.2565</td>
+<td style="text-align:center">0.0450</td>
+</tr>
+</tbody>
+</table>
+<p>To get a maximum absolute error of less than 0.01 we require:</p>
+<ul>
+<li><code>$N=323$</code> for forward and backward differences;</li>
+<li><code>$N=208$</code> for central differences;</li>
+<li><code>$N=86$</code> for the second derivative.</li>
+</ul>
+<p>For forward and backward differences, the error roughly halves as <code>$N$</code> is doubled.</p>
+<p>For central differences and second derivatives, the error is divided by roughly 4 as <code>$N$</code> is doubled.</p>
+<p>In mathematical terms, the first two are &lsquo;first order&rsquo; and the second two are &lsquo;second order&rsquo; as <code>$N$</code> increases.
+Don&rsquo;t worry if you don&rsquo;t know what it means.</p>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +3095,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

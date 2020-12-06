@@ -12,21 +12,21 @@
     <title>Numerical integration   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1690,7 +1690,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary-of-mathematics-used">Summary of mathematics used</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1717,22 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>You should already be familiar with analytic integration, as both the inverse of differentiation and a means of finding the area under a curve.
+If you are unsure about this, look it up now in any A level textbook or the relevant section of the <a href="https://en.wikibooks.org/wiki/Calculus/Indefinite_integral">Calculus Wikibook</a>.</p>
+<p>For most functions that you will come across in mathematical modelling, it will not be possible to undertake the integration analytically, and you will have to resort to numerical methods.
+The following explains two numerical methods for approximating integrals: the Trapezium rule, and Simpson&rsquo;s rule.</p>
+<h2 id="summary-of-mathematics-used">Summary of mathematics used</h2>
+<p>Suppose <code>$y=f(x)$</code>.
+Let the points <code>$x_0,x_1,x_2,\ldots,x_N$</code> be equally spaced points on the interval <code>$[a,b]$</code>, and let <code>$h=\frac{1}{N}(x_N−x_0)=x_{i+}1−x_i$</code>.
+Now let <code>$y_i=f(x_i)$</code>.
+The Trapezium rule for approximating integrals is:</p>
+<p><code>$$\int_a^b f(x) \,dx \approx h\left( \frac{1}{2}y_0+y_1+y_2+\ldots+y_{N_1}+\frac{1}{2}y_N \right).$$</code></p>
+<p>This is equivalent to breaking up the area under the curve into a series of trapezia and calculating their areas, as shown in the following figure, where <code>$y_i=f(x_i)$</code>.
+The figure is from <a href="https://upload.wikimedia.org/wikipedia/commons/d/d1/Integration_num_trapezes_notation.svg">Wikipedia</a>, unmodified, shared under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license.</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_03/3_04_1_trapezium.svg?classes=matlab-screenshot-40" alt="Trapezium Rule"></p>
+<p>Assuming that <code>$N$</code> is even, Simpson&rsquo;s rule for approximating integrals is</p>
+<p><code>$$\int_a^b f(x) \,dx \approx \frac{h}{3}\left( y_0 + 4\left( y_1+y_3+\ldots+y_{N-1} \right) + 2\left( y_2+y_4+\ldots+y_{N-2} + y_N \right)\right). $$</code></p>
+<p>This is derived in a similar way to the Trapezium rule, but by approximating the function by a quadratic curve on each interval, rather than the linear curve used by the Trapezium rule.</p>
 
 
 <footer class="footline">
@@ -2873,16 +2886,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

@@ -12,21 +12,21 @@
     <title>Exercises 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607207649" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607292822" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607292822" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607207649" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607292822" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607292822"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607207649"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607292822"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607292822"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607207649"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607292822"></script>
 
     
   </div>
@@ -1713,10 +1713,234 @@
         
 
 
+<p>This set of exercises is designed to give you familiarity with numerical integration.
+Hints and solutions are available.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Evaluate <code>$\int_{-1}^{1} x^4 \,dx$</code> using:</p>
+<ol>
+<li>
+<p>the Trapezium rule with 10 equal-sized intervals,</p>
+</li>
+<li>
+<p>Simpson’s rule with 10 equal-sized intervals.</p>
+</li>
+</ol>
+<p>In each case, how many uniformly sized intervals do you need for the absolute error in the answer to be less than 0.0001?</p>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The following code calculates the Trapezium rule and Simpson’s rule approximations for <code>$N=10$</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+<span style="color:#75715e">%</span>
+N=<span style="color:#ae81ff">10</span>;               <span style="color:#75715e">% Number of intervals</span>
+h=<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>N;              <span style="color:#75715e">% The size of each interval</span>
+x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+y=x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;       <span style="color:#75715e">% Defining the function</span>
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Firstly we apply the Trapezium rule:</span>
+<span style="color:#75715e">%</span>
+TrapeziumIntegral=<span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">% Initialising 0.5*y0</span>
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% We now loop over the elements y1…yN</span>
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">2</span>:N
+ TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span>y(i);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Lastly, we need to add 0.5*yN (which corresponds to the (N+1)th</span>
+<span style="color:#75715e">% entry of the vector y) and multiply by the interval size, h</span>
+<span style="color:#75715e">%</span>
+TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">*</span>h
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Now we apply Simpson’s rule:</span>
+<span style="color:#75715e">%</span>
+SimpsonIntegral=y(<span style="color:#ae81ff">1</span>);       <span style="color:#75715e">% Initialise</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:N<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+ SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:N<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+ SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Lastly, we add the last value and multiply by h/3</span>
+SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span>y(N<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">*</span>h<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>
+</code></pre></div><p>The true answer is <code>$\left[ \frac{x^5}{5} \right]_{-1}^{1} = 0.4.$</code></p>
+<p>To get the answer within 0.0001 of the true value, we require <code>$N=164$</code> for the Trapezium rule and <code>$N=16$</code> for Simpson’s rule.
+MATLAB code to calculate the <code>$N$</code> required to get the integral to the required accuracy is given below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+format long
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Now look for required N for Trapezium rule</span>
+<span style="color:#75715e">%</span>
+TargetError=<span style="color:#ae81ff">0.0001</span>;
+TrapeziumError=<span style="color:#ae81ff">1</span>; <span style="color:#75715e">% initialise error</span>
+Ntrap=<span style="color:#ae81ff">10</span>; <span style="color:#75715e">% initial Ntrap</span>
+ExactIntegral = <span style="color:#ae81ff">0.4</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (TrapeziumError<span style="color:#f92672">&gt;</span>TargetError)
+    Ntrap=Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;                  <span style="color:#75715e">% Number of intervals</span>
+    h=<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>Ntrap;              <span style="color:#75715e">% The size of each interval</span>
+    x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    y=x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;           <span style="color:#75715e">% Defining the function</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Now we apply the Trapezium rule:</span>
+    TrapeziumIntegral=<span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">% Initialising 0.5*y0</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% We now loop over the elements y1…yN</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">2</span>:Ntrap
+        TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span>y(i);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Lastly, we need to add 0.5*yN (which corresponds to the (N+1)th</span>
+    <span style="color:#75715e">% entry of the vector y) and multiply by the interval size, h</span>
+    <span style="color:#75715e">%</span>
+    TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">*</span>h;
+    <span style="color:#75715e">%</span>
+    TrapeziumError = abs(TrapeziumIntegral<span style="color:#f92672">-</span>ExactIntegral);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+Ntrap
+TrapeziumError
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Now look for required N for Simpson’s rule</span>
+<span style="color:#75715e">%</span>
+TargetError=<span style="color:#ae81ff">0.0001</span>;
+SimpsonError=<span style="color:#ae81ff">1</span>; <span style="color:#75715e">% initialise error</span>
+Nsimp=<span style="color:#ae81ff">10</span>; <span style="color:#75715e">% initial Nsimp</span>
+ExactIntegral = <span style="color:#ae81ff">0.4</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (SimpsonError<span style="color:#f92672">&gt;</span>TargetError)
+    Nsimp=Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>;              <span style="color:#75715e">% Number of intervals so even</span>
+    h=<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span>Nsimp;              <span style="color:#75715e">% The size of each interval</span>
+    x=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    y=x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x<span style="color:#f92672">.*</span>x;           <span style="color:#75715e">% Defining the function</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Now we apply Simpson’s rule:</span>
+    SimpsonIntegral=y(<span style="color:#ae81ff">1</span>);       <span style="color:#75715e">% Initialise</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:Nsimp<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+        SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:Nsimp<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Lastly, we add the last value and multiply by h/3</span>
+    SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span>y(Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">*</span>h<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>;
+    <span style="color:#75715e">%</span>
+    SimpsonError = abs(SimpsonIntegral<span style="color:#f92672">-</span>ExactIntegral);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+Nsimp
+SimpsonError
+</code></pre></div>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <ol>
+<li>
+<p>Repeat the previous question for <code>$\int_0^1 \left( e^{-1000x}+x \right) \,dx.$</code></p>
+</li>
+<li>
+<p>Can you suggest a more sensible way to choose the discrete points instead of using uniformly spaced points?</p>
+</li>
+</ol>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <ol>
+<li>The true answer is <code>$\left[ \frac{-e^{-1000x}}{1000} + \frac{x^2}{2}\right]_0^1 = \frac{1-e^{-1000}}{1000} + \frac{1}{2} \approx 0.501.$</code></li>
+</ol>
+<p>To get an answer within 0.0001 of true value, we require <code>$N=904$</code> for the Trapezium rule and <code>$N=426$</code> for Simpson’s rule.
+The MATLAB code for Problem 3 can be modified for this question and is given below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear all
+format long
+<span style="color:#75715e">% Now look for required N for Trapezium rule</span>
+<span style="color:#75715e">%</span>
+TargetError=<span style="color:#ae81ff">0.0001</span>;
+TrapeziumError=<span style="color:#ae81ff">1</span>; <span style="color:#75715e">% initialise error</span>
+Ntrap=<span style="color:#ae81ff">10</span>; <span style="color:#75715e">% initial Ntrap</span>
+ExactIntegral = (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>exp(<span style="color:#f92672">-</span><span style="color:#ae81ff">1000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0.5</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (TrapeziumError<span style="color:#f92672">&gt;</span>TargetError)
+    Ntrap=Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;                  <span style="color:#75715e">% Number of intervals</span>
+    h=<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>Ntrap;              <span style="color:#75715e">% The size of each interval</span>
+    x=linspace(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    y=exp(<span style="color:#f92672">-</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">+</span>x;           <span style="color:#75715e">% Defining the function</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Now we apply the Trapezium rule:</span>
+    TrapeziumIntegral=<span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">% Initialising 0.5*y0</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% We now loop over the elements y1…yN</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">2</span>:Ntrap
+        TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span>y(i);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Lastly, we need to add 0.5*yN (which corresponds to the (N+1)th</span>
+    <span style="color:#75715e">% entry of the vector y) and multiply by the interval size, h</span>
+    <span style="color:#75715e">%</span>
+    TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span>y(Ntrap<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    TrapeziumIntegral=TrapeziumIntegral<span style="color:#f92672">*</span>h;
+    <span style="color:#75715e">%</span>
+    TrapeziumError = abs(TrapeziumIntegral<span style="color:#f92672">-</span>ExactIntegral);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+Ntrap
+TrapeziumError
+<span style="color:#75715e">%</span>
+<span style="color:#75715e">% Now look for required N for Simpson’s rule</span>
+<span style="color:#75715e">%</span>
+TargetError=<span style="color:#ae81ff">0.0001</span>;
+SimpsonError=<span style="color:#ae81ff">1</span>; <span style="color:#75715e">% initialise error</span>
+Nsimp=<span style="color:#ae81ff">10</span>; <span style="color:#75715e">% initial Nsimp</span>
+ExactIntegral = (<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>exp(<span style="color:#f92672">-</span><span style="color:#ae81ff">1000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0.5</span>;
+<span style="color:#75715e">%</span>
+<span style="color:#66d9ef">while</span> (SimpsonError<span style="color:#f92672">&gt;</span>TargetError)
+    Nsimp=Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>;              <span style="color:#75715e">% Number of intervals so even</span>
+    h=<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>Nsimp;              <span style="color:#75715e">% The size of each interval</span>
+    x=linspace(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    y=exp(<span style="color:#f92672">-</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">*</span>x)<span style="color:#f92672">+</span>x;           <span style="color:#75715e">% Defining the function</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Now we apply Simpson’s rule:</span>
+    SimpsonIntegral=y(<span style="color:#ae81ff">1</span>);       <span style="color:#75715e">% Initialise</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:Nsimp<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+        SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:Nsimp<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>y(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">%</span>
+    <span style="color:#75715e">% Lastly, we add the last value and multiply by h/3</span>
+    SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">+</span>y(Nsimp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+    SimpsonIntegral=SimpsonIntegral<span style="color:#f92672">*</span>h<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>;
+    <span style="color:#75715e">%</span>
+    SimpsonError = abs(SimpsonIntegral<span style="color:#f92672">-</span>ExactIntegral);
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e">%</span>
+Nsimp
+SimpsonError
+</code></pre></div><ol start="2">
+<li>In order to improve accuracy, a non-uniform distribution of the <code>$x_i$</code>, with a higher density close to the origin, could be used.</li>
+</ol>
+</div>
+</details>
 
 </div>
 
@@ -2873,16 +3097,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607292822"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607207649"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607207649"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607292822"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607292822"></script>
     
     
 

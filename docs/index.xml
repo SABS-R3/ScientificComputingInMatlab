@@ -62,8 +62,7 @@ When you see things written in typewriter font as in this for example, you shoul
       <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/01_introduction_and_definitions/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Learning objectives The purpose of this unit is to use MATLAB to carry out many of the analytical mathematical techniques that you know. We will look at traditional methods of numerical differentiation and integration as well as root-finding algorithms. Also included is a section on Fourier series which allow discontinuous functions to be approximated by sums of continuous functions. The aim of the unit is to show you how to use MATLAB to undertake all these operations and also to give you practice in creating MATLAB functions.</description>
     </item>
     
     <item>
@@ -112,8 +111,10 @@ Regular activities and resources There are several kinds of activity that you wi
       <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/02_numerical_differentiation/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>You should already be familiar with the idea of analytical differentiation and be able to differentiate simple functions like $y=x^n$ and $y=sin(x)$. If you don’t know how to do this, look it up now in any A level textbook or the relevant section of the Calculus Wikibook.
+Sometimes functions are highly non-linear and a closed form for the derivative may be difficult to calculate. For example
+$$y=x^{\ln x}$$
+Alternatively, $y$ can be defined as the solution to an equation, so we can not calculate a closed form for $y=f(x)$ to which the traditional rules of differentiation may be applied.</description>
     </item>
     
     <item>
@@ -173,8 +174,9 @@ x=[1,2,3] y=[2,4,6]&amp;#39; z=[2;4;6] Enter the following commands on the comma
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/03_exercises_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This set of exercises is designed to give you a familiarity with numerical differentiation. Hints and solutions are available.
+Question Do the following problem with pen and paper. Using the Taylor series expansion of the form: $$y(t)=y(a)+(t−a)y&#39;(a)+(t−a)^2y&#39;&#39;(a)+(t−a)^3\frac{y&#39;&#39;&#39;(a)}{3!}+\ldots$$
+ Derive the forward difference formula, $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_i}{h}$$ Derive the backward difference formula, $$\frac{dy}{dx}\approx\frac{y_i−y_{i−1}}{h}$$ Derive the central difference formula, $$\frac{dy}{dx}\approx\frac{y_{i+1}−y_{i−1}}{2h}$$ Optional: If you are feeling adventurous derive the second derivative approximation, $$\frac{d^2y}{dx^2}\approx\frac{y_{i+1}−2y_i+y_{i−1}}{h^2}$$  Hint: you will need to include more terms in your Taylor expansion.</description>
     </item>
     
     <item>
@@ -243,8 +245,8 @@ There are many MATLAB commands that are used to read in data from files and writ
       <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/04_numerical_integration/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>You should already be familiar with analytic integration, as both the inverse of differentiation and a means of finding the area under a curve. If you are unsure about this, look it up now in any A level textbook or the relevant section of the Calculus Wikibook.
+For most functions that you will come across in mathematical modelling, it will not be possible to undertake the integration analytically, and you will have to resort to numerical methods.</description>
     </item>
     
     <item>
@@ -317,8 +319,12 @@ function A=buildA(N) dx=1/N; nvar=(N-1)^2; e1= ones(nvar,1); e2=e1; e2( 1:N-1:nv
       <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/05_exercises_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This set of exercises is designed to give you familiarity with numerical integration. Hints and solutions are available.
+Question Evaluate $\int_{-1}^{1} x^4 \,dx$ using:
+  the Trapezium rule with 10 equal-sized intervals,
+  Simpson’s rule with 10 equal-sized intervals.
+  In each case, how many uniformly sized intervals do you need for the absolute error in the answer to be less than 0.0001?
+ Expand for solution Solution The following code calculates the Trapezium rule and Simpson’s rule approximations for $N=10$.</description>
     </item>
     
     <item>
@@ -369,8 +375,8 @@ For instance, typing help fft will display
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/06_solution_of_nonlinear_equations/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>We very often need to find the zero of a complex non-linear function when working with mathematical modelling problems, perhaps most frequently when we wish to find the value (or values) of $x$ such that two functions, say $f$ and $g$, are equal, that is $f(x)=g(x)$. This problem is equivalent to letting $y(x)=f(x)−g(x)$ and determining the value(s) of $x$ such that $y(x)=0$.
+Here we will use the numerical methods of interval bisection and Newton&amp;rsquo;s method (also known as Newton–Raphson) to find the zero of a function.</description>
     </item>
     
     <item>
@@ -421,8 +427,10 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/07_exercises_3/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Question Let $f(x) = x^3 - 1 $.
+  Use the bisection method on the interval $[−1,10]$ to calculate the root of $f(x)=0$ correct to two decimal places. How many bisections were necessary?
+  Use Newton–Raphson with $x_0=10$ to calculate the root of $f(x)=0$ correct to two decimal places. How many iterations were necessary?
+   Expand for solution Solution   14 bisections are required for interval bisection:</description>
     </item>
     
     <item>
@@ -476,8 +484,13 @@ Let $A$ be a sparse symmetric positive definite matrix of dimension $(N-1)^2\tim
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/08_fourier_series/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Fourier series can be used to approximate a general periodic function, even with discontinuities. It does this by using the sum of continuous sine and cosine waves.
+Summary of mathematics used The Fourier series of the periodic function $f(x)$ defined on the domain $[−\pi,\pi]$ such that $f(x)+f(x+2\pi)$ is given by:
+$$f(x) = \frac{1}{2}a_0 + \sum_{n=1}^{\infty} \left( a_n\cos{nx} + b_n\sin{nx} \right)$$
+where
+$$a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\,dx$$
+and
+$$a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos{nx}\,dx \textrm{, and} \quad b_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin{nx}\,dx \quad \textrm{for}\, n = 1,2,\ldots.</description>
     </item>
     
     <item>
@@ -516,8 +529,13 @@ Let $A$ be a sparse symmetric positive definite matrix of dimension $(N-1)^2\tim
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_3_basic_calculus/09_exercises_4/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Question Verify analytically that the Fourier series of a square wave defined as:
+$$f(x) = \left\{ \begin{array}{ll} -k &amp;amp; \textrm{if}\quad -\pi&amp;lt;x&amp;lt;0\,, \\ k &amp;amp; \textrm{if}\quad 0&amp;lt;x&amp;lt;\pi\,, \end{array} \right. $$
+and
+$$f(x+2\pi) = f(x)$$
+is
+$$\frac{4k}{\pi}\left( \sin{x} + \frac{1}{3}\sin{3x} + \frac{1}{5}\sin{5x} + \ldots \right).$$
+ Expand for soluton Solution $$a_0 = \frac{-1}{\pi}\int_{-\pi}^0 k\,dx + \frac{1}{\pi}\int_0^{\pi} k\,dx = 0 $$ $$a_n = \frac{-1}{\pi}\int_{-\pi}^0 k\cos{nx}\,dx + \frac{1}{\pi}\int_0^{\pi} k\cos{nx}\,dx = 0\, , \quad \textrm{for} \quad n=1,2,\ldots $$ and $$b_n = \frac{-1}{\pi}\int_{-\pi}^0 k\sin{nx}\,dx + \frac{1}{\pi}\int_0^{\pi} k\sin{nx}\,dx = \frac{4k}{n\pi}\,, \quad \textrm{for} \quad n=1,3,5,\ldots $$ and</description>
     </item>
     
     <item>
