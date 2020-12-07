@@ -5,7 +5,7 @@ draft: false
 pre: "7. "
 ---
 
-
+{{% notice question %}}
 Using the GUI provided in the previous section as a guide, create a GUI for the system of differential equations given by:
 
 `$$\frac{dN}{dt}=N(1-P)$$`
@@ -17,7 +17,8 @@ If you're interested in the biological background for this problem (which is kno
 Your GUI should plot both the solutions, `$N !nc$` and `$P !nc$` over time, together with the phase plane (how `$P !nc$` varies with `$N !nc$`).
 It should include two inputs (sliders) in order to vary the initial conditions, `$\alpha !nc$` and `$\beta !nc$`, and a button that is used to start the simulations.
 
-Solution reveal
+{{%expand "Expand for solution"%}}
+{{% notice solution %}}
 The following file, PredPreyGUI.m, presents a suitable GUI for the predator– prey system described in the problem.
 
 ```matlab
@@ -107,3 +108,7 @@ Move the sliders and press the 'Run' button see the plot change. The working GUI
 Now that you understand the basics of making GUIs in MATLAB, you can use the inbuilt 'App Designer' development environment to make GUIs using a graphical interface.
 See [Create and Run a Simple App Using App Designer](https://uk.mathworks.com/help/matlab/creating_guis/create-a-simple-app-or-gui-using-app-designer.html) for more information.
 You will not be required to use App Designer for this course but you may find it useful if you need to make a complicated GUI in the future.
+
+{{% /notice %}}
+{{% /expand %}}
+{{% /notice %}}
