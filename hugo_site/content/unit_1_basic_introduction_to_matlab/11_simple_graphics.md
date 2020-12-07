@@ -21,6 +21,9 @@ To plot the function `$sin(x)$` for `$x$` between 0 and 10 type:
 fplot(@(x)sin(x),[0 10])
 ```
 
+Here, the notation `@(x)sin(x) !nc` is referred to in MATLAB as an [anonymous function](https://uk.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html).
+It specifies a function that takes `x !nc` and outputs `sin(x) !nc`.
+
 This gives you the following figure on screen:
 
 ![Plot of sin(x)](/ScientificComputingInMatlab/images/unit_01/1_11_1.png?classes=matlab-screenshot-40)
