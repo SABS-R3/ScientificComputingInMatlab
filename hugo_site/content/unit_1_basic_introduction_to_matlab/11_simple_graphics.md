@@ -15,7 +15,7 @@ We will now go through how to plot a simple function in MATLAB and save the figu
 
 ### Walkthrough
 
-To plot the function `$sin(x)$` for `$x$` between 0 and 10 type:
+To plot the function `$\sin(x)$` for `$x$` between 0 and 10 type:
 
 ```matlab
 fplot(@(x)sin(x),[0 10])
