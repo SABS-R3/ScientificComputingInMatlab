@@ -26,12 +26,10 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
 
 ## Definitions and notation
 
-- Differential Equation – This is an equation containing variables and their derivatives.  
-
-- ODE – Ordinary Differential Equation. This is a differential equation where the derivatives of the dependent variable (usually `$y$` or `$x$`) are with respect to only one independent variable, usually `$x$` or `$t$`.  
-
-- Order of ODE – order of the highest derivative.  
-
-- Therefore a first-order ODE is of the form: `$\frac{dy}{dx}=f(x,y)$`.  
-
-- Notation: the following shorthand for derivatives will be used throughout the unit: `$y'=\frac{dy}{dx}$` and `$\dot{y}=\frac{dy}{dt}$`.  
+- Differential Equation – This is an equation containing variables and their derivatives.
+- ODE – Ordinary Differential Equation. This is a differential equation where the derivatives of the dependent variable (usually `$y$` or `$x$`) are with respect to only one independent variable, usually `$x$` or `$t$`.
+- Order of ODE – order of the highest derivative.
+- Therefore a first-order ODE is of the form:
+    `$$\frac{dy}{dx}=f(x,y).$$`
+- Notation: the following shorthand for derivatives will be used throughout the unit:
+    `$$y'=\frac{dy}{dx}\qquad\mbox{and}\qquad\dot{y}=\frac{dy}{dt}.$$`
