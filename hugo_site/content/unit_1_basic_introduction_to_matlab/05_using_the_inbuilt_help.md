@@ -26,11 +26,11 @@ For instance, typing `help fft` will display
 Instead, you can open the more extensive documentation pages by typing `doc FunctionName`.
 For instance, typing `doc fft` will open the following window:
 
-![docs for fft](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![docs for fft](/ScientificComputingInMatlab/images/unit_01/1_05_1.png?classes=matlab-screenshot)
 
 The only real drawback is that you need to know not only that something is there but also what it is called.
 Fortunately, most of the MATLAB commands have sensible names and there is inbuilt search functionality for the graphical help.
 
 You can just load the graphical help browser where you can search for the function you need by typing `doc`, which brings up the following window:
 
-![docs home screen](/ScientificComputingInMatlab/images/1_5_help.png?classes=matlab-screenshot)
+![docs home screen](/ScientificComputingInMatlab/images/unit_01/1_05_2.png?classes=matlab-screenshot)

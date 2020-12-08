@@ -16,7 +16,7 @@ The theory of least squares fitting can be found in the following:
 
 - [Wolfram MathWorld](http://mathworld.wolfram.com/LeastSquaresFitting.html)
 - Chapter 7 of *The Statistical Sleuth* by Ramsey and Schafer.
-- Chapter 25 (in the ninth edition) of *Advanced Engineering Mathematics* by Erwin Kreyszig.
+- Chapter 24 and 25 (in the tenth edition) of [*Advanced Engineering Mathematics* by Erwin Kreyszig](http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph021446150).
 {{% /notice %}}
 
 The following activity will lead you through generating some experimental data adding artificial noise and then performing least squares estimation to try to elucidate the underlying model parameters.
