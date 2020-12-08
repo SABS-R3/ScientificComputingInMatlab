@@ -35,8 +35,8 @@ Modify this algorithm for the case `$f(a)>0$` and `$f(b)<0$`
 {{% notice solution %}}
 1. Let `$c = \frac{(a+b)}{2}$`
 
-2. If `$f(c)<0$`, then the root lies in the interval `$[c,b]$`, so let `$a=c$`.
-    If `$f(c)>0$`, then the root lies in the interval `$[a,c]$`, so let `$b=c$`.
+2. If `$f(c)<0$`, then the root lies in the interval `$[a,c]$`, so let `$b=c$`.
+    If `$f(c)>0$`, then the root lies in the interval `$[c,b]$`, so let `$a=c$`.
     If `$f(c)=0$` then the root is at `$x=c$`.
 
 3. Repeat this process until you have a root to the desired accuracy.
