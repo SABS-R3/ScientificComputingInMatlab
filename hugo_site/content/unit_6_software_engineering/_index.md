@@ -9,8 +9,3 @@ pre = "<b>6. </b>"
 ### Chapter 6
 
 # Software engineering
-
-
-{{% notice warning %}}
-Chapter under construction. Original course [available here](http://www.dtc.ox.ac.uk/online-learning/matlab/).
-{{% /notice %}}
