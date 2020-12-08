@@ -5,25 +5,19 @@ draft: false
 pre: "11. "
 ---
 
+This set of exercises is designed to get you to use MATLAB to solve boundary value problems.
+Hints and solutions are available.
 
 {{% notice question %}}
-This set of exercises is designed to get you to use MATLAB to solve boundary value problems. Hints and solutions are available.
 
-Use `bvp4c` to solve the following boundary value problems.
+Use `bvp4c !nc` to solve the following boundary value problems.
 
-Consider the equation.
+Consider the equation
 `$$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$`
 
 1. Solve this subject to `$y(0) = 0$` and `$y(1) = 1$`.
 
 2. Solve the same equation subject to `$y'(0) = 0$` and `$y(1) = 1$`.
-
-
-{{% expand "Expand for hint" %}}
-{{% notice hint %}}
-Have another look at the code from the previous BVP example.
-{{% /notice %}}
-{{% /expand %}}
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
@@ -35,40 +29,37 @@ Example code to solve this system with associated boundary conditions is given b
 ```matlab
 % Function to solve y''+ 3y' - 4y^2 = 0.
 function SolveBVP()
-%
-solinit = bvpinit([0,1],[0 0]);
-%
-sol = bvp4c(@deriv,@bcs,solinit);
-%
-x=linspace(0,1,100);
-y=deval(sol,x);
-%
-plot(x,y(1,:),'b-x');
-%
-function dYdx = deriv(x,Y)
-%
-dYdx(1) = Y(2);
-dYdx(2) = 4*Y(1)-3*Y(2);
-%
-% boundary conditions y(0)=1, y(1)=1.
-function res = bcs(ya,yb)
-%
-res = [ ya(1)-1
-        yb(1)-1];
-%
-% % boundary conditions y(0)=1, y(1)=1.
-% function res = bcs(ya,yb)
-% res = [ ya(2)
-% yb(1)-1];
+    %% Set up, solve, & plot the BVP
+    solinit = bvpinit([0,1],[0 0]);
+    sol = bvp4c(@deriv,@bcs,solinit);
+    x=linspace(0,1,100);
+    y=deval(sol,x);
+    plot(x,y(1,:),'b-x');
+    xlabel('x')
+    ylabel('y')
+    %% Function to evaluate the right hand side of the system
+    function dYdx = deriv(x,Y)
+        %
+        dYdx(1) = Y(2);
+        dYdx(2) = 4*Y(1)-3*Y(2);
+    end
+    %% Function to evaluate the boundary values
+    function res = bcs(ya,yb)
+        res = [ ya(1)
+            yb(1)-1];
+%         res = [ ya(2)
+%             yb(1)-1];
+    end
+end
 ```
 
-Running this code yields the following plot, which shows that both boundary conditions are satisfied.
+Running this code yields the following plot, which shows that both boundary conditions are satisfied:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![bvp4c question 1 solution](/ScientificComputingInMatlab/images/unit_05/5_11_1.svg?classes=matlab-screenshot-40)
 
-In order to solve the equations with the second set of boundary conditions, replace the `bcs` function by the commented version. This yields the following plot.
+In order to solve the equations with the second set of boundary conditions, replace the `bcs !nc` function by the commented version. This yields the following plot.
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![bvp4c question 2 solution](/ScientificComputingInMatlab/images/unit_05/5_11_2.svg?classes=matlab-screenshot-40)
 
 Note that now the derivative of `$y$` is now zero at `$x=0$`.
 {{% /notice %}}
