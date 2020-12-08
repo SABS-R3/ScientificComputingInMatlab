@@ -20,22 +20,25 @@ Let `$f(x) = x^3 - 1 $`.
 1. 14 bisections are required for interval bisection:
 
     ```matlab
-    clear all
+    clear
     %
-    % Interval bisection method
-    % Firstly define the ends of the interval [-1,10]
-    a=-1;
-    b=10;
+    %% The function, interval and tolerance
+    theFunction=@(x)x^3-1;
+    theInterval=[-1,10];
+    theTolerance=0.001;
+    %
+    %% Interval bisection method
     NumberOfBisections=0;   % Initialising
+    a=theInterval(1);
+    b=theInterval(2);
     %
-    while (b-a > 0.001) % Want root correct to 2 decimal places
+    while (b-a > theTolerance)
         c=(a+b)*0.5;
-        f0=a^3-1; % function evaluated at a
-        f1=c^3-1; % function evaluated at c
-        f2=b^3-1; % function evaluated at b
-        if (f0*f1 > 0)
+        fa=theFunction(a);
+        fc=theFunction(c);
+        if (fa*fc > 0)
             a=c;
-        elseif (f0*f1 < 0)
+        elseif (fa*fc < 0)
             b=c;
         else
             b=a;
@@ -53,16 +56,21 @@ Let `$f(x) = x^3 - 1 $`.
     Example code to solve this is given below:
 
     ```matlab
-    clear all
+    clear
     %
-    % Newton-Raphson method
+    %% The function, starting value and tolerance
+    theFunction=@(x)x^3-1;
+    theDerivative=@(x)3*x*x;
+    theInitialGuess=10;
+    theTolerance=0.001;
     %
-    x=10;       % Approximation to solution, x0
+    %% Newton-Raphson method
+    x=theInitialGuess;      % Initialising
     diff=1;                 % Initialising
     NumberOfIterations=0;   % Initialising
     %
     while ( diff >= 0.001 )
-        y=x-(x^3-1)/(3*x*x);
+        y=x - theFunction(x)/theDerivative(x);
         diff=abs(y-x);  % calculate |x_(n+1) - x_n|
         x=y;            % Update solution approximation
         %
@@ -93,31 +101,33 @@ All you need to change is the function definitions.
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
-14 bisections are required for the bisection method and 23 iterations are required for Newton–Raphson in this case.  
+14 bisections are required for the bisection method and 30 iterations are required for Newton–Raphson in this case.  
 
 1. Example code to solve this using the bisection method is given below:
 
     ```matlab
-    clear all
+    clear
     %
-    % Interval bisection method
-    % Firstly define the ends of the interval [-1,10]
-    a=-1;
-    b=10;
+    %% The function, interval and tolerance
+    theFunction=@(x)x^5+x*1e-6;
+    theInterval=[-1,10];
+    theTolerance=0.001;
+    %
+    %% Interval bisection method
     NumberOfBisections=0;   % Initialising
+    a=theInterval(1);
+    b=theInterval(2);
     %
-    while (b-a > 0.001) % Want root correct to 2 decimal places
+    while (b-a > theTolerance)
         c=(a+b)*0.5;
-        f0=a^3-1; % function evaluated at a
-        f1=c^3-1; % function evaluated at c
-        f2=b^3-1; % function evaluated at b
-        if (f0*f1 > 0)
+        fa=theFunction(a);
+        fc=theFunction(c);
+        if (fa*fc > 0)
             a=c;
-        elseif (f0*f1 < 0)
+        elseif (fa*fc < 0)
             b=c;
         else
             b=a;
-        %
         end
         %
         % Increment number of bisections
@@ -131,16 +141,21 @@ All you need to change is the function definitions.
     Example code to solve this using Newton–Raphson is given below:
 
     ```matlab
-    clear all
+    clear
     %
-    % Newton-Raphson method
+    %% The function, starting value and tolerance
+    theFunction=@(x)x^5+x*1e-6;
+    theDerivative=@(x)5*x^4+1e-6;
+    theInitialGuess=10;
+    theTolerance=0.001;
     %
-    x=10;       % Approximation to solution, x0
+    %% Newton-Raphson method
+    x=theInitialGuess;      % Initialising
     diff=1;                 % Initialising
     NumberOfIterations=0;   % Initialising
     %
     while ( diff >= 0.001 )
-        y=x-(x^5-x/1000000)/((4*x^4)+1/1000000);
+        y=x - theFunction(x)/theDerivative(x);
         diff=abs(y-x);  % calculate |x_(n+1) - x_n|
         x=y;            % Update solution approximation
         %
