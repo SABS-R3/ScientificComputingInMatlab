@@ -5,7 +5,8 @@ draft: false
 pre: "5. "
 ---
 
-Before we move on to the next section, make sure you can solve the following problems analytically using pen and paper. Hints and solutions are available.
+Before we move on to the next section, make sure you can solve the following problems analytically using pen and paper.
+Hints and solutions are available.
 
 {{% notice question %}}
 Solve `$\frac{dy}{dx} = x^2$` subject to `$y(0) = 1$`.
@@ -85,7 +86,8 @@ Solve `$\frac{dy_1}{dx} = -y_2$` and `$\frac{dy_2}{dx} = y_1$`, subject to `$y_1
 
 {{% expand "Expand for hint" %}}
 {{% notice hint %}}
-Combining these two equations, by differentiating the first and substituting it in the second, yields a second-order ODE with linear coefficients. Look at the characteristic equation.
+Combining these two equations, by differentiating the first and substituting it in the second, yields a second-order ODE with linear coefficients.
+Look at the characteristic equation.
 {{% /notice %}}
 {{% /expand %}}
 
@@ -96,8 +98,9 @@ Combining these two equations (differentiating the first and substituting it int
 The general solution to this is
 `$$ y_1=A\cos(x)+B\sin(x) \,. $$`
 From the first equation we can calculate `$y_2$` as
-`$$ y_2=A\sin(x) − B\cos(x) $$ \,.`
-Applying the initial conditions gives `$A=1$` and `$B=0$`. The solution is therefore
+`$$ y_2=A\sin(x) − B\cos(x)\,.$$`
+Applying the initial conditions gives `$A=1$` and `$B=0$`.
+The solution is therefore
 `$$ y_1=\cos(x) \quad \textrm{and} \quad y_2=\sin(x). $$`
 {{% /notice %}}
 {{% /expand %}}
@@ -109,7 +112,8 @@ Solve `$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0$`, subject to `$y(0)=1$` and
 
 {{% expand "Expand for hint" %}}
 {{% notice hint %}}
-This is a second-order ODE with linear coefficients. Look at the characteristic equation.
+This is a second-order ODE with linear coefficients.
+Look at the characteristic equation.
 {{% /notice %}}
 {{% /expand %}}
 
@@ -117,7 +121,8 @@ This is a second-order ODE with linear coefficients. Look at the characteristic 
 {{% notice solution %}}
 The general solution to this is
 `$$ y=Ae^x+Be^{−4x} \,. $$`
-Applying the initial conditions gives `$A=\frac{4}{5}$` and `$B=\frac{1}{5}$`. The solution is therefore
+Applying the initial conditions gives `$A=\frac{4}{5}$` and `$B=\frac{1}{5}$`.
+The solution is therefore
 `$$ y=\frac{4}{5}e^x+\frac{1}{5}e^{−4x} \,.$$`
 {{% /notice %}}
 {{% /expand %}}
@@ -126,4 +131,6 @@ Applying the initial conditions gives `$A=\frac{4}{5}$` and `$B=\frac{1}{5}$`. T
 
 ## Close of section
 
-There are many methods for solving ODEs analytically, but we may not be able to calculate explicit forms for the integrals, even if we can formulate a given ODE into one of the known forms. Furthermore, if we wish to solve an equation that does match one of the standard forms, then we must recourse to numerical methods. This is the case for most systems of ODEs that represent real-world situations, since most of these are highly non-linear.
+There are many methods for solving ODEs analytically, but we may not be able to calculate explicit forms for the integrals, even if we can formulate a given ODE into one of the known forms.
+Furthermore, if we wish to solve an equation that does match one of the standard forms, then we must recourse to numerical methods.
+This is the case for most systems of ODEs that represent real-world situations, since most of these are highly non-linear.
