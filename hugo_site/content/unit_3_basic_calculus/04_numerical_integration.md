@@ -28,6 +28,6 @@ The figure is from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/d/
 
 Assuming that `$N$` is even, Simpson's rule for approximating integrals is
 
-`$$\int_a^b f(x) \,dx \approx \frac{h}{3}\left( y_0 + 4\left( y_1+y_3+\ldots+y_{N-1} \right) + 2\left( y_2+y_4+\ldots+y_{N-2} + y_N \right)\right). $$`
+`$$\int_a^b f(x) \,dx \approx \frac{h}{3}\left( y_0 + 4\left( y_1+y_3+\ldots+y_{N-1} \right) + 2\left( y_2+y_4+\ldots+y_{N-2}\right) + y_N\right). $$`
 
 This is derived in a similar way to the Trapezium rule, but by approximating the function by a quadratic curve on each interval, rather than the linear curve used by the Trapezium rule.
