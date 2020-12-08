@@ -514,8 +514,9 @@ $$a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos{nx}\,dx \textrm{, and} \quad b_n 
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</guid>
-      <description> Warning Page under construction.
- Z = peaks(50); surf(Z); axis tight manual set(gca,&amp;#39;nextplot&amp;#39;,&amp;#39;replacechildren&amp;#39;); v = VideoWriter(&amp;#39;peaks.mp4&amp;#39;, &amp;#39;MPEG-4&amp;#39;); open(v); for k = 1:80 surf((1 + cos(6*pi*k/80) + cos(2*pi*k/80))* 0.3333 * Z,Z) frame = getframe(gcf); writeVideo(v,frame); end close(v);  </description>
+      <description>If you are going to make a presentation then you may want to make a movie that you can include within it. The following example will show how to use the commands
+ getframe VideoWriter writeVideo  to make a movie in MATLAB. Before going through the walkthrough look at the help files for the above commands.
+Walkthrough Here we are going to make a movie of an oscillating surface.</description>
     </item>
     
     <item>
@@ -560,8 +561,8 @@ Info Most of the time when you use MATLAB, you will write scripts, which are jus
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/09_speeding_up_code_part_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>There are various methods for speeding up your code and the Writing Fast MATLAB Code guide contains a lot of useful tips. We now list some examples of the key methods used to speed up MATLAB code: preallocating; vectorising; using inbuilt functions; and using sparse matrices.
+Preallocating Most of your calculations in MATLAB have involved manipulations of matrices and vectors, which can slow code down immensely if not used correctly. The following walkthrough will show you how to avoid these problems.</description>
     </item>
     
     <item>
@@ -592,8 +593,8 @@ Walkthrough For example the following commands print out the integers between 1 
       <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/10_speeding_up_code_part_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Even if you have tried all the standard methods of improving your code, there are specific tools in MATLAB to help you to identify bottlenecks. The main one of these tools is the profiler.
+MATLAB profiler Often the best way to develop code is to develop a prototype that has the required functionality, and then to speed up this prototype while maintaining that functionality. A profiler is a tool that identifies how much time is spent executing each line of the code, which enables us to find problem areas and use the methods of improvement described above to speed it up.</description>
     </item>
     
     <item>
@@ -602,8 +603,9 @@ Walkthrough For example the following commands print out the integers between 1 
       <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/11_exercises_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Consider the partial differential equation $$\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2},\qquad\mbox{for}\qquad 0&amp;lt;x&amp;lt;1,\quad 0&amp;lt;t&amp;lt;0.2,$$
+with boundary conditions $u(0,t) = u(1,t)=0$ and initial condition $u(x,0)=\sin(\pi x)$. This is the &amp;lsquo;Unsteady Heat Equation&amp;rsquo;, whose exact solution is given by $$u(x,t)=\sin(\pi x)\exp(-\pi^2 t).$$
+The function HeatEquation.m solves this system using a forward Euler scheme for the temporal derivative and a second-order finite difference formula for the spatial derivative. You are not required to understand the solution method, but more details can be found in Numerical Solution of Partial Differential Equations by K.</description>
     </item>
     
     <item>

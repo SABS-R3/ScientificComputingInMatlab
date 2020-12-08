@@ -12,21 +12,21 @@
     <title>Speeding up code: part 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607427856" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607427856" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607434683" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607434683" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607427856" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607434683" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607427856"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607434683"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607427856"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607427856"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607434683"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607434683"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607427856"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607434683"></script>
 
     
   </div>
@@ -1690,7 +1690,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#matlab-profiler">MATLAB profiler</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#other-tips-and-tricks">Other tips and tricks</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1722,35 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>Even if you have tried all the standard methods of improving your code, there are specific tools in MATLAB to help you to identify bottlenecks.
+The main one of these tools is the profiler.</p>
+<h2 id="matlab-profiler">MATLAB profiler</h2>
+<p>Often the best way to develop code is to develop a prototype that has the required functionality, and then to speed up this prototype while maintaining that functionality.
+A profiler is a tool that identifies how much time is spent executing each line of the code, which enables us to find problem areas and use the methods of improvement described above to speed it up.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>MATLAB has its own inbuilt in profiler.
+See &lsquo;doc profile&rsquo; for instructions on how to use it.
+The profiler can be used via the Command Window, but it is easiest to access it via the &lsquo;Run and Time&rsquo; button.</p>
+<p>Download the file <a href="/ScientificComputingInMatlab/docs/unit_06/HeatEquation.m">HeatEquation.m</a> and put it in your working directory.</p>
+<p>First, run the code with parameter <code>$N=100$</code> by pressing the arrow under the &lsquo;Run&rsquo; button, and where it says <em>type code to run</em>, replace the <code>$N$</code> with 100.
+Check that it runs OK, with no errors in the Command Window.</p>
+<p>Then, press &lsquo;Run and Time&rsquo;.
+That should bring up the following window:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_06/6_10_1.png?classes=matlab-screenshot" alt="Profiler window"></p>
+<p>Clicking on HeatEquation (the one with the biggest blue bar) reveals the lines of code where most time was spent:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_06/6_10_2.png?classes=matlab-screenshot" alt="Profiler window"></p>
+<p>This indicates the areas where you can improve the code, as you will see in the exercises later.</p>
+<h2 id="other-tips-and-tricks">Other tips and tricks</h2>
+<p>There are many other things that you can do to try to speed up your code.
+Some other assorted tips and tricks are.</p>
+<ul>
+<li>In Linux you can start MATLAB with only the command line.
+To do this start MATLAB using the command <code>matlab –nodesktop</code></li>
+<li>You can write components of your code as external <code>.mex !nc</code> files, which may be precompiled C++ and Fortran.
+For more details see <code>doc mex</code>.
+This kind of optimisation is suitable for loop-heavy code (that cannot be vectorised) and as a last resort for code that requires maximum speed.</li>
+<li>The <a href="/ScientificComputingInMatlab/docs/unit_06/writing_fast_matlab_code_getreuer/matopt.pdf">Writing Fast MATLAB Code</a> guide is an excellent source for ways to speed up MATLAB code.</li>
+</ul>
 
 
 <footer class="footline">
@@ -2873,16 +2904,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607427856"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607434683"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607427856"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607427856"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607434683"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607434683"></script>
     
     
 
