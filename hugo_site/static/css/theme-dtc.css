@@ -288,3 +288,9 @@ div.notices.solution > div.label:first-child:before {
 summary {
     padding: 0.5rem 0px;
 }
+
+div.videoContainer {
+    text-align: center;
+    max-width: 80vw;
+    margin: auto;
+}
