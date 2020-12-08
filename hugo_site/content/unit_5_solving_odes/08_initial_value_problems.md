@@ -13,7 +13,7 @@ Consider systems of first order equations of the form
 `$$ \frac{dy_2}{dz} = f_2(x,y_1,y_2) \,, $$`
 subject to conditions `$y_1(x_0)=y_{1_0}$` and `$y_2(x_0)=y_{2_0}$`.
 This type of problem is known as an Initial Value Problem (IVP).
-In order to solve these we use the inbuilt MATLAB commands `ode45` and `ode15s`, both of which use the same syntax so that once you can use one you can use the other.
+In order to solve these we use the inbuilt MATLAB commands `ode45 !nc` and `ode15s !nc`, both of which use the same syntax so that once you can use one you can use the other.
 (There is a larger family of ODE solvers that use the same syntax. See `doc ode45` for a full list.).
 
 This family of solvers is based on multi-step methods such as Runge–Kutta schemes, which extend the Euler methods discussed in the previous section.
@@ -21,7 +21,7 @@ For more details, see any book on numerical methods of solving differential equa
 (Note that this is beyond the scope of this present course.)
 Use `doc ode45` to find more details on these solvers.
 
-In this section we will demonstrate how to use the inbuilt MATLAB ODE solvers such as `ode45`.
+In this section we will demonstrate how to use the inbuilt MATLAB ODE solvers such as `ode45 !nc`.
 We will demonstrate how this works through two walkthroughs: a single first-order ODE and a coupled system of first-order ODEs.
 
 

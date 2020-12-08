@@ -9,8 +9,3 @@ pre = "<b>5. </b>"
 ### Chapter 5
 
 # Solving ODEs
-
-
-{{% notice warning %}}
-Chapter under construction. Original course [available here](http://www.dtc.ox.ac.uk/online-learning/matlab/).
-{{% /notice %}}
