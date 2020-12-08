@@ -6,7 +6,8 @@ pre: "7. "
 ---
 
 
-This set of exercises is designed to give you familiarity with the numerical methods used to solve first-order ODEs. Hints and solutions are available.
+This set of exercises is designed to give you familiarity with the numerical methods used to solve first-order ODEs.
+Hints and solutions are available.
 
 {{% notice question %}}
 Write a Matlab script to solve
@@ -30,7 +31,7 @@ Similarly, the backward Euler formula gives, on rearrangement
 In MATLAB, this can be implemented as
 
 ```matlab
-yBackward(i+1) = 1/(1-dx)*yBackward(i);
+yBackward(i+1) = yBackward(i)/(1-dx);
 ```
 
 for suitably defined variables in an appropriate loop.
@@ -55,7 +56,7 @@ close all
 N = 50; % Number of intevals
 EndTime = 5;
 dx = EndTime/N;
-x=linspace(0,EndTime,N+1)
+x=linspace(0,EndTime,N+1);
 yExact = exp(x); % Exact solution
 %
 yForward = zeros(1,N+1);
@@ -67,20 +68,21 @@ yBackward(1) = 1;
 %
 for i = 1:N
     yForward(i+1) = (1+dx)*yForward(i);
-    yBackward(i+1) = 1/(1-dx)*yBackward(i);
+    yBackward(i+1) = yBackward(i)/(1-dx);
 end
 %
 plot(x,yExact,'k',x,yForward,'b+',x,yBackward,'rx');
 legend('Exact','Forward Euler','Backward Euler');
 ```
 
-Running this code, by copying the file to your working directory and using the command `EulerComparison` produces the following figure.
+Running this code produces the following figure:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![TODO REPLACE ME](/ScientificComputingInMatlab/images/unit_05/5_07_1.svg?classes=matlab-screenshot-40)
 
-For this problem, the forward Euler method always underestimates the solution, while the backward Euler method always overestimates it. This is because the gradient of the solution is always increasing.
+For this problem, the forward Euler method always underestimates the solution, while the backward Euler method always overestimates it.
+This is because the gradient of the solution is always increasing.
 
-By running the script and varying `$n$` we see that as n increases, the accuracy of the approximations also increases.
+By running the script and varying `$n$` we see that as `$n$` increases, the accuracy of the approximations also increases.
 {{% /notice %}}
 {{% /expand %}}
 {{% /notice %}}
