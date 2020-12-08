@@ -7,16 +7,16 @@ pre: "11. "
 
 
 {{% notice question %}}
-This set of exercises is designed to get you to use MATLAB to solve boundary value problems. Hints and solutions are available.  
+This set of exercises is designed to get you to use MATLAB to solve boundary value problems. Hints and solutions are available.
 
-Use `bvp4c` to solve the following boundary value problems.  
+Use `bvp4c` to solve the following boundary value problems.
 
-Consider the equation.  
+Consider the equation.
 `$$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$`
 
-1. Solve this subject to `$y(0) = 0$` and `$y(1) = 1$`.  
+1. Solve this subject to `$y(0) = 0$` and `$y(1) = 1$`.
 
-2. Solve the same equation subject to `$y'(0) = 0$` and `$y(1) = 1$`.  
+2. Solve the same equation subject to `$y'(0) = 0$` and `$y(1) = 1$`.
 
 
 {{% expand "Expand for hint" %}}
@@ -27,10 +27,10 @@ Have another look at the code from the previous BVP example.
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
-To solve this numerically, we first need to reduce the second-order system to a system of first-order equations,  
+To solve this numerically, we first need to reduce the second-order system to a system of first-order equations,
 `$$ \frac{dy}{dx} = z \,, $$`
 `$$ \frac{dz}{dx} = 4y - 3z \,. $$`
-Example code to solve this system with associated boundary conditions is given by  
+Example code to solve this system with associated boundary conditions is given by
 
 ```matlab
 % Function to solve y''+ 3y' - 4y^2 = 0.
@@ -62,11 +62,11 @@ res = [ ya(1)-1
 % yb(1)-1];
 ```
 
-Running this code yields the following plot, which shows that both boundary conditions are satisfied.  
+Running this code yields the following plot, which shows that both boundary conditions are satisfied.
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)  
+![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
 
-In order to solve the equations with the second set of boundary conditions, replace the `bcs` function by the commented version. This yields the following plot.  
+In order to solve the equations with the second set of boundary conditions, replace the `bcs` function by the commented version. This yields the following plot.
 
 ![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
 
