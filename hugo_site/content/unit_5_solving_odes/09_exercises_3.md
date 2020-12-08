@@ -6,7 +6,8 @@ pre: "9. "
 ---
 
 
-This set of exercises is designed to get you to use MATLAB to solve initial value problems. Hints and solutions are available.
+This set of exercises is designed to get you to use MATLAB to solve initial value problems.
+Hints and solutions are available.
 
 {{% notice question %}}
 1. Solve `$\frac{dy}{dx} = x^2$`, subject to `$y(0) = 1$`.
@@ -15,7 +16,8 @@ This set of exercises is designed to get you to use MATLAB to solve initial valu
 
 3. Solve `$\frac{dy}{dx} + \frac{2y}{x} = x^4$`, subject to `$y(1) = 1$`.
 
-4. Solve `$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0$`, subject to `$y(0) = 1$` and `$y'(0) = 0$`. Note you will need to reformulate this as a system of first order ODEs.
+4. Solve `$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0$`, subject to `$y(0) = 1$` and `$y'(0) = 0$`.
+    Note you will need to reformulate this as a system of first order ODEs.
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
@@ -29,8 +31,13 @@ Analytical solutions are given in a previous exercise, so you can check your ans
 {{% /expand %}}
 {{% /notice %}}
 
+
 {{% notice question %}}
-Mathematical models of simple chemical or biochemical reaction mechanisms often take the form of non-linear systems of ODEs (derived using the standard chemical laws of mass action). The various reactions that make up a system often operate on very different time-scales, which leads to a ‘stiff’ system (for more details see http://en.wikipedia.org/wiki/Stiff_equation). An example is Robertson’s chemical reaction model, in which three chemical species 1, 2 and 3 react according to the following system of equations:
+
+Mathematical models of simple chemical or biochemical reaction mechanisms often take the form of non-linear systems of ODEs (derived using the standard chemical laws of mass action).
+The various reactions that make up a system often operate on very different time-scales, which leads to a 'stiff' system (for more details see https://en.wikipedia.org/wiki/Stiff_equation).
+
+An example is Robertson's chemical reaction model, in which three chemical species 1, 2 and 3 react according to the following system of equations:
 `$$ \frac{dy_1}{dt} = -0.04y_1 + 10000y_2y_3 \,, $$`
 `$$ \frac{dy_2}{dt} = 0.04y_1 - 10000y_2y_3 - 30000000y_2^2 \,, $$`
 `$$ \frac{dy_3}{dt} = 30000000y_2^2 \,. $$`
@@ -59,48 +66,49 @@ toc
 The following code solves the Robertson reactions using ode45 and ode15s.
 
 ```matlab
-% Function to solve the Robertson ODE system using
-% ode45 and ode15s.
+% Function to solve the Robertson ODE system using ode45 and ode15s.
 function SolveRobertson()
-disp('Time for ode45');
-tic
-[t,Y45] = ode45(@Robertson,[0,100],[1;0;0]);
-toc
-%
-subplot(1,2,1);
-plot(t,Y45(:,1),'b',t,Y45(:,2),'r',t,Y45(:,3),'g');
-legend('y_1 ode45','y_2 ode45','y_3 ode45');
-%
-disp('Time for ode15s');
-tic
-[t,Y15s] = ode15s(@Robertson,[0,100],[1;0;0]);
-toc
-%
-subplot(1,2,2);
-plot(t,Y15s(:,1),'b',t,Y15s(:,2),'r',t,Y15s(:,3),'g');
-legend('y_1 ode15s','y_2 ode15s','y_3 ode15s');
-%
-function dYdt = Robertson(t,Y)
-%
-dYdt = [-0.04*Y(1) + 10000*Y(2)*Y(3);
-         0.04*Y(1) - 10000*Y(2)*Y(3) - 30000000*Y(2)^2;
-         30000000*Y(2)^2];
+    %% Using ode45
+    disp('Time for ode45');
+    tic; [t,Y45] = ode45(@Robertson,[0,100],[1;0;0]); toc
+    % Plot results
+    subplot(1,2,1);
+    plot(t,Y45(:,1),'b',t,Y45(:,2),'r',t,Y45(:,3),'g');
+    legend('y_1 ode45','y_2 ode45','y_3 ode45');
+    %% Using ode15s
+    disp('Time for ode15s');
+    tic; [t,Y15s] = ode15s(@Robertson,[0,100],[1;0;0]); toc
+    % Plot results
+    subplot(1,2,2);
+    plot(t,Y15s(:,1),'b',t,Y15s(:,2),'r',t,Y15s(:,3),'g');
+    legend('y_1 ode15s','y_2 ode15s','y_3 ode15s');
+    %% Evaluate the right hand side of the system
+    function dYdt = Robertson(t,Y)
+        dYdt = [-0.04*Y(1) + 10000*Y(2)*Y(3);
+            0.04*Y(1) - 10000*Y(2)*Y(3) - 30000000*Y(2)^2;
+            30000000*Y(2)^2];
+    end
+end
 ```
 
-Running the code, using `SolveRobertson`, yields the following output
+Running the code, by saving in a file named `SolveRobertson.m` and executing it with `SolveRobertson()`, yields the following output:
 
-`Time for ode45`
-`Elapsed time is 48.494789 seconds.`
-`Time for ode15s`
-`Elapsed time is 0.026938 seconds.`
+```plaintext
+>> SolveRobertson
+Time for ode45
+Elapsed time is 1.090715 seconds.
+Time for ode15s
+Elapsed time is 0.007496 seconds.
+```
 
-and the following plot
+and the following plot:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![ode45 coupled system](/ScientificComputingInMatlab/images/unit_05/5_09_1.svg?classes=matlab-screenshot-40)
 
-For this particular example, `ode15s` is almost 2,000 times faster than ode45.
+For this particular example, `ode15s` is almost 150x faster than ode45.
 
-The reactions are occurring on different time-scales and mathematically the problem is known to be ‘stiff’. Therefore, using `ode15s`, which is designed for such problems, is much more efficient than `ode45` in this situation.
+The reactions are occurring on different time-scales and mathematically the problem is known to be 'stiff'.
+Therefore, using `ode15s`, which is designed for such problems, is much more efficient than `ode45` in this situation.
 {{% /notice %}}
 {{% /expand %}}
 {{% /notice %}}
