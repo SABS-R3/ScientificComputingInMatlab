@@ -16,7 +16,7 @@ The aim of the unit is to show you how to use MATLAB to undertake all these oper
 
 ## Reading list
 
-The best book for descriptions of the numerical methods used here is *Advanced Engineering Mathematics* by Erwin Kreyszig.
+The best book for descriptions of the numerical methods used here is [*Advanced Engineering Mathematics* by Erwin Kreyszig](http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph021446150).
 
 There will be appropriate references wherever new numerical ideas are introduced.
 

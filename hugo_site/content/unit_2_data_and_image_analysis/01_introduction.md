@@ -25,4 +25,4 @@ Where needed, references for more advanced material will be given.
 
 - Any A level or undergraduate introduction to probability or statistics
 - The [statistics wikibook](http://en.wikibooks.org/wiki/Statistics)
-- Chapter 24 (in the ninth edition) of *Advanced Engineering Mathematics* by Erwin Kreyszig. (This is a huge book but you should be able to find a copy in your library.)
+- Chapter 24 (in the ninth edition) of [*Advanced Engineering Mathematics* by Erwin Kreyszig](http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph021446150). (This is a huge book but you should be able to find a copy in your library.)
