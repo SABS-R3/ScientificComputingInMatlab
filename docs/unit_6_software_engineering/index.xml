@@ -13,8 +13,7 @@
       <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/01_introduction/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Learning objectives As you will have found out by now, it is important to produce well-structured and efficient code. This unit contains exercises designed to show you how to do this. It is also important to be able to represent the results of your work in the best possible way. In this unit you will therefore also learn how to construct a simple Graphical User Interface (GUI) for your code and how to produce movies in MATLAB to present your results.</description>
     </item>
     
     <item>
@@ -23,8 +22,9 @@
       <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/02_formatting_code_part_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This section is based on the https://software-carpentry.org/ course and the article on coding style https://queue.acm.org/detail.cfm?id=1039535. Emphasis has been put on how you use these ideas in MATLAB, however, a lot of the ideas you will see here are applicable in any programming language.
+Why we write code The main reasons we write code are:
+ to design solutions to problems; to communicate our designs to people; and to get a computer to implement our design.</description>
     </item>
     
     <item>
@@ -33,8 +33,11 @@
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/03_formatting_code_part_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Comments help to describe the intent of the programmer and document tricky sections of the program. Comments also provide a way of adding metadata, such as physical units. The aim is to describe, rather than duplicate.
+For example:
+% Initialise voltage to zero voltage = 0.0; just repeats the information in the code, whereas:
+% Transmembrane potential (units - mV) voltage = 0.0; provides more important information.
+When writing code, it is good practice to use comments first to lay out a skeleton for the code.</description>
     </item>
     
     <item>
@@ -43,8 +46,8 @@
       <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/04_formatting_code_part_3/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Whitespace Whitespace is generally not significant to the computer, but it makes a big difference to code&amp;rsquo;s readability to humans. Take a look at the following examples.
+Can(you, tell, at + a, glance, which * of, these, parameters, is(the, eighth), one); This(is, ... much, ... nicer); This=is+almost*(as-annoying); This = is + much * (more - readable); Nested functions You can define functions inside other functions – known as &amp;lsquo;nested&amp;rsquo; functions – which can improve the readability of the code and save you from having to use multiple files.</description>
     </item>
     
     <item>
@@ -53,8 +56,8 @@
       <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/05_guis_part_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>If you are developing code for other people to use, then it is much better to provide the user with an interface rather than having to type commands into MATLAB. Moreover, developing a user interface will also make the code more usable for you and make it easier for you to demonstrate your code to other people.
+MATLAB has inbuilt functionality that enables you to create GUIs with a few simple commands.</description>
     </item>
     
     <item>
@@ -63,8 +66,8 @@
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>In the previous screens we have created the figure for the GUI and added some controls. We now need to get the GUI to do something. In the command to create the push button we called a function named PlotGUI !nc, which is where the MATLAB code to be controlled by the GUI will go.
+The plot function We now define the function PlotGUI !nc which is called by the push button.</description>
     </item>
     
     <item>
@@ -73,8 +76,10 @@
       <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/07_exercises_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Question Using the GUI provided in the previous section as a guide, create a GUI for the system of differential equations given by:
+$$\frac{dN}{dt}=N(1-P)$$ $$\frac{dP}{dt}=P(N-1),$$
+with initial conditions $N(0)=\alpha$ and $P(0)=\beta$. If you&amp;rsquo;re interested in the biological background for this problem (which is known as a &amp;lsquo;Predator–Prey system&amp;rsquo;), then see Chapter 3 of Mathematical Biology by J. D. Murray.
+Your GUI should plot both the solutions, $N !nc$ and $P !</description>
     </item>
     
     <item>
@@ -84,7 +89,7 @@
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/08_making_movies_in_matlab/</guid>
       <description> Warning Page under construction.
- </description>
+ Z = peaks(50); surf(Z); axis tight manual set(gca,&amp;#39;nextplot&amp;#39;,&amp;#39;replacechildren&amp;#39;); v = VideoWriter(&amp;#39;peaks.mp4&amp;#39;, &amp;#39;MPEG-4&amp;#39;); open(v); for k = 1:80 surf((1 + cos(6*pi*k/80) + cos(2*pi*k/80))* 0.3333 * Z,Z) frame = getframe(gcf); writeVideo(v,frame); end close(v);  </description>
     </item>
     
     <item>

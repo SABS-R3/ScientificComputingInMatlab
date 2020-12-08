@@ -12,21 +12,21 @@
     <title>Formatting code: part 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607386246" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607386246" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607386246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607361777"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607386246"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607386246"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607386246"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#creating-automatic-documentation">Creating automatic documentation</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1721,59 @@
         
 
 
+<p>Comments help to describe the intent of the programmer and document tricky sections of the program.
+Comments also provide a way of adding metadata, such as physical units.
+The aim is to describe, rather than duplicate.</p>
+<p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">% Initialise voltage to zero</span>
+voltage = <span style="color:#ae81ff">0.0</span>;
+</code></pre></div><p>just repeats the information in the code, whereas:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">% Transmembrane potential (units - mV)</span>
+voltage = <span style="color:#ae81ff">0.0</span>;
+</code></pre></div><p>provides more important information.</p>
+<p>When writing code, it is good practice to use comments first to lay out a skeleton for the code.
+This helps to solidify the algorithm in your mind and also means that there is often no need to write more comments afterwards!</p>
+<p>You can start off with something like</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%% Initialise stiffness matrix</span>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<span style="color:#75715e">% Add boundary conditions</span>
+
+<span style="color:#75715e">%% Assemble linear system</span>
+
+<span style="color:#75715e">% Set initial conditions in Solution vector</span>
+
+<span style="color:#75715e">%% Solve linear system</span>
+</code></pre></div><p>where comments on the main steps are marked <code>%% !nc</code> while those on sub-steps are marked <code>% !nc</code>. This is only one example of using the <code>% !nc</code> to signify parts of your code, and you may wish to use your own, for example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%%%%%%%%%%</span>
+<span style="color:#75715e">%% Main Step %%</span>
+<span style="color:#75715e">%%%%%%%%%%</span>
+
+<span style="color:#75715e">%% Sub Step %%</span>
+</code></pre></div><p>Any method you choose is fine as long as you are consistent.</p>
+
+<div class="notices info" >
+  <div class="label">Info</div>
+  <p>In MATLAB, a comment starting with a double percent (<code>%% !nc</code>) starts a new &lsquo;section&rsquo; in a script, that is marked by a light yellow background.</p>
+<p>This can be very useful for structuring code as it is possible to run just a section of your script.</p>
 
 </div>
 
+<h2 id="creating-automatic-documentation">Creating automatic documentation</h2>
+<p>You can use comments in functions to provide automatic documentation (or help) for your functions.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>For example, if you create an M-file with the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> y = <span style="color:#a6e22e">average</span>(x)
+    <span style="color:#75715e">% AVERAGE Mean of vector elements.</span>
+    <span style="color:#75715e">% Further documentation</span>
+    y = sum(x)<span style="color:#f92672">/</span>length(x); <span style="color:#75715e">% Actual computation</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Running the command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">help average
+</code></pre></div><p>will now produce</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; help average
+  average Mean of vector elements.
+  Further documentation
+</code></pre></div><p>More help on this functionality can be found <a href="https://uk.mathworks.com/help/matlab/matlab_prog/add-help-for-your-program.html">here</a>.</p>
 
 
 <footer class="footline">
@@ -2873,16 +2927,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607386246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607386246"></script>
     
     
 

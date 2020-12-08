@@ -12,21 +12,21 @@
     <title>GUIs: part 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607386246" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607386246" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607386246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607361777"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607386246"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607386246"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607386246"></script>
 
     
   </div>
@@ -1690,7 +1690,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-plot-function">The plot function</a></li>
+        <li><a href="#the-whole-thing">The whole thing</a></li>
+        <li><a href="#alternative-gui-example">Alternative GUI example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1723,125 @@
         
 
 
+<p>In the previous screens we have created the figure for the GUI and added some controls.
+We now need to get the GUI to do something.
+In the command to create the push button we called a function named <code>PlotGUI !nc</code>, which is where the MATLAB code to be controlled by the GUI will go.</p>
+<h3 id="the-plot-function">The plot function</h3>
+<p>We now define the function <code>PlotGUI !nc</code> which is called by the push button.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%% Called by SimpeGUI to do the plotting</span>
+<span style="color:#75715e">% hObject is the button and eventdata is unused.</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">PlotGUI</span>(hObject,eventdata)
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+    <span style="color:#75715e">% Gets the value of the parameter from the slider.</span>
+    Param = get(Slider,<span style="color:#e6db74">&#39;Value&#39;</span>);
 
-</div>
+    <span style="color:#75715e">% Puts the value of the parameter on the GUI.</span>
+    uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, num2str(Param),<span style="color:#75715e">...</span>
+    <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">460</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">20</span>]);
 
+    <span style="color:#75715e">% Plots the Graph.</span>
+    x=linspace(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1000</span>);
+    k = Param;
+    y = sin(k<span style="color:#f92672">*</span>x);
+    plot(x,y);
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>The function &lsquo;PlotGUI&rsquo; takes in two input arguments:</p>
+<ul>
+<li><code>hObject !nc</code>, the handle of the button which enables the state of the uicontrol to be accessed from <code>PlotGUI !nc</code>. (Note: this is not used here as we are using global functions but is used in the code given below.)</li>
+<li><code>eventdata !nc</code>, unused here but included for use with the <code>Callback !nc</code> command.</li>
+</ul>
+<p>This function can be modified so that it runs the code you wish the GUI to control.</p>
+<h3 id="the-whole-thing">The whole thing</h3>
+<p>Brought together, the entire GUI is defined by the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%% Simple GUI</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SimpleGUI</span>()
+    close all
+    
+    <span style="color:#66d9ef">global</span> Slider; <span style="color:#75715e">%Define this to be global so subfunction can see slider</span>
+    
+    <span style="color:#75715e">% Make a large figure.</span>
+    figure(<span style="color:#e6db74">&#39;position&#39;</span>,[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">700</span> <span style="color:#ae81ff">500</span>], <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;SimpleGUI&#39;</span>, <span style="color:#e6db74">&#39;NumberTitle&#39;</span>, <span style="color:#e6db74">&#39;off&#39;</span>);
+    
+    <span style="color:#75715e">% Make subplot to hold plot.</span>
+    h = subplot(<span style="color:#e6db74">&#39;position&#39;</span>,[<span style="color:#ae81ff">0.1</span> <span style="color:#ae81ff">0.3</span> <span style="color:#ae81ff">0.8</span> <span style="color:#ae81ff">0.6</span>]);
+    
+    <span style="color:#75715e">% Just some descriptive text.</span>
+    uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, <span style="color:#e6db74">&#39;Parameter Value&#39;</span>,<span style="color:#75715e">...</span>
+        <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">150</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">30</span>]);
+    
+    <span style="color:#75715e">% A slider for varying the parameter.</span>
+    Slider = uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;slider&#39;</span>, <span style="color:#e6db74">&#39;Min&#39;</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#ae81ff">10</span>,<span style="color:#75715e">...</span>
+        <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">250</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">30</span>]);
+    
+    <span style="color:#75715e">% A button to run the sims.</span>
+    Button = uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;pushbutton&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, <span style="color:#e6db74">&#39;Run&#39;</span>,<span style="color:#75715e">...</span>
+        <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">530</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">30</span>],<span style="color:#e6db74">&#39;Callback&#39;</span>, @PlotGUI);
+    
+    <span style="color:#75715e">%% Called by SimpeGUI to do the plotting</span>
+    <span style="color:#75715e">% hObject is the button and eventdata is unused.</span>
+<span style="color:#66d9ef">    function</span> <span style="color:#a6e22e">PlotGUI</span>(hObject,eventdata)
+        
+        <span style="color:#75715e">% Gets the value of the parameter from the slider.</span>
+        Param = get(Slider,<span style="color:#e6db74">&#39;Value&#39;</span>);
+        
+        <span style="color:#75715e">% Puts the value of the parameter on the GUI.</span>
+        uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, num2str(Param),<span style="color:#75715e">...</span>
+            <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">460</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">20</span>]);
+        
+        <span style="color:#75715e">% Plots the Graph.</span>
+        x=linspace(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1000</span>);
+        k = Param;
+        y = sin(k<span style="color:#f92672">*</span>x);
+        plot(x,y);
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Copy this into a new M-file in your working directory named <code>SimpleGUI.m</code>, and run it with the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">SimpleGui
+</code></pre></div><p>Move the slider and press the &lsquo;Run&rsquo; button see the plot change.
+The working GUI is shown in the following figure:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_06/6_06_1.svg?classes=matlab-screenshot-40" alt="GUI with UI controls"></p>
+<p>While this is a very simple application, the methods used here can be extended to more general GUIs.</p>
+<h3 id="alternative-gui-example">Alternative GUI example</h3>
+<p>Another version of this GUI is given below, which automatically updates the plot after the slider is moved:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%% Simple GUI</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SimpleGUIWithoutButton</span>()
+    close all
+    
+    <span style="color:#75715e">% Make a large figure.</span>
+    figure(<span style="color:#e6db74">&#39;position&#39;</span>,[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">700</span> <span style="color:#ae81ff">500</span>], <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;SimpleGUI&#39;</span>, <span style="color:#e6db74">&#39;NumberTitle&#39;</span>, <span style="color:#e6db74">&#39;off&#39;</span>);
+    
+    <span style="color:#75715e">% Make subplot to hold plot.</span>
+    h = subplot(<span style="color:#e6db74">&#39;position&#39;</span>,[<span style="color:#ae81ff">0.1</span> <span style="color:#ae81ff">0.3</span> <span style="color:#ae81ff">0.8</span> <span style="color:#ae81ff">0.6</span>]);
+    
+    <span style="color:#75715e">% Just some descriptive text.</span>
+    uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, <span style="color:#e6db74">&#39;Parameter Value&#39;</span>,<span style="color:#75715e">...</span>
+        <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">150</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">30</span>]);
+    
+    <span style="color:#75715e">% A slider for varying the parameter.</span>
+    uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;slider&#39;</span>, <span style="color:#e6db74">&#39;Min&#39;</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#ae81ff">10</span>,<span style="color:#75715e">...</span>
+        <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">250</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">30</span>],<span style="color:#e6db74">&#39;Callback&#39;</span>, @PlotGUI);
+    
+    <span style="color:#75715e">%% Called by SimpleGUI to do the plotting</span>
+    <span style="color:#75715e">% hObject is the slider and eventdata is unused.</span>
+<span style="color:#66d9ef">    function</span> <span style="color:#a6e22e">PlotGUI</span>(hObject,eventdata)
+        
+        <span style="color:#75715e">% Gets the value of the parameter from the slider.</span>
+        Param = get(hObject,<span style="color:#e6db74">&#39;Value&#39;</span>);
+        
+        <span style="color:#75715e">% Puts the value of the parameter on the GUI.</span>
+        uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, num2str(Param),<span style="color:#75715e">...</span>
+            <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">460</span> <span style="color:#ae81ff">55</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">20</span>]);
+        
+        <span style="color:#75715e">% Plots the Graph.</span>
+        x=linspace(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1000</span>);
+        k = Param;
+        y = sin(k<span style="color:#f92672">*</span>x);
+        plot(x,y);
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Copy this into a new M-file in your working directory named <code>SimpleGUIWithoutButton.m</code>, and run it with the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">SimpleGuiWithoutButton
+</code></pre></div><p>There are various other ways of constructing the GUI, and by now you will be sufficiently familiar with functions used in MATLAB to modify the files you have to experiment with this.</p>
 
 
 <footer class="footline">
@@ -2873,16 +2995,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607386246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607386246"></script>
     
     
 

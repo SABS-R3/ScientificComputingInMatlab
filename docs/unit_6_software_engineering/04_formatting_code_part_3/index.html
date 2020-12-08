@@ -12,21 +12,21 @@
     <title>Formatting code: part 3   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607386246" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607386246" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607386246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607361777"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607386246"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607386246"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607386246"></script>
 
     
   </div>
@@ -1690,7 +1690,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#whitespace">Whitespace</a></li>
+    <li><a href="#nested-functions">Nested functions</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1718,35 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<h2 id="whitespace">Whitespace</h2>
+<p>Whitespace is generally not significant to the computer, but it makes a big difference to code&rsquo;s readability to humans.
+Take a look at the following examples.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Can(you, tell, at + a, glance, which * of, these,
+parameters, is(the, eighth), one);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">This(is, ...
+     much, ...
+     nicer);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">This=is+almost*(as-annoying);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">This = is + much * (more - readable);
+</code></pre></div><h2 id="nested-functions">Nested functions</h2>
+<p>You can define functions inside other functions – known as &lsquo;nested&rsquo; functions – which can improve the readability of the code and save you from having to use multiple files.
+In the following example of nested functions, note how indentation helps to distinguish functions from each other.
+(This can be done automatically within the MATLAB editor by using the smart indent command in the &lsquo;Text&rsquo; menu or the &lsquo;Ctrl-I&rsquo; command in Windows.)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">A</span>(x, y) <span style="color:#75715e">% Primary function</span>
+    B(x, y);
+    D(y);
+<span style="color:#66d9ef">    function</span> <span style="color:#a6e22e">B</span>(x, y) <span style="color:#75715e">% Nested in A</span>
+        C(x);
+        D(y);
+<span style="color:#66d9ef">        function</span> <span style="color:#a6e22e">C</span>(x) <span style="color:#75715e">% Nested in B</span>
+            D(x);
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">    function</span> <span style="color:#a6e22e">D</span>(x) <span style="color:#75715e">% Nested in A</span>
+        z = x <span style="color:#f92672">+</span> y;
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Look up <a href="https://uk.mathworks.com/help/matlab/matlab_prog/nested-functions.html">nested functions</a> in the MATLAB help system.</p>
 
 
 <footer class="footline">
@@ -2873,16 +2900,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607386246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607386246"></script>
     
     
 

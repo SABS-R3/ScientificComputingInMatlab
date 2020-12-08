@@ -12,21 +12,21 @@
     <title>Introduction   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607361777" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607386246" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607386246" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607361777" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607386246" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607386246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607361777"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607386246"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607386246"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607361777"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607386246"></script>
 
     
   </div>
@@ -1690,7 +1690,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning objectives</a></li>
+    <li><a href="#reading-list">Reading list</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1718,31 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<h2 id="learning-objectives">Learning objectives</h2>
+<p>As you will have found out by now, it is important to produce well-structured and efficient code.
+This unit contains exercises designed to show you how to do this.
+It is also important to be able to represent the results of your work in the best possible way.
+In this unit you will therefore also learn how to construct a simple Graphical User Interface (GUI) for your code and how to produce movies in MATLAB to present your results.</p>
+<p>The time you spend typing is a tiny fraction of the time you spend coding.
+Much of your time will be spent:</p>
+<ul>
+<li>designing;</li>
+<li>testing (making sure your code does what it&rsquo;s meant to do);</li>
+<li>debugging (fixing problems);</li>
+<li>refactoring (rewriting elements of the code without changing what they do); or</li>
+<li>enhancing (improving the code).</li>
+</ul>
+<p>The aim of this unit is to show you techniques to improve your code in order to make it more efficient and user friendly.</p>
+<h2 id="reading-list">Reading list</h2>
+<p>Much of this unit is based on the following three online sources:</p>
+<ul>
+<li>&lsquo;Writing Fast MATLAB Code&rsquo;: <a href="/ScientificComputingInMatlab/docs/unit_06/writing_fast_matlab_code_getreuer/matopt.pdf">download pdf</a> and <a href="/ScientificComputingInMatlab/docs/unit_06/writing_fast_matlab_code_getreuer/license.txt">accompanying license</a></li>
+<li>The Software carpentry website: <a href="https://software-carpentry.org/lessons/">https://software-carpentry.org/lessons/</a></li>
+<li>An article on coding styles: <a href="http://queue.acm.org/detail.cfm?id=1039535">http://queue.acm.org/detail.cfm?id=1039535</a></li>
+</ul>
+<p>The &lsquo;Writing Fast MATLAB Code&rsquo; guide will be particularly useful as you begin to write your own code.
+I advise downloading a copy now to look at as you go throughout the unit.
+While fairly old now, the techniques described are nonetheless very relevant.</p>
 
 
 <footer class="footline">
@@ -2870,16 +2893,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607386246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607361777"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607361777"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607386246"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607386246"></script>
     
     
 
