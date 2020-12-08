@@ -12,21 +12,21 @@
     <title>Numerical methods   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607453984" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607453984" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607453984"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607444257"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607453984"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607453984"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607453984"></script>
 
     
   </div>
@@ -1690,7 +1690,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#numerical-differentiation">Numerical differentiation</a></li>
+    <li><a href="#eulers-method-for-solving-first-order-odes">Euler&rsquo;s method for solving first order ODEs</a></li>
+    <li><a href="#forward-vs-backward-euler">Forward vs backward Euler</a></li>
+    <li><a href="#euler-method-for-systems-of-odes">Euler method for systems of ODEs</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1720,52 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>The following sections are concerned with the theory underlying the numerical solution of ODEs such as numerical differentiation and Euler&rsquo;s method.</p>
+<h2 id="numerical-differentiation">Numerical differentiation</h2>
+<p>Recall from the previous unit &lsquo;Basic calculus in MATLAB&rsquo; that the derivative of a function <code>$y$</code> with respect to the variable <code>$x$</code> can be approximated by</p>
+<p><code>$$\frac{dy}{dx}(x) \approx \frac{y(x) - y(x-\delta x)}{\delta x},$$</code>
+the backward difference formula; or</p>
+<p><code>$$\frac{dy}{dx}(x) \approx \frac{y(x+\delta x) - y(x)}{\delta x},$$</code>
+the forward difference formula.</p>
+<p>where <code>$\delta x$</code> is small.
+The smaller <code>$\delta x$</code> is, the better the approximation.
+The notation here is slightly different from unit 3, since we are using <code>$h=\delta x$</code>.</p>
+<h2 id="eulers-method-for-solving-first-order-odes">Euler&rsquo;s method for solving first order ODEs</h2>
+<p>We wish to solve the first order ODE
+<code>$$ \frac{dy}{dx}=f(x,y) \,,$$</code>
+subject to the initial condition
+<code>$$ y(a)=y_a \,,$$</code>
+on the domain <code>$ a \leq x \leq b \,.$</code></p>
+<p>We will do this using Euler&rsquo;s method and proceed as follows:</p>
+<ul>
+<li>
+<p>The first step is to divide the domain up into <code>$n$</code> equally sized intervals of size <code>$\delta x=\frac{b−a}{n}$</code>.</p>
+</li>
+<li>
+<p>Then we define <code>$x^0=a$</code>, <code>$x^i=a+i\delta x$</code> and <code>$x^n=b$</code>, and let <code>$y^0=y_a$</code>.</p>
+</li>
+<li>
+<p>We now want to find a sequence of numbers <code>$y^1 \ldots y^n$</code> such that <code>$y^i \approx y(x^i)$</code>.
+Using the approximations for the derivative from above we can approximate the first order initial value problem by <code>$\frac{y^{i+1}−y^i}{\delta x}=f(x,y)$</code>.</p>
+</li>
+</ul>
+<p>If we know <code>$f(x,y)$</code>, then rearranging this gives a formula for calculating <code>$y^{i+1}$</code> given <code>$y^i$</code>.</p>
+<p>There are various options for evaluating <code>$f(x,y)$</code> which are discussed now.</p>
+<h2 id="forward-vs-backward-euler">Forward vs backward Euler</h2>
+<p>Evaluating <code>$f(x,y)$</code> at <code>$x^i$</code> gives
+<code>$$ \frac{y^{i+1}−y^i}{\delta x}=f(x^i,y^i) \,, $$</code>
+which can be rearranged to give an explicit formula for <code>$y^{i+1}$</code>,
+<code>$$ y^{i+1}=y^i+\delta xf(x^i,y^i) \,,$$</code>
+which is known as the <strong>forward Euler</strong> method.</p>
+<p>Evaluating <code>$f(x,y)$</code> at <code>$x^{i+1}$</code> gives
+<code>$$ \frac{y^{i+1}−y^i}{\delta x} = f(x^{i+1},y^{i+1}) \,,$$</code>
+which can be rearranged to give an implicit formula for <code>$y^{i+1}$</code>,
+<code>$$ y^{i+1}−\delta xf(x^{i+1},y^{i+1})=y^i \,.$$</code>
+which is known as the <strong>backward Euler</strong> method.
+In general, this system is non-linear in <code>$y^{i+1}$</code>.</p>
+<p>It is usually simpler to work out the forward Euler than the backward Euler approximation, but it is often possible to use a coarser mesh with the backward Euler method, since it remains stable for a larger step size.</p>
+<h2 id="euler-method-for-systems-of-odes">Euler method for systems of ODEs</h2>
+<p>We can extend this to solve systems of first-order ODEs by treating <code>$y$</code> as a vector (<code>$\mathbf{y}$</code>) and <code>$f$</code> as a vector of functions (<code>$\mathbf{f}$</code>).</p>
 
 
 <footer class="footline">
@@ -2873,16 +2919,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607453984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607453984"></script>
     
     
 

@@ -12,21 +12,21 @@
     <title>Analytical methods: 2nd order   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607453984" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607453984" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607453984"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607444257"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607453984"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607453984"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607453984"></script>
 
     
   </div>
@@ -1690,7 +1690,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1721,34 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>After dealing with first-order equations, we now look at the simplest type of second-order differential equation, with linear coefficients of the form
+<code>$$ a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = 0 \,. $$</code></p>
+<p>To solve this we look at the solutions to the auxiliary equation, given by
+<code>$$ ak^2 + bk + c = 0 \,. $$</code></p>
+<p>Based on the solutions of the auxiliary equation, the solution takes the following forms:</p>
+<ul>
+<li>
+<p>If the solutions are <code>$k=\alpha,\beta$</code> where <code>$\alpha,\beta \in \Re$</code>, with <code>$\alpha \neq \beta$</code> then the solutions to the original equation are of the form <code>$y=Ae^{\alpha x}+Be^{\beta x}$</code>, where <code>$A,B \in \Re$</code> are constants of integration to be determined by initial or boundary conditions.</p>
+</li>
+<li>
+<p>If the solutions are both <code>$k=\alpha$</code> where <code>$\alpha \in \Re$</code> then the solutions to the original equation are of the form <code>$y=(A+Bx)e^{\alpha x}$</code>, where <code>$A,B \in \Re$</code> are constants of integration to be determined by initial or boundary conditions.</p>
+</li>
+<li>
+<p>If the solutions are <code>$k=\pm \beta i$</code> where <code>$\beta \in \Re$</code> then the solutions to the original equation are of the form <code>$y=A\sin(\beta x)+B\cos(\beta x)$</code>, where <code>$A,B \in \Re$</code> are constants of integration to be determined by initial or boundary conditions.</p>
+</li>
+<li>
+<p>If the solutions are <code>$k=\alpha\pm\beta i$</code> where <code>$\alpha,\beta \in \Re$</code> then the solutions to the original equation are of the form <code>$y=e^{\alpha x}[A\sin(\beta x)+B\cos(\beta x)]$</code>, where <code>$A,B \in \Re$</code> are constants of integration to be determined by initial or boundary conditions.</p>
+</li>
+</ul>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>We wish to solve
+<code>$$ \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0 $$</code>
+subject to
+<code>$$ y(0)=0 \quad \textrm{and} \quad y'(1)=1 \,.$$</code>
+The solutions of the auxiliary equation are both <code>$k=−1$</code>, therefore the general solution is
+<code>$$ y=(A+Bx)e^{−x} \,,$$</code>
+Applying the boundary conditions <code>$y(0)=0,y'(1)=1$</code> gives <code>$B=e^1,\;A=0$</code>, and the solution is therefore
+<code>$$ y(x)=xe^{1−x} \,. $$</code></p>
 
 
 <footer class="footline">
@@ -2873,16 +2902,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607453984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607453984"></script>
     
     
 

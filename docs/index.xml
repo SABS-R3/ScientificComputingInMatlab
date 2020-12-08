@@ -70,8 +70,8 @@ When you see things written in typewriter font as in this for example, you shoul
       <pubDate>Thu, 26 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Learning objectives Systems of Ordinary Differential Equations (ODEs) are used to model many physical and biological systems. MATLAB contains a collection of ODE solvers, which are ideal for investigating such systems. The aim of this unit is to enable you to understand and use these solvers. In addition you will see how to tell which solver is appropriate in which situation.
+The unit begins with a revision of analytical techniques for solving ODEs before moving on to numerical methods, such as Euler&amp;rsquo;s method.</description>
     </item>
     
     <item>
@@ -80,8 +80,8 @@ When you see things written in typewriter font as in this for example, you shoul
       <pubDate>Wed, 25 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Before moving on to numerical methods for the solution of ODEs we begin by revising basic analytical techniques for solving ODEs that you will of seen at undergraduate level.
+Separation of variables/separable solutions If your equation is of the form $$ \frac{dy}{dx}=\frac{f(x)}{g(y)} \,, $$ then it can be reformulated as $$\int g(y)\,dy = \int f(x)\,dx + C \,, $$ where $C \in \Re$ is a constant of integration. This can be solved by integration, either directly or by substitution, to give a relation between $y$ and $x$.</description>
     </item>
     
     <item>
@@ -155,8 +155,9 @@ x=[1,2,3] y=[2,4,6]&amp;#39; z=[2;4;6] Enter the following commands on the comma
       <pubDate>Tue, 24 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/03_analytical_methods_2nd_order/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>After dealing with first-order equations, we now look at the simplest type of second-order differential equation, with linear coefficients of the form $$ a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = 0 \,. $$
+To solve this we look at the solutions to the auxiliary equation, given by $$ ak^2 + bk + c = 0 \,. $$
+Based on the solutions of the auxiliary equation, the solution takes the following forms:</description>
     </item>
     
     <item>
@@ -258,8 +259,8 @@ For most functions that you will come across in mathematical modelling, it will 
       <pubDate>Mon, 23 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/04_reducing_higher_order_odes/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>If we have a general second-order equation of the form $$ a(x)\frac{d^2y}{dx^2} + b(x)\frac{dy}{dx} + c(x)y = f(x), $$ we can reformulate this as a system of first-order equations. If we let $z=\frac{dy}{dx}$, then the above equation can be written as $$ \frac{dy}{dx} = z \,,$$ $$ \frac{dz}{dx} = \frac{f(x) − b(x)z−c(x)y}{a(x)} \,, $$ which is a system of first-order equations.
+Therefore we can reduce any second-order ODE to a system of first-order ODEs.</description>
     </item>
     
     <item>
@@ -312,8 +313,10 @@ function A=buildA(N) dx=1/N; nvar=(N-1)^2; e1= ones(nvar,1); e2=e1; e2( 1:N-1:nv
       <pubDate>Sun, 22 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/05_exercises_1/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Before we move on to the next section, make sure you can solve the following problems analytically using pen and paper. Hints and solutions are available.
+Question Solve $\frac{dy}{dx} = x^2$ subject to $y(0) = 1$.
+ Expand for hint Hint Try just integrating the right-hand side.
+   Expand for solution Solution Integrating both sides yields $$ y = \int x^2\,dx + C \,. $$ This is the general solution to the differential equation, to which we now need to apply the initial condition $y(0)=1$.</description>
     </item>
     
     <item>
@@ -368,8 +371,10 @@ The plot function We now define the function PlotGUI !nc which is called by the 
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/06_numerical_methods/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>The following sections are concerned with the theory underlying the numerical solution of ODEs such as numerical differentiation and Euler&amp;rsquo;s method.
+Numerical differentiation Recall from the previous unit &amp;lsquo;Basic calculus in MATLAB&amp;rsquo; that the derivative of a function $y$ with respect to the variable $x$ can be approximated by
+$$\frac{dy}{dx}(x) \approx \frac{y(x) - y(x-\delta x)}{\delta x},$$ the backward difference formula; or
+$$\frac{dy}{dx}(x) \approx \frac{y(x+\delta x) - y(x)}{\delta x},$$ the forward difference formula.</description>
     </item>
     
     <item>
@@ -422,8 +427,9 @@ Your GUI should plot both the solutions, $N !nc$ and $P !</description>
       <pubDate>Fri, 20 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/07_exercises_2/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This set of exercises is designed to give you familiarity with the numerical methods used to solve first-order ODEs. Hints and solutions are available.
+Question Write a Matlab script to solve $$ \frac{dy}{dx} = y $$ subject to $y(0) = 1$ on the domain $0 \leq x \leq 5$, using both forward and backward Euler methods.
+ Expand for hint Hint The forward Euler formula gives, on rearrangement $$ y^{i+1} = y^i + \delta x \times y^i \,.</description>
     </item>
     
     <item>
@@ -504,8 +510,7 @@ $$a_n = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos{nx}\,dx \textrm{, and} \quad b_n 
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Problem definition Consider systems of first order equations of the form $$ \frac{dy_1}{dx} = f_1(x,y_1,y_2) \,, $$ $$ \frac{dy_2}{dz} = f_2(x,y_1,y_2) \,, $$ subject to conditions $y_1(x_0)=y_{1_0}$ and $y_2(x_0)=y_{2_0}$. This type of problem is known as an Initial Value Problem (IVP). In order to solve these we use the inbuilt MATLAB commands ode45 and ode15s, both of which use the same syntax so that once you can use one you can use the other.</description>
     </item>
     
     <item>
@@ -525,8 +530,11 @@ Walkthrough Here we are going to make a movie of an oscillating surface.</descri
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/09_exercises_3/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This set of exercises is designed to get you to use MATLAB to solve initial value problems. Hints and solutions are available.
+Question   Solve $\frac{dy}{dx} = x^2$, subject to $y(0) = 1$.
+  Solve $\frac{dy}{dx} = \frac{x^2}{y}$, subject to $y(0) = 1$.
+  Solve $\frac{dy}{dx} + \frac{2y}{x} = x^4$, subject to $y(1) = 1$.
+  Solve $\frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0$, subject to $y(0) = 1$ and $y&#39;(0) = 0$.</description>
     </item>
     
     <item>
@@ -571,8 +579,9 @@ Preallocating Most of your calculations in MATLAB have involved manipulations of
       <pubDate>Tue, 17 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/10_boundary_value_problems/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>Problem definition Suppose we wish to solve the system of equations $\frac{d\mathbf{y}}{dx}=\mathbf{f}(x,\mathbf{y})$, with conditions applied at two different points $x=a$ and $x=b$.
+More commonly, problems of this sort will be written as a higher-order (that is, a second-order) ODE with derivative boundary conditions We can reduce any such equation to a system of first-order equations, however, so we only need to consider how to solve systems of first-order equations.
+Such problems are known as &amp;lsquo;Boundary Value Problems&amp;rsquo; (BVPs).</description>
     </item>
     
     <item>
@@ -614,8 +623,11 @@ The function HeatEquation.m solves this system using a forward Euler scheme for 
       <pubDate>Mon, 16 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</guid>
-      <description> Warning Page under construction.
- </description>
+      <description>This set of exercises is designed to get you to use MATLAB to solve boundary value problems. Hints and solutions are available.
+Question Use bvp4c !nc to solve the following boundary value problems.
+Consider the equation $$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$
+  Solve this subject to $y(0) = 0$ and $y(1) = 1$.
+  Solve the same equation subject to $y&#39;(0) = 0$ and $y(1) = 1$.</description>
     </item>
     
     <item>

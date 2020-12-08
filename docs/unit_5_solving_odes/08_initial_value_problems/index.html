@@ -12,21 +12,21 @@
     <title>Initial value problems   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607453984" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607453984" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607453984"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607444257"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607453984"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607453984"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607453984"></script>
 
     
   </div>
@@ -1690,7 +1690,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#problem-definition">Problem definition</a></li>
+    <li><a href="#matlab-commands">Matlab commands</a>
+      <ul>
+        <li><a href="#walkthrough---single-ode">Walkthrough - Single ODE</a></li>
+        <li><a href="#walkthrough---coupled-systems-of-equations">Walkthrough - Coupled systems of equations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1723,143 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<h2 id="problem-definition">Problem definition</h2>
+<p>Consider systems of first order equations of the form
+<code>$$ \frac{dy_1}{dx} = f_1(x,y_1,y_2) \,, $$</code>
+<code>$$ \frac{dy_2}{dz} = f_2(x,y_1,y_2) \,, $$</code>
+subject to conditions <code>$y_1(x_0)=y_{1_0}$</code> and <code>$y_2(x_0)=y_{2_0}$</code>.
+This type of problem is known as an Initial Value Problem (IVP).
+In order to solve these we use the inbuilt MATLAB commands <code>ode45</code> and <code>ode15s</code>, both of which use the same syntax so that once you can use one you can use the other.
+(There is a larger family of ODE solvers that use the same syntax. See <code>doc ode45</code> for a full list.).</p>
+<p>This family of solvers is based on multi-step methods such as Runge–Kutta schemes, which extend the Euler methods discussed in the previous section.
+For more details, see any book on numerical methods of solving differential equations or <a href="https://mathworld.wolfram.com/Runge-KuttaMethod.html">https://mathworld.wolfram.com/Runge-KuttaMethod.html</a>.
+(Note that this is beyond the scope of this present course.)
+Use <code>doc ode45</code> to find more details on these solvers.</p>
+<p>In this section we will demonstrate how to use the inbuilt MATLAB ODE solvers such as <code>ode45</code>.
+We will demonstrate how this works through two walkthroughs: a single first-order ODE and a coupled system of first-order ODEs.</p>
+<h2 id="matlab-commands">Matlab commands</h2>
+<p>We wish to solve
+<code>$$ \frac{dy}{dx} = f(x,y) $$</code>
+subject to <code>$y(x_0) = y_0$</code>, for given values <code>$x_0$</code> and <code>$y_0$</code>.</p>
+<p>Use of the inbuilt MATLAB ODE solvers requires the following steps:</p>
+<ol>
+<li>
+<p>We construct a function (here called deriv) which has input arguments <code>$x$</code> and <code>$y$</code> and returns the value of the derivative <code>$\frac{dy}{dx}$</code>, that is <code>$f(x,y)$</code>.</p>
+</li>
+<li>
+<p>We call the ODE solver (here <code>ode45</code>) using the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">[x,y] = ode45(@deriv,[x0,x1],y0);
+</code></pre></div><p>The variables and parameters passed to the ODE solver are:</p>
+<ul>
+<li>
+<p><code>@deriv !nc</code>, a handle to a function that returns the value of the derivative <code>$\frac{dy}{dx}$</code> for a given <code>$x$</code> and <code>$y$</code>;</p>
+</li>
+<li>
+<p><code>[x0,x1] !nc</code>, the range of <code>$x$</code> for which the problem is to be solved; and</p>
+</li>
+<li>
+<p><code>y0 !nc</code>, the initial condition for <code>$y$</code>, <code>$ y(x_0)=y_0$</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>We plot the results, which are now stored as <code>$x$</code> and <code>$y$</code>.</p>
+</li>
+</ol>
+<h3 id="walkthrough---single-ode">Walkthrough - Single ODE</h3>
+<p>Suppose we wish to solve</p>
+<p><code>$$ \frac{dy}{dx} = xy \,,$$</code></p>
+<p>subject to <code>$y(0) = 1$</code></p>
+<p>using the Matlab solver <code>ode45</code>.</p>
+<p>Example code to solve this is given by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">% Function to solve dydx=xy.</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SolveSimple</span>(y0)
+    [x,y] = ode45(@deriv,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],y0);
+    plot(x,y,<span style="color:#e6db74">&#39;b-x&#39;</span>);
+    <span style="color:#75715e">% A function defining the derivative</span>
+<span style="color:#66d9ef">    function</span> dydx = <span style="color:#a6e22e">deriv</span>(x,y)
+        dydx = x<span style="color:#f92672">*</span>y;
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>The main elements of this code are</p>
+<ul>
+<li>
+<p><code>[x,y] = ode45(@deriv,[0,1],y0); !nc</code>
+Which is the call to the ode45 solver, whose parameters are:</p>
+<ul>
+<li>
+<p><code>@deriv !nc</code> a handle to a function that returns the value of the derivative <code>$\frac{dy}{dx}$</code> given <code>$x$</code> and <code>$y$</code>;</p>
+</li>
+<li>
+<p><code>[0,1] !nc</code> the range for which the problem is to be solved; and</p>
+</li>
+<li>
+<p><code>y0 !nc</code> the initial condition for <code>$y$</code>, <code>$y(0)=y_0$</code> (where <code>$y_0$</code> is a number).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>function dydx = deriv(x,y) !nc</code>
+which is a function that returns the value of <code>$\frac{dy}{dx}$</code> for a given <code>$x$</code> and <code>$y$</code> (here <code>$xy$</code>).</p>
+</li>
+</ul>
+<p>Running the code, by saving in a file named <code>SolveSimple.m</code> and executing it with <code>SolveSimple(1)</code>, yields the following plot:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_05/5_08_1.svg?classes=matlab-screenshot-40" alt="ode45 example"></p>
+<p>This is plotted against the exact solution <code>$y=e^{\frac{x^2}{2}}$</code>, in the next figure:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_05/5_08_2.svg?classes=matlab-screenshot-40" alt="ode45 vs exact"></p>
+<p>The red line represents the actual solution and the blue crosses show the numerical solution from ode45.</p>
+<p>You can also use <code>ode45</code> to solve systems of first-order ODEs (and also higher-order equations by reducing them to systems of first-order equations) as shown in the following walkthrough.</p>
+<h3 id="walkthrough---coupled-systems-of-equations">Walkthrough - Coupled systems of equations</h3>
+<p>Suppose we wish to solve
+<code>$$ \frac{dy_1}{dx} = -y_2 $$</code>
+<code>$$ \frac{dy_2}{dx} = y_1 $$</code>
+subject to <code>$y_1(0) = 1$</code> and <code>$y_2(0) = 0$</code>.</p>
+<p>Example code to solve this is given by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">% Function to solve the simple coupled ODE system.</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SolveCoupled</span>()
+    y10=<span style="color:#ae81ff">1</span>; y20=<span style="color:#ae81ff">0</span>;
+    [x,Y] = ode45(@coupled,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5</span>],[y10;y20]);
+    <span style="color:#75715e">%</span>
+    plot(x,Y(:,<span style="color:#ae81ff">1</span>),<span style="color:#e6db74">&#39;b&#39;</span>,x,Y(:,<span style="color:#ae81ff">2</span>),<span style="color:#e6db74">&#39;r&#39;</span>);
+    legend(<span style="color:#e6db74">&#39;y_1&#39;</span>,<span style="color:#e6db74">&#39;y_2&#39;</span>)
+    <span style="color:#75715e">%</span>
+<span style="color:#66d9ef">    function</span> dYdt = <span style="color:#a6e22e">coupled</span>(x,Y)
+        dYdt=[<span style="color:#f92672">-</span>Y(<span style="color:#ae81ff">2</span>);Y(<span style="color:#ae81ff">1</span>)];
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>This code is very similar to the code for the single ODE but here <code>Y !nc</code> and <code>dYdt !nc</code> are now vectors.</p>
+<p>The main elements of this code are</p>
+<ul>
+<li>
+<p><code>[x,Y] = ode45(@coupled,[0,5],[y10;y20]); !nc</code>
+which is the call to the <code>ode45</code> solver, the various parameters are:</p>
+<ul>
+<li>
+<p><code>@coupled !nc</code>, a handle to a function that returns the value of the derivative <code>$\frac{dy}{dx}$</code> for given <code>$x$</code> and <code>$y=(y1,y2)$</code>;</p>
+</li>
+<li>
+<p><code>[0,5] !nc</code>, the range for which the problem is to be to solved;</p>
+</li>
+<li>
+<p><code>[y10;y20] !nc</code>, the initial conditions for <code>$y1$</code> and <code>$y2$</code>; and</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Y !nc</code>, the solution in the form of a matrix, in which the first column is the solution for <code>$y_1$</code> and the second is the solution for <code>$y_2$</code>.</p>
+</li>
+<li>
+<p><code>function dYdx = coupled(x,Y) !nc</code> which is a function that returns the value of <code>$\frac{dy}{dx}$</code> for a given <code>$x$</code> and <code>$\mathbf{y}$</code>.
+Note that this is now a vector.</p>
+</li>
+<li>
+<p><code>plot(x,Y(:,1),'b',x,Y(:,2),'r'); !nc</code>
+which plots the solutions for <code>$y_1$</code> and <code>$y_2$</code>, in blue and red respectively.</p>
+</li>
+</ul>
+<p>Running the code, by saving in a file named <code>SolveCoupled.m</code> and executing it with <code>SolveCoupled()</code>, yields the following plot:</p>
+<p><img src="/ScientificComputingInMatlab/images/unit_05/5_08_3.svg?classes=matlab-screenshot-40" alt="ode45 coupled system"></p>
+<p>Which agrees with the analytical solution of <code>$y_1=\cos(x)$</code> and <code>$y_2=\sin(x)$</code> calculated earlier.</p>
 
 
 <footer class="footline">
@@ -2873,16 +3013,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607453984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607453984"></script>
     
     
 

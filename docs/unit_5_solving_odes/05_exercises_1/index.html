@@ -12,21 +12,21 @@
     <title>Exercises 1   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607453984" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607453984" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607453984"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607444257"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607453984"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607453984"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607453984"></script>
 
     
   </div>
@@ -1690,7 +1690,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#close-of-section">Close of section</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1717,150 @@
         
 
 
+<p>Before we move on to the next section, make sure you can solve the following problems analytically using pen and paper.
+Hints and solutions are available.</p>
 
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$\frac{dy}{dx} = x^2$</code> subject to <code>$y(0) = 1$</code>.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Try just integrating the right-hand side.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Integrating both sides yields
+<code>$$ y = \int x^2\,dx + C \,. $$</code>
+This is the general solution to the differential equation, to which we now need to apply the initial condition <code>$y(0)=1$</code>.</p>
+<p><code>$ 1 = y(0) = C$</code>, so we take <code>$C=1$</code>. The solution is therefore
+<code>$$ y = \frac{x^3}{3} + 1 \,. $$</code></p>
+</div>
+</details>
 
 </div>
 
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$\frac{dy}{dx} = \frac{x^2}{y}$</code>, suvject to <code>$y(0) = 1$</code>.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Try separation of variables.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Separation of variables yields
+<code>$$ \int y\,dy = \int x^2\,dx + C \,. $$</code>
+Therefore
+<code>$$ \frac{y^2}{2} = \frac{x^3}{3} + C\,. $$</code>
+On rearranging we get
+<code>$$ y = \pm \sqrt{2\left(\frac{x^3}{3} + C\right)} $$</code>
+This is the general solution to the differential equation, to which we now need to apply the initial condition <code>$y(0)=1$</code>.</p>
+<p><code>$1=y(0) = \pm \sqrt{0+C}$</code>, so we take the positive root and <code>$C=1$</code>. The solution is therefore</p>
+<p><code>$$ y = \sqrt{\frac{2x^3}{3} + 1} \,.$$</code></p>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$\frac{dy}{dx} + \frac{2y}{x} = x^4$</code> subject to <code>$y(1) = 1$</code>.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Try using an integrating factor.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The integrating factor is
+<code>$$ \varphi = e^{\int \frac{2}{x}\,dx} = x^2 \,. $$</code>
+The general solution to the equation is therefore
+<code>$$ y = \frac{x^5}{7} + \frac{C}{x^2} \,. $$</code>
+Applying the initial condition gives
+<code>$$ 1 = y(1) = \frac{1}{7} + C \,, $$</code>
+so <code>$C = \frac{6}{7} $</code>. The solution is therefore
+<code>$$ y = \frac{x^5}{7} + \frac{6}{7x^2} \,.$$</code></p>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$\frac{dy_1}{dx} = -y_2$</code> and <code>$\frac{dy_2}{dx} = y_1$</code>, subject to <code>$y_1(0) = 1$</code> and <code>$y_2(0) = 0$</code>.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>Combining these two equations, by differentiating the first and substituting it in the second, yields a second-order ODE with linear coefficients.
+Look at the characteristic equation.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>Combining these two equations (differentiating the first and substituting it into the second) gives
+<code>$$ \frac{d^2y_1}{dx^2}=−y_1 \,. $$</code>
+The general solution to this is
+<code>$$ y_1=A\cos(x)+B\sin(x) \,. $$</code>
+From the first equation we can calculate <code>$y_2$</code> as
+<code>$$ y_2=A\sin(x) − B\cos(x)\,.$$</code>
+Applying the initial conditions gives <code>$A=1$</code> and <code>$B=0$</code>.
+The solution is therefore
+<code>$$ y_1=\cos(x) \quad \textrm{and} \quad y_2=\sin(x). $$</code></p>
+</div>
+</details>
+
+</div>
+
+
+<div class="notices question" >
+  <div class="label">Question</div>
+  <p>Solve <code>$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0$</code>, subject to <code>$y(0)=1$</code> and <code>$y'(0) = 0$</code>.</p>
+<details>
+    <summary>Expand for hint</summary>
+    <div class="notices hint" >
+  <div class="label">Hint</div>
+  <p>This is a second-order ODE with linear coefficients.
+Look at the characteristic equation.</p>
+</div>
+</details>
+<details>
+    <summary>Expand for solution</summary>
+    <div class="notices solution" >
+  <div class="label">Solution</div>
+  <p>The general solution to this is
+<code>$$ y=Ae^x+Be^{−4x} \,. $$</code>
+Applying the initial conditions gives <code>$A=\frac{4}{5}$</code> and <code>$B=\frac{1}{5}$</code>.
+The solution is therefore
+<code>$$ y=\frac{4}{5}e^x+\frac{1}{5}e^{−4x} \,.$$</code></p>
+</div>
+</details>
+
+</div>
+
+<h2 id="close-of-section">Close of section</h2>
+<p>There are many methods for solving ODEs analytically, but we may not be able to calculate explicit forms for the integrals, even if we can formulate a given ODE into one of the known forms.
+Furthermore, if we wish to solve an equation that does match one of the standard forms, then we must recourse to numerical methods.
+This is the case for most systems of ODEs that represent real-world situations, since most of these are highly non-linear.</p>
 
 
 <footer class="footline">
@@ -2873,16 +3014,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607453984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607453984"></script>
     
     
 

@@ -12,21 +12,21 @@
     <title>Analytical methods: 1st order   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607444257" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1607453984" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607453984" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607444257" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607453984" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607453984"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607444257"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607453984"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607453984"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607444257"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607453984"></script>
 
     
   </div>
@@ -1690,7 +1690,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#separation-of-variablesseparable-solutions">Separation of variables/separable solutions</a>
+      <ul>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+      </ul>
+    </li>
+    <li><a href="#integrating-factors">Integrating factors</a>
+      <ul>
+        <li><a href="#walkthrough-1">Walkthrough</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1713,13 +1726,62 @@
         
 
 
-
-<div class="notices warning" >
-  <div class="label">Warning</div>
-  <p>Page under construction.</p>
-
-</div>
-
+<p>Before moving on to numerical methods for the solution of ODEs we begin by revising basic analytical techniques for solving ODEs that you will of seen at undergraduate level.</p>
+<h2 id="separation-of-variablesseparable-solutions">Separation of variables/separable solutions</h2>
+<p>If your equation is of the form
+<code>$$ \frac{dy}{dx}=\frac{f(x)}{g(y)} \,, $$</code>
+then it can be reformulated as
+<code>$$\int g(y)\,dy = \int f(x)\,dx + C \,, $$</code>
+where <code>$C \in \Re$</code> is a constant of integration.
+This can be solved by integration, either directly or by substitution, to give a relation between <code>$y$</code> and <code>$x$</code>.
+The following example will show you how to use to use the separation of variables to solve a first-order ODE.</p>
+<h3 id="walkthrough">Walkthrough</h3>
+<p>We wish to solve
+<code>$$ \frac{dy}{dx} = \frac{x}{y} \,, $$</code>
+subject to <code>$ y(0) = 1 $</code>.
+The equation can be reformulated as
+<code>$$ \int y\,dy = \int x\,dx + C \,, $$</code>
+which can be solved to give
+<code>$$ \frac{y^2}{2} = \frac{x^2}{2} + C \,,$$</code>
+which simplifies to
+<code>$$ y = \pm \sqrt{x^2 + A} \,, $$</code>
+where <code>$ A = 2C $</code>.
+This is the general solution to the differential equation. We now need to apply the initial condition <code>$y(0)=1$</code>.
+<code>$$ 1 = y(0) = \pm\sqrt{A} \,, $$</code>
+Therefore <code>$A=1$</code>, and we take the positive root.
+The solution is <code>$y = \sqrt{x^2+1}$</code>.</p>
+<h2 id="integrating-factors">Integrating factors</h2>
+<p>If your equation is of the form
+<code>$$ \frac{dy}{dx} + f(x)y = g(x) \, $$</code>
+then it can be reformulated by introducing an integrating factor.
+The integrating factor for the above equation is defined as
+<code>$$ \varphi(x) = e^{\int f(x) \,dx} \,, $$</code>
+(Note: that this is not unique as any multiple would also be an integrating factor).
+In order to solve the original equation we multiply through by the integrating factor to give
+<code>$$ \varphi(x)\frac{dy}{dx} + \varphi(x)f(x)y(x) = \varphi(x)g(x) \,, $$</code>
+by construction of the integrating factor
+<code>$$ \frac{d\varphi}{dx} = \varphi(x)f(x) \,. $$</code>
+The original equation can be written as
+<code>$$ \frac{d}{dx}\left(\varphi(x)y(x)\right) = \varphi(x)g(x) \,.$$</code></p>
+<p>This can be solved by integration of the right hand side, either directly or by substitution.
+The solution is
+<code>$$ y(x) = \frac{\int\varphi(x)g(x)\,dx}{\varphi(x)} $$</code>
+Note: You need to be careful to consider where the solutions exist, that is, you need <code>$\varphi(x) \neq 0$</code>.
+Therefore no solutions exist for <code>$x$</code> such that <code>$\varphi(x) \neq 0$</code>.
+The following example will show you how to use integrating factors to solve a first-order ODE.</p>
+<h3 id="walkthrough-1">Walkthrough</h3>
+<p>We wish to solve
+<code>$$ \frac{dy}{dx} + \frac{y}{x} = 1 \,, $$</code>
+subject to <code>$y(1) = 0$</code>.
+The integrating factor for this equation is given by
+<code>$$ \varphi(x) = e^{\int\frac{1}{x}\,dx} = x \,. $$</code>
+Therefore the original equation may be written as
+<code>$$ \frac{d}{dx}\left(xy\right) = x \,. $$</code>
+Integrating the right-hand side gives
+<code>$$ y(x) = \frac{x}{2} + \frac{C}{x} \,, $$</code>
+where <code>$C \in \Re$</code> is a constant of integration, and <code>$x \neq 0$</code>. This is the general solution to the differential equation. We now need to apply the initial condition <code>$y(1) = 0$</code>.
+<code>$$ 0 = \frac{1}{2} + \frac{C}{1} \,.$$</code>
+Therefore <code>$ C = \frac{-1}{2} $</code>, and the solution is <code>$ y(x) = \frac{x}{2} - \frac{1}{2x}$</code>, valid for <code>$x&gt;0.$</code></p>
 
 
 <footer class="footline">
@@ -2873,16 +2935,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607453984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607444257"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607444257"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1607453984"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607453984"></script>
     
     
 
