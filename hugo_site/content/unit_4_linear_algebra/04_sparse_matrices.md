@@ -90,14 +90,14 @@ Which uses less memory?
 {{% notice solution %}}
 ```plaintext
 >> whos A
-  Name        Size               Bytes  Class     Attributes
-  A         500x500            2000000  double              
+  Name         Size                  Bytes  Class     Attributes
+  A         5000x5000            200000000  double              
 ```
 
 ```plaintext
 >> whos B
-  Name        Size             Bytes  Class     Attributes
-  B         500x500            27976  double    sparse    
+  Name         Size               Bytes  Class     Attributes
+  B         5000x5000            279976  double    sparse    
 ```
 
 So `A !nc` used 2000000 bytes, and `B !nc` only used 27976 bytes, saving about 98.6% of the space.
