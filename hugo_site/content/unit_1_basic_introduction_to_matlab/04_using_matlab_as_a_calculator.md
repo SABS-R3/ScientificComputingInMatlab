@@ -48,7 +48,7 @@ The value of `x !nc` may now, if desired, be printed out by typing
 x
 ```
 
-To evaluate a power we use the '`^ !nc`' symbol. For example, to evaluate `$3^4 !nc$` type
+To evaluate a power we use the '`^ !nc`' symbol. For example, to evaluate `$3^4$` type
 
 ```matlab
 3^4

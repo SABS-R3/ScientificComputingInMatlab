@@ -43,7 +43,7 @@ surf(X,Y,Z)
 
 which gives:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![Surface plot example](/ScientificComputingInMatlab/images/unit_01/1_12_1.png?classes=matlab-screenshot-40)
 
 ```matlab
 mesh(X,Y,Z)
@@ -51,7 +51,7 @@ mesh(X,Y,Z)
 
 which gives:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![Mesh plot example](/ScientificComputingInMatlab/images/unit_01/1_12_2.png?classes=matlab-screenshot-40)
 
 ```matlab
 contour(X,Y,Z)
@@ -59,7 +59,7 @@ contour(X,Y,Z)
 
 which gives:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![Contour plot example](/ScientificComputingInMatlab/images/unit_01/1_12_3.png?classes=matlab-screenshot-40)
 
 ```matlab
 plot3(X,Y,Z)
@@ -67,7 +67,7 @@ plot3(X,Y,Z)
 
 which gives:
 
-![TODO REPLACE ME](/ScientificComputingInMatlab/images/1_5_doc_fft.png?classes=matlab-screenshot)
+![3D plot example](/ScientificComputingInMatlab/images/unit_01/1_12_4.png?classes=matlab-screenshot-40)
 
 Many of the same tools and commands that worked in 2D plots (legend, title, etc) also work in 3D.
 

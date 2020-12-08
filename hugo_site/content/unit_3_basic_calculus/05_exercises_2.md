@@ -6,7 +6,8 @@ pre: "5. "
 ---
 
 
-This set of exercises is designed to give you familiarity with numerical integration. Hints and solutions are available. 
+This set of exercises is designed to give you familiarity with numerical integration.
+Hints and solutions are available. 
 
 {{% notice question %}}
 Evaluate `$\int_{-1}^{1} x^4 \,dx$` using:  
@@ -61,9 +62,10 @@ SimpsonIntegral=SimpsonIntegral+y(N+1);
 SimpsonIntegral=SimpsonIntegral*h/3
 ```  
 
-The true answer is `$\left[ \frac{x^5}{5} \right]_{-1}^{1} = 0.4$`.  
+The true answer is `$\left[ \frac{x^5}{5} \right]_{-1}^{1} = 0.4.$`
 
-To get the answer within 0.0001 of the true value, we require `$N=164$` for the Trapezium rule and `$N=16%` for Simpson’s rule. MATLAB code to calculate the `$N$` required to get the integral to the required accuracy is given below.
+To get the answer within 0.0001 of the true value, we require `$N=164$` for the Trapezium rule and `$N=16$` for Simpson’s rule.
+MATLAB code to calculate the `$N$` required to get the integral to the required accuracy is given below:
 
 ```matlab
 clear all
@@ -143,15 +145,16 @@ SimpsonError
 
 
 {{% notice question %}}
-1. Repeat the previous question for `$\int_0^1 \left( e^{-1000x}+x \right) \,dx$`  
+1. Repeat the previous question for `$\int_0^1 \left( e^{-1000x}+x \right) \,dx.$`
 
 2. Can you suggest a more sensible way to choose the discrete points instead of using uniformly spaced points?
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
-1. The true answer is `$\left[ \frac{-e^{-1000x}}{1000} + \frac{x^2}{2}\right]_0^1 = \frac{1-e^{-1000}}{1000} + \frac{1}{2} \approx 0.501$`.  
+1. The true answer is `$\left[ \frac{-e^{-1000x}}{1000} + \frac{x^2}{2}\right]_0^1 = \frac{1-e^{-1000}}{1000} + \frac{1}{2} \approx 0.501.$`
 
-To get an answer within 0.0001 of true value, we require `$N=904$` for the Trapezium rule and `$N=426$` for Simpson’s rule. The MATLAB code for Problem 3 can be modified for this question and is given below.
+To get an answer within 0.0001 of true value, we require `$N=904$` for the Trapezium rule and `$N=426$` for Simpson’s rule.
+The MATLAB code for Problem 3 can be modified for this question and is given below.
 
 ```matlab
 clear all
@@ -161,7 +164,7 @@ format long
 TargetError=0.0001;
 TrapeziumError=1; % initialise error
 Ntrap=10; % initial Ntrap
-ExactIntegral = (1-exp(-1000))/1000+1/2;
+ExactIntegral = (1-exp(-1000))/1000+0.5;
 %
 while (TrapeziumError>TargetError)
     Ntrap=Ntrap+1;                  % Number of intervals
@@ -194,7 +197,7 @@ TrapeziumError
 TargetError=0.0001;
 SimpsonError=1; % initialise error
 Nsimp=10; % initial Nsimp
-ExactIntegral = (1-exp(-1000))/1000+1/2;
+ExactIntegral = (1-exp(-1000))/1000+0.5;
 %
 while (SimpsonError>TargetError)
     Nsimp=Nsimp+2;              % Number of intervals so even
@@ -224,8 +227,7 @@ Nsimp
 SimpsonError
 ```
 
-2. In order to improve accuracy, a non-uniform distribution of `$x_i$`’s with a higher density close to the origin could be used.
+2. In order to improve accuracy, a non-uniform distribution of the `$x_i$`, with a higher density close to the origin, could be used.
 {{% /notice %}}
 {{% /expand %}}
 {{% /notice %}}
-

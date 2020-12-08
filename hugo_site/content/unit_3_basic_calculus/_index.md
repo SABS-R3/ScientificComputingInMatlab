@@ -9,8 +9,3 @@ pre = "<b>3. </b>"
 ### Chapter 3
 
 # Basic calculus
-
-
-{{% notice warning %}}
-Chapter under construction. Original course [available here](http://www.dtc.ox.ac.uk/online-learning/matlab/).
-{{% /notice %}}
