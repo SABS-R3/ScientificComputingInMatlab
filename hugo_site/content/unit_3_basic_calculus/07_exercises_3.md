@@ -69,7 +69,7 @@ Let `$f(x) = x^3 - 1 $`.
     diff=1;                 % Initialising
     NumberOfIterations=0;   % Initialising
     %
-    while ( diff >= 0.001 )
+    while (diff > theTolerance)
         y=x - theFunction(x)/theDerivative(x);
         diff=abs(y-x);  % calculate |x_(n+1) - x_n|
         x=y;            % Update solution approximation
@@ -154,7 +154,7 @@ All you need to change is the function definitions.
     diff=1;                 % Initialising
     NumberOfIterations=0;   % Initialising
     %
-    while ( diff >= 0.001 )
+    while (diff > theTolerance)
         y=x - theFunction(x)/theDerivative(x);
         diff=abs(y-x);  % calculate |x_(n+1) - x_n|
         x=y;            % Update solution approximation
