@@ -11,11 +11,11 @@ hidden = false
 ## Overview and Support
 
 Welcome to the Online Scientific Computing MATLAB course.
-This course aims to give students a good understanding of the MATLAB programming language, and the use of MATLAB in data analysis, numerical calculus, linear algebra and the solution of ODEs.
+This course aims to give students a good understanding of the MATLAB programming language, and the use of MATLAB in data analysis, image analysis, numerical calculus, linear algebra and the solution of ODEs.
 Where applicable, a revision of elements of A-level mathematics needed for these areas is provided.
 Elements of software engineering are covered to give students the ability to write well-structured code, as well as how to use MATLAB to present their work using movies or Graphical User Interfaces (GUIs).
 
-The course runs from **7th May 2021 to the 17th June 2021** and is supported via an MS Teams Team, which you will have already been added to.
+The course runs from **07 May 2021** to **17 June 2021** and is supported via an MS Teams Team, which you will have already been added to.
 The course leader, Fergus Cooper, will be available to help you with the course content and general MATLAB enquiries, and will respond to messages on the MS Teams Team throughout the course on a first come first served basis.
 
 If you have any questions then contact the course tutor via the MS Teams Team.
