@@ -12,21 +12,21 @@
     <title>GUIs: part 1   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846388" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846388" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846388"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454139"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846388"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846388"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846388"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1731,7 +1755,7 @@ The following example will teach you all the basics you need to create a simple 
 <p>The code to create a GUI consists of three parts:</p>
 <ul>
 <li>the figure, which holds the GUI,</li>
-<li>the controls using <code>uicontrol !nc</code>, and</li>
+<li>the controls using <code>uicontrol</code>, and</li>
 <li>the plot function, which does the solving and/or plotting.</li>
 </ul>
 <h3 id="setting-up-the-figure">Setting up the figure</h3>
@@ -1739,7 +1763,7 @@ The following example will teach you all the basics you need to create a simple 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">figure(<span style="color:#e6db74">&#39;position&#39;</span>,[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">700</span> <span style="color:#ae81ff">500</span>], <span style="color:#e6db74">&#39;name&#39;</span>,<span style="color:#e6db74">&#39;SimpleGUI&#39;</span>,<span style="color:#e6db74">&#39;NumberTitle&#39;</span>,<span style="color:#e6db74">&#39;off&#39;</span>);
 </code></pre></div><p>The variables passed to &lsquo;figure&rsquo; dictate the properties of the figure:</p>
 <ul>
-<li>The pair <code>'position',[0 0 700 500] !nc</code> specifies the xy-position of the figure (the first two elements of the vector) in pixels from the bottom-left of your screen, and the width and height of the figure (the last two elements) in pixels.</li>
+<li>The pair <code>'position',[0 0 700 500]</code> specifies the xy-position of the figure (the first two elements of the vector) in pixels from the bottom-left of your screen, and the width and height of the figure (the last two elements) in pixels.</li>
 <li>The pair &lsquo;name&rsquo;, &lsquo;SimpleGUI&rsquo; specifies the title of the figure.</li>
 <li>The pair &lsquo;NumberTitle&rsquo;, &lsquo;off&rsquo; stops the figure being numbered.</li>
 </ul>
@@ -1755,9 +1779,9 @@ All of these values are given as fractions of the total width or height.</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_06/6_05_2.png?classes=matlab-screenshot-40" alt="GUI with empty axes"></p>
 <h3 id="using-uicontrol">Using uicontrol</h3>
 <p>Now we have the figure and axes defined, we can add the controls to the GUI.
-Elements of the GUI are added using the <code>uicontrol !nc</code> command.
+Elements of the GUI are added using the <code>uicontrol</code> command.
 For more details see <code>doc uicontrol</code>.</p>
-<p>The <code>uicontrol !nc</code> command can be used to add some descriptive text to the figure:</p>
+<p>The <code>uicontrol</code> command can be used to add some descriptive text to the figure:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;String&#39;</span>, <span style="color:#e6db74">&#39;Parameter Value&#39;</span>, <span style="color:#e6db74">&#39;Position&#39;</span>, [<span style="color:#ae81ff">150</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">90</span> <span style="color:#ae81ff">30</span>]);
 </code></pre></div><p>The variables passed to uicontrol dictate the type of user interface.</p>
 <ul>
@@ -1834,6 +1858,22 @@ Button = uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span sty
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2948,16 +2988,16 @@ Button = uicontrol(<span style="color:#e6db74">&#39;Style&#39;</span>, <span sty
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846388"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846388"></script>
     
     
 

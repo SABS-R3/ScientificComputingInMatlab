@@ -12,21 +12,21 @@
     <title>Basic data and image processing   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846387" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846387" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846387"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846387"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1763,8 +1787,8 @@ If, for example, you were storing your data in a different directory (in the cur
 The following command will save the variable <code>data</code> as a file &lsquo;TestSave.txt&rsquo; in plain text as specified by the <code>–ascii</code> option.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">save <span style="color:#e6db74">&#39;TestSave.txt&#39;</span> data <span style="color:#f92672">-</span>ascii
 </code></pre></div><h2 id="loading-and-saving-the-whole-workspace">Loading and saving the whole workspace</h2>
-<p>You can also use <code>save</code> and <code>load</code> to save all the variables in your workspace as a <code>.mat !nc</code> file.
-Note that this file can only be read by MATLAB, unlike the <code>.txt !nc</code> files we made in the previous example.</p>
+<p>You can also use <code>save</code> and <code>load</code> to save all the variables in your workspace as a <code>.mat</code> file.
+Note that this file can only be read by MATLAB, unlike the <code>.txt</code> files we made in the previous example.</p>
 <h3 id="walkthrough-1">Walkthrough</h3>
 <p>We begin with an empty workspace</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
@@ -1797,7 +1821,7 @@ If the image were in colour then there would be three such matrices (one for eac
 </code></pre></div><p>Suppose we had made some modifications to the image, for example by cropping the image</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(:,[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">114</span>:<span style="color:#66d9ef">end</span>])=[];
 image(A);
-</code></pre></div><p>The matrix <code>A !nc</code> could be saved as an image by using the command</p>
+</code></pre></div><p>The matrix <code>A</code> could be saved as an image by using the command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">imwrite(A,<span style="color:#e6db74">&#39;TestCroppedImage.png&#39;</span>);
 </code></pre></div><p>which produces a file &lsquo;TestCroppedImage.png&rsquo; which looks like the following figure</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_02/2_04_TestCroppedImage.png" alt="TestCroppedImage.png"></p>
@@ -1840,6 +1864,22 @@ image(A);
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2954,16 +2994,16 @@ image(A);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846387"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846387"></script>
     
     
 

@@ -43,7 +43,7 @@ When you see things written in typewriter font as in this for example, you shoul
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/04_using_matlab_as_a_calculator/</guid>
       <description>The first thing we will use MATLAB for is a calculator.
-MATLAB uses the standard computer symbols for addition (&#39;+ !nc&#39;), subtraction (&#39;- !nc&#39;), multiplication (&#39;* !nc&#39;) and division (&#39;/ !nc&#39;). Brackets are also used (if required) to indicate which operations are to be performed first.
+MATLAB uses the standard computer symbols for addition (&#39;+&#39;), subtraction (&#39;-&#39;), multiplication (&#39;*&#39;) and division (&#39;/&#39;). Brackets are also used (if required) to indicate which operations are to be performed first.
 For example, to evaluate $3 + 4\left(1 + \frac{6}{3}\right)$ type the following in the Command Window:
 3+4*(1+6/3) and you get the answer 15. Your Command Window should look just like:</description>
     </item>
@@ -79,7 +79,7 @@ Walkthrough Suppose the vector $u$ is given by $u=(1\;4\;9)$. This may be entere
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/07_vectors_and_matrices_part_2/</guid>
       <description>Now that we know how to handle matrices and vectors in MATLAB, we will look at how to perform operations on them.
-Addition, subtraction and multiplication of vectors and matrices If two vectors or matrices are of the correct size, then they may be added, subtracted or multiplied using the standard operators + !nc, - !nc and * !nc.
+Addition, subtraction and multiplication of vectors and matrices If two vectors or matrices are of the correct size, then they may be added, subtracted or multiplied using the standard operators +, - and *.
 Walkthrough For example, enter the following vectors and matrices:
 u=[1 2]; v=[3; 4]; A=[1 2; 3 4]; B=[5 6; 7 8]; The following are valid operations:</description>
     </item>
@@ -103,8 +103,8 @@ real(z) imag(z) abs(z) angle(z) conj(z)  Question Question: What are the results
       <pubDate>Wed, 18 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/09_simple_m_files_scripts/</guid>
-      <description>Instead of typing the commands into the Command Window, they may be typed into a file with a .m !nc extension, which allows commands to be built up into a high-level computer program.
-Info Most of the time when you use MATLAB, you will write scripts, which are just text files with a .m !nc extension, rather than typing commands directly into the Command Window.
+      <description>Instead of typing the commands into the Command Window, they may be typed into a file with a .m extension, which allows commands to be built up into a high-level computer program.
+Info Most of the time when you use MATLAB, you will write scripts, which are just text files with a .m extension, rather than typing commands directly into the Command Window.
  Opening a new M-file From the &amp;lsquo;Home&amp;rsquo; tab, click &amp;lsquo;New Script&amp;rsquo;, or, from the &amp;lsquo;Editor&amp;rsquo; tab, select &amp;lsquo;New&amp;rsquo; and then &amp;lsquo;Script&amp;rsquo;.</description>
     </item>
     
@@ -129,7 +129,7 @@ Walkthrough For example the following commands print out the integers between 1 
       <description>MATLAB incorporates many powerful graphic tools and can provide visualisations in two or three dimensions, and most books on MATLAB have whole chapters devoted to producing graphics.
 Single plots We will now go through how to plot a simple function in MATLAB and save the figure to a file you can use in a report.
 Walkthrough To plot the function $\sin(x)$ for $x$ between 0 and 10 type:
-fplot(@(x)sin(x),[0 10]) Here, the notation @(x)sin(x) !</description>
+fplot(@(x)sin(x),[0 10]) Here, the notation @(x)sin(x) is referred to in MATLAB as an anonymous function.</description>
     </item>
     
     <item>
@@ -153,7 +153,7 @@ x = linspace(0,20,100); y = linspace(0,10,100); [X,Y] = meshgrid(x,y); Then defi
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/13_functions/</guid>
       <description>A particularly useful feature of MATLAB is the ability to define functions.
 Walkthrough The syntax for defining the function $y=x^2$ is as follows:
-function [y] = xsquared(x) y = x^2;  Info  The [y] !nc indicates the variables that will be returned from the function: there may be multiple, e.g. [y1, y2] !nc. The (x) !nc indicates the parameters that are passed to the function: there may be multiple, e.</description>
+function [y] = xsquared(x) y = x^2;  Info  The [y] indicates the variables that will be returned from the function: there may be multiple, e.g. [y1, y2]. The (x) indicates the parameters that are passed to the function: there may be multiple, e.g. (x1, x2).   Type these commands into an M-file called xsquared.</description>
     </item>
     
     <item>
@@ -164,7 +164,7 @@ function [y] = xsquared(x) y = x^2;  Info  The [y] !nc indicates the variables t
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_1_basic_introduction_to_matlab/14_exercises/</guid>
       <description>The unit closes with a few simple exercises for you to test the skills you have learned throughout the unit.
 Question Problem 1: Hint based problem
- Write functions to calculate the maximum and minimum of an array of numbers, without using the commands max !nc or min !nc. Your functions should take in a vector and return values for the maximum and minimum.   Expand for hint Hint The following if !</description>
+ Write functions to calculate the maximum and minimum of an array of numbers, without using the commands max or min. Your functions should take in a vector and return values for the maximum and minimum.   Expand for hint Hint The following if statement will find the maximum between max_x and x(i):</description>
     </item>
     
   </channel>

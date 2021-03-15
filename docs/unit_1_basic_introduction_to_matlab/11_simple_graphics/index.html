@@ -12,21 +12,21 @@
     <title>Simple graphics   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846387" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846387" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846387"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846387"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1737,8 +1761,8 @@
 <h3 id="walkthrough">Walkthrough</h3>
 <p>To plot the function <code>$\sin(x)$</code> for <code>$x$</code> between 0 and 10 type:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">fplot(@(x)sin(x),[<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span>])
-</code></pre></div><p>Here, the notation <code>@(x)sin(x) !nc</code> is referred to in MATLAB as an <a href="https://uk.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html">anonymous function</a>.
-It specifies a function that takes <code>x !nc</code> and outputs <code>sin(x) !nc</code>.</p>
+</code></pre></div><p>Here, the notation <code>@(x)sin(x)</code> is referred to in MATLAB as an <a href="https://uk.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html">anonymous function</a>.
+It specifies a function that takes <code>x</code> and outputs <code>sin(x)</code>.</p>
 <p>This gives you the following figure on screen:</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_01/1_11_1.png?classes=matlab-screenshot-40" alt="Plot of sin(x)"></p>
 <p>To label the axes and add a title type</p>
@@ -1748,21 +1772,21 @@ title(<span style="color:#e6db74">&#39;y=sin(x)&#39;</span>)
 </code></pre></div><p>which updates the figure as follows:</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_01/1_11_2.png?classes=matlab-screenshot-40" alt="Plot of sin(x) with title and axis labels"></p>
 <p>You can save the figure by clicking on the &lsquo;Save&rsquo; icon in the top left corner of the screen.
-This will save the figure as a <code>.fig !nc</code> file which can only be opened in MATLAB.</p>
+This will save the figure as a <code>.fig</code> file which can only be opened in MATLAB.</p>
 <p>If you want to save the file in a format that you can include in a report, select the &lsquo;Save As&rsquo; item in the &lsquo;File&rsquo; menu.
 You can select the type of file to save as in the &lsquo;Save as type:&rsquo; drop-down menu.
-The best file type to save the figure as are <code>.eps !nc</code> if you are using LaTeX, a <code>.png !nc</code> or <code>.tiff !nc</code> if you are using something like Microsoft Word, or <code>.svg !nc</code> if you are writing for the web.</p>
+The best file type to save the figure as are <code>.eps</code> if you are using LaTeX, a <code>.png</code> or <code>.tiff</code> if you are using something like Microsoft Word, or <code>.svg</code> if you are writing for the web.</p>
 <p>The figure produced is given below:</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_01/1_11_3.svg?classes=matlab-screenshot-40" alt="Exported figure of sin(x)"></p>
 <p>There are also command line commands such as</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">print ExampleFigure.png –dpng
-</code></pre></div><p>which will print the currently selected figure to the file <code>ExampleFigure.png !nc</code>. The second command <code>–dpng !nc</code> selects the type of file in which the figure will be saved - try doing this now. For more options see</p>
+</code></pre></div><p>which will print the currently selected figure to the file <code>ExampleFigure.png</code>. The second command <code>–dpng</code> selects the type of file in which the figure will be saved - try doing this now. For more options see</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">doc print
 </code></pre></div><p>To close the figure use the <code>close</code> command.</p>
 <h2 id="multiple-plots">Multiple plots</h2>
 <p>You can also include multiple plots in the same figure, using the procedure covered in the following walkthrough.</p>
 <h3 id="walkthrough-1">Walkthrough</h3>
-<p>To plot two data-sets <code>y1 !nc</code> and <code>y2 !nc</code> against <code>x !nc</code> on the same diagram, use the method shown below.</p>
+<p>To plot two data-sets <code>y1</code> and <code>y2</code> against <code>x</code> on the same diagram, use the method shown below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">x=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>];
 
 y1=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">36</span>];
@@ -1774,7 +1798,7 @@ xlabel(<span style="color:#e6db74">&#39;x&#39;</span>)
 ylabel(<span style="color:#e6db74">&#39;y&#39;</span> )
 
 legend(<span style="color:#e6db74">&#39;y1&#39;</span>,<span style="color:#e6db74">&#39;y2&#39;</span>,<span style="color:#e6db74">&#39;Location&#39;</span>,<span style="color:#e6db74">&#39;NorthWest&#39;</span>)
-</code></pre></div><p>The statement <code>plot(x,y1,'-',x,y2,'--')</code> tells MATLAB to plot <code>y1 !nc</code> against <code>x !nc</code> as a solid line, and to plot <code>y2 !nc</code> against <code>x !nc</code> as a broken line.
+</code></pre></div><p>The statement <code>plot(x,y1,'-',x,y2,'--')</code> tells MATLAB to plot <code>y1</code> against <code>x</code> as a solid line, and to plot <code>y2</code> against <code>x</code> as a broken line.
 Note the use of legend to label the lines and the position of the legend.</p>
 <p>You could also use the command <code>hold on</code>.
 To do this see <code>doc hold</code> for examples.</p>
@@ -1839,6 +1863,22 @@ You can add labels and titles to each of these subfigures in the usual way.</p>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2953,16 +2993,16 @@ You can add labels and titles to each of these subfigures in the usual way.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846387"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846387"></script>
     
     
 

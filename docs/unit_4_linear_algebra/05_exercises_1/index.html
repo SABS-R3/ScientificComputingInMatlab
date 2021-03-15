@@ -12,21 +12,21 @@
     <title>Exercises 1   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846388" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846388" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846388"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846388"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846388"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846388"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1714,7 +1738,7 @@
 
 
 <p>The following exercise will allow you to practise what you have learned so far in this unit.</p>
-<p>Let <code>$A$</code> be a sparse symmetric <a href="https://en.wikipedia.org/wiki/Definite_symmetric_matrix">positive definite matrix</a> of dimension <code>$(N-1)^2\times (N-1)^2$</code> entered in MATLAB (for a given <code>$N$</code>) by the function <code>buildA !nc</code> as follows:</p>
+<p>Let <code>$A$</code> be a sparse symmetric <a href="https://en.wikipedia.org/wiki/Definite_symmetric_matrix">positive definite matrix</a> of dimension <code>$(N-1)^2\times (N-1)^2$</code> entered in MATLAB (for a given <code>$N$</code>) by the function <code>buildA</code> as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> A=<span style="color:#a6e22e">buildA</span>(N)
     dx=<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>N;
     nvar=(N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)^<span style="color:#ae81ff">2</span>;
@@ -1734,7 +1758,7 @@ This corresponds to a finite difference solution to Poisson&rsquo;s equation:</p
   <div class="label">Question</div>
   <ol>
 <li>
-<p>Copy the function <code>buildA !nc</code> above into a new file <code>buildA.m !nc</code> in your current working directory.</p>
+<p>Copy the function <code>buildA</code> above into a new file <code>buildA.m</code> in your current working directory.</p>
 </li>
 <li>
 <p>Set <code>$N=4$</code> and produce a spy plot of the matrix <code>$A$</code>.
@@ -1771,7 +1795,7 @@ Using <code>nnz(A)</code> we see that there are 33 non-zero entries.
 </li>
 <li>
 <p>The spy plot <code>spy(A-A')</code> shows no non-zero entries.
-Likewise, <code>A-A'</code> yields <code>All zero sparse: 9×9 !nc</code>.
+Likewise, <code>A-A'</code> yields <code>All zero sparse: 9×9</code>.
 Both tell us that <code>$A$</code> is symmetric.</p>
 <p>The command <code>e=eigs(A,9)</code> tells us the eigenvalues are:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; e=eigs(A,9)
@@ -1837,6 +1861,22 @@ e =
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2951,16 +2991,16 @@ e =
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846388"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846388"></script>
     
     
 

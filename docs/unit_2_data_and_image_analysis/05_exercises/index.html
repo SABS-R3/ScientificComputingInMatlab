@@ -12,21 +12,21 @@
     <title>Exercises   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846387" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846387" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846387"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846387"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1748,9 +1772,9 @@ subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span
 <p>It is clear that the first data-set is from a normal distribution and the mean and standard deviation are found by using</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">mean(dataset1)
 std(dataset1)
-</code></pre></div><p><code>mean = 175.3321 !nc</code> and <code>std=10.0953 !nc</code></p>
+</code></pre></div><p><code>mean = 175.3321</code> and <code>std=10.0953</code></p>
 <p>For the second data-set it is not clear what the distribution is, as there is a relatively low number of data points, but it is still drawn from a normal distribution, whose mean and standard deviation are</p>
-<p><code>mean = 192.0019 !nc</code> and <code>std = 5.2121 !nc</code></p>
+<p><code>mean = 192.0019</code> and <code>std = 5.2121</code></p>
 <p>The data are simulated height data.
 The first dataset represents heights of 10,000 men in the UK population, while the second represents the heights of 50 Olympic rowers, so the average height is larger in the second group than in the normal population.</p>
 <p>Code which brings all this together is given below.</p>
@@ -1793,10 +1817,10 @@ Thresholding is an image analysis technique designed to remove noise from image 
     <summary>Expand for hint</summary>
     <div class="notices hint" >
   <div class="label">Hint</div>
-  <p>Use <code>imread !nc</code> and <code>imwrite !nc</code> to load and save the image.</p>
+  <p>Use <code>imread</code> and <code>imwrite</code> to load and save the image.</p>
 <p>Once the image is loaded in, you can treat it like a traditional matrix so you can perform operations such as</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">find(A<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">125</span>)
-</code></pre></div><p>which will give you all the entries of <code>A !nc</code> that are greater than 125, and use this to set them all to 255.</p>
+</code></pre></div><p>which will give you all the entries of <code>A</code> that are greater than 125, and use this to set them all to 255.</p>
 </div>
 </details>
 <details>
@@ -1862,6 +1886,22 @@ imwrite(TestImage,<span style="color:#e6db74">&#39;ThresholdedImage.png&#39;</sp
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2976,16 +3016,16 @@ imwrite(TestImage,<span style="color:#e6db74">&#39;ThresholdedImage.png&#39;</sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846387"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846387"></script>
     
     
 

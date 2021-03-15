@@ -89,7 +89,7 @@ Question Write a Matlab script to solve $$ \frac{dy}{dx} = y $$ subject to $y(0)
       <pubDate>Thu, 19 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/08_initial_value_problems/</guid>
-      <description>Problem definition Consider systems of first order equations of the form $$ \frac{dy_1}{dx} = f_1(x,y_1,y_2) \,, $$ $$ \frac{dy_2}{dz} = f_2(x,y_1,y_2) \,, $$ subject to conditions $y_1(x_0)=y_{1_0}$ and $y_2(x_0)=y_{2_0}$. This type of problem is known as an Initial Value Problem (IVP). In order to solve these we use the inbuilt MATLAB commands ode45 !nc and ode15s !nc, both of which use the same syntax so that once you can use one you can use the other.</description>
+      <description>Problem definition Consider systems of first order equations of the form $$ \frac{dy_1}{dx} = f_1(x,y_1,y_2) \,, $$ $$ \frac{dy_2}{dz} = f_2(x,y_1,y_2) \,, $$ subject to conditions $y_1(x_0)=y_{1_0}$ and $y_2(x_0)=y_{2_0}$. This type of problem is known as an Initial Value Problem (IVP). In order to solve these we use the inbuilt MATLAB commands ode45 and ode15s, both of which use the same syntax so that once you can use one you can use the other.</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ Such problems are known as &amp;lsquo;Boundary Value Problems&amp;rsquo; (BVPs).
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_5_solving_odes/11_exercises_4/</guid>
       <description>This set of exercises is designed to get you to use MATLAB to solve boundary value problems. Hints and solutions are available.
-Question Use bvp4c !nc to solve the following boundary value problems.
+Question Use bvp4c to solve the following boundary value problems.
 Consider the equation $$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$
   Solve this subject to $y(0) = 0$ and $y(1) = 1$.
   Solve the same equation subject to $y&#39;(0) = 0$ and $y(1) = 1$.</description>

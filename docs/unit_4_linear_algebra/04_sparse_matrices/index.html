@@ -12,21 +12,21 @@
     <title>Sparse matrices   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846387" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846387" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846387"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846387"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1726,9 +1750,9 @@ A matrix is &lsquo;sparse&rsquo; if most of its entries are zero, and most of th
 The details of this speeding-up will be discussed further in the later unit <a href="/ScientificComputingInMatlab/unit_6_software_engineering">&lsquo;Software engineering&rsquo;</a>, but we introduce sparse matrices here as they will be used in exercises later in this unit.</p>
 <p>The following will give you an introduction to the uses of sparse matrices.</p>
 <h3 id="walkthrough">Walkthrough</h3>
-<p>Create the matrix <code>A !nc</code> using the following commands:</p>
+<p>Create the matrix <code>A</code> using the following commands:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>eye(<span style="color:#ae81ff">5000</span>)<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">4999</span>,<span style="color:#ae81ff">1</span>),<span style="color:#ae81ff">1</span>)<span style="color:#f92672">-</span>diag(ones(<span style="color:#ae81ff">4999</span>,<span style="color:#ae81ff">1</span>),<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
-</code></pre></div><p>Run the following commands to investigate the structure of <code>A !nc</code>:</p>
+</code></pre></div><p>Run the following commands to investigate the structure of <code>A</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>)
 nnz(A)
 spy(A)
@@ -1736,23 +1760,23 @@ spy(A(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">10</span>
 </code></pre></div>
 <div class="notices question" >
   <div class="label">Question</div>
-  <p>What is the structure of <code>A !nc</code>?</p>
+  <p>What is the structure of <code>A</code>?</p>
 <details>
     <summary>Expand for solution</summary>
     <div class="notices solution" >
   <div class="label">Solution</div>
-  <p><code>A !nc</code> is &lsquo;tri-diagonal&rsquo;, with 2 on the diagonal and −1 on the adjacent diagonals.
-Therefore, <code>A !nc</code> has <code>$5000+(2\times 4999)=14998$</code> non-zero entries, as found using <code>nnz(A)</code>.</p>
+  <p><code>A</code> is &lsquo;tri-diagonal&rsquo;, with 2 on the diagonal and −1 on the adjacent diagonals.
+Therefore, <code>A</code> has <code>$5000+(2\times 4999)=14998$</code> non-zero entries, as found using <code>nnz(A)</code>.</p>
 </div>
 </details>
 
 </div>
 
-<p>Calculate the inverse of <code>A !nc</code>.</p>
+<p>Calculate the inverse of <code>A</code>.</p>
 
 <div class="notices note" >
   <div class="label">Note</div>
-  <p>The inverse of <code>A !nc</code> is not sparse.
+  <p>The inverse of <code>A</code> is not sparse.
 This is true in general.</p>
 
 </div>
@@ -1771,18 +1795,18 @@ spy(abs(Ai)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">tic; A<span style="color:#f92672">*</span>A; toc
-</code></pre></div><p>Create the matrix <code>B !nc</code> using the following commands.
-Note that <code>A !nc</code> and <code>B !nc</code> have the same non-zero entries:</p>
+</code></pre></div><p>Create the matrix <code>B</code> using the following commands.
+Note that <code>A</code> and <code>B</code> have the same non-zero entries:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">B=spdiags(ones(<span style="color:#ae81ff">5000</span>,<span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],<span style="color:#ae81ff">5000</span>,<span style="color:#ae81ff">5000</span>);
 </code></pre></div><p>The command <code>spdiags</code> creates a sparse matrix with the entries from the vector (passed as the first variable) on the diagonal indicated by the second variable. These variables can be passed individually or in groups as in the above example. The final two variables represent the size of the matrix. Look at the MATLAB help files for more information on <code>spdiags</code>.</p>
-<p>Look at the structure of <code>B !nc</code>:</p>
+<p>Look at the structure of <code>B</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">B(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>)
 full(B(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>))
 nnz(B)
 </code></pre></div>
 <div class="notices question" >
   <div class="label">Question</div>
-  <p>Using the command <code>whos</code>, look at how the matrices <code>A !nc</code> and <code>B !nc</code> are stored.
+  <p>Using the command <code>whos</code>, look at how the matrices <code>A</code> and <code>B</code> are stored.
 Which uses less memory?</p>
 <details>
     <summary>Expand for solution</summary>
@@ -1794,7 +1818,7 @@ Which uses less memory?</p>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; whos B
   Name         Size               Bytes  Class     Attributes
   B         5000x5000            279976  double    sparse    
-</code></pre></div><p>So <code>A !nc</code> used 2000000 bytes, and <code>B !nc</code> only used 27976 bytes, saving about 98.6% of the space.</p>
+</code></pre></div><p>So <code>A</code> used 2000000 bytes, and <code>B</code> only used 27976 bytes, saving about 98.6% of the space.</p>
 </div>
 </details>
 
@@ -1845,7 +1869,7 @@ Elapsed time is 0.000719 seconds.
 
 <p>Finally, you can also convert matrices from full to sparse using the following command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A=sparse(A);
-</code></pre></div><p>Using the command <code>whos</code>, check that <code>A !nc</code> is now sparse and uses the same memory as <code>B !nc</code>.</p>
+</code></pre></div><p>Using the command <code>whos</code>, check that <code>A</code> is now sparse and uses the same memory as <code>B</code>.</p>
 <p>Now clear the workspace</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">clear
 </code></pre></div>
@@ -1887,6 +1911,22 @@ Elapsed time is 0.000719 seconds.
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3001,16 +3041,16 @@ Elapsed time is 0.000719 seconds.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846388"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846388"></script>
     
     
 

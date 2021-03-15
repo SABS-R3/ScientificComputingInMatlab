@@ -12,21 +12,21 @@
     <title>GUIs: part 2   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846388" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846388" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846388"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454139"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846388"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846388"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846388"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1725,9 +1749,9 @@
 
 <p>In the previous screens we have created the figure for the GUI and added some controls.
 We now need to get the GUI to do something.
-In the command to create the push button we called a function named <code>PlotGUI !nc</code>, which is where the MATLAB code to be controlled by the GUI will go.</p>
+In the command to create the push button we called a function named <code>PlotGUI</code>, which is where the MATLAB code to be controlled by the GUI will go.</p>
 <h3 id="the-plot-function">The plot function</h3>
-<p>We now define the function <code>PlotGUI !nc</code> which is called by the push button.</p>
+<p>We now define the function <code>PlotGUI</code> which is called by the push button.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#75715e">%% Called by SimpeGUI to do the plotting</span>
 <span style="color:#75715e">% hObject is the button and eventdata is unused.</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">PlotGUI</span>(hObject,eventdata)
@@ -1747,8 +1771,8 @@ In the command to create the push button we called a function named <code>PlotGU
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>The function &lsquo;PlotGUI&rsquo; takes in two input arguments:</p>
 <ul>
-<li><code>hObject !nc</code>, the handle of the button which enables the state of the uicontrol to be accessed from <code>PlotGUI !nc</code>. (Note: this is not used here as we are using global functions but is used in the code given below.)</li>
-<li><code>eventdata !nc</code>, unused here but included for use with the <code>Callback !nc</code> command.</li>
+<li><code>hObject</code>, the handle of the button which enables the state of the uicontrol to be accessed from <code>PlotGUI</code>. (Note: this is not used here as we are using global functions but is used in the code given below.)</li>
+<li><code>eventdata</code>, unused here but included for use with the <code>Callback</code> command.</li>
 </ul>
 <p>This function can be modified so that it runs the code you wish the GUI to control.</p>
 <h3 id="the-whole-thing">The whole thing</h3>
@@ -1881,6 +1905,22 @@ The working GUI is shown in the following figure:</p>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2995,16 +3035,16 @@ The working GUI is shown in the following figure:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846388"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846388"></script>
     
     
 

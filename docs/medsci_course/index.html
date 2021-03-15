@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/ScientificComputingInMatlab/logos/dtc_hex.svg" type="image/x-icon" />
 
-    <title>Introduction and definitions   Scientific Computing in MATLAB</title>
+    <title>Medical Sciences Course   Scientific Computing in MATLAB</title>
 
     
     <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846388" rel="stylesheet">
@@ -62,7 +62,7 @@
 
 
   </head>
-  <body class="" data-url="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/">
+  <body class="" data-url="/ScientificComputingInMatlab/medsci_course/">
     <nav id="sidebar" class="">
 
 
@@ -108,8 +108,8 @@
   
     
     <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/ScientificComputingInMatlab/medsci_course/">
@@ -1121,7 +1121,7 @@
   
     
     <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/" title="Solving ODEs" class="dd-item
-        parent
+        
         
         
         ">
@@ -1147,7 +1147,7 @@
  
   
     
-      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/" title="Introduction and definitions" class="dd-item active">
+      <li data-nav-id="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/" title="Introduction and definitions" class="dd-item ">
         <a href="/ScientificComputingInMatlab/unit_5_solving_odes/01_introduction_and_definitions/">
         1. Introduction and definitions
         
@@ -1670,7 +1670,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/unit_5_solving_odes/01_introduction_and_definitions.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SABS-R3/ScientificComputingInMatlab/blob/main/hugo_site/content/medsci_course/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1697,13 +1697,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/ScientificComputingInMatlab/'></a> > <a href='/ScientificComputingInMatlab/unit_5_solving_odes/'>Solving ODEs</a> > Introduction and definitions
-          
-        
+            <a href='/ScientificComputingInMatlab/'></a> > Medical Sciences Course
           
         
           
@@ -1716,9 +1710,21 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#learning-objectives">Learning objectives</a></li>
-    <li><a href="#reading-list">Reading list</a></li>
-    <li><a href="#definitions-and-notation">Definitions and notation</a></li>
+    <li><a href="#overview-and-support">Overview and Support</a></li>
+    <li><a href="#the-course">The Course</a>
+      <ul>
+        <li><a href="#unit-0-course-introduction">Unit 0: Course introduction</a></li>
+      </ul>
+    </li>
+    <li><a href="#assessments">Assessments</a>
+      <ul>
+        <li><a href="#unit-1-basic-introduction-to-matlab">Unit 1: Basic introduction to MATLAB</a></li>
+        <li><a href="#unit-2-data-and-image-analysis">Unit 2: Data and image analysis</a></li>
+        <li><a href="#unit-3-basic-calculus">Unit 3: Basic calculus</a></li>
+        <li><a href="#optional-units-and-beyond">Optional units and beyond</a></li>
+      </ul>
+    </li>
+    <li><a href="#submission">Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -1736,39 +1742,112 @@
           
             <h1>
               
-              Introduction and definitions
+              Medical Sciences Course
             </h1>
           
 
         
 
 
-<h2 id="learning-objectives">Learning objectives</h2>
-<p>Systems of Ordinary Differential Equations (ODEs) are used to model many physical and biological systems.
-MATLAB contains a collection of ODE solvers, which are ideal for investigating such systems.
-The aim of this unit is to enable you to understand and use these solvers.
-In addition you will see how to tell which solver is appropriate in which situation.</p>
-<p>The unit begins with a revision of analytical techniques for solving ODEs before moving on to numerical methods, such as Euler&rsquo;s method.
-You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs with initial and boundary conditions.</p>
-<h2 id="reading-list">Reading list</h2>
+
+	<h2 id="overview-and-support">Overview and Support</h2>
+<p>Welcome to the Online Scientific Computing MATLAB course.
+This course aims to give students a good understanding of the MATLAB programming language, and the use of MATLAB in data analysis, numerical calculus, linear algebra and the solution of ODEs.
+Where applicable, a revision of elements of A-level mathematics needed for these areas is provided.
+Elements of software engineering are covered to give students the ability to write well-structured code, as well as how to use MATLAB to present their work using movies or Graphical User Interfaces (GUIs).</p>
+<p>The course runs from <strong>7th May 2021 to the 17th June 2021</strong> and is supported via an MS Teams Team, which you will have already been added to.
+The course leader, Fergus Cooper, will be available to help you with the course content and general MATLAB enquiries, and will respond to messages on the MS Teams Team throughout the course on a first come first served basis.</p>
+<p>If you have any questions then contact the course tutor via the MS Teams Team.</p>
+<h2 id="the-course">The Course</h2>
+<p>The course is broken down into a number of units, each one is designed to take approximately one day to complete, however this will depend greatly on your background.</p>
+<p>The first unit is much shorter and gives you an introduction to the course.
+You should look at this now to make sure that you have everything you need to begin the course.</p>
+<h3 id="unit-0-course-introduction">Unit 0: Course introduction</h3>
+<p>The remainder of the course is split into two sections: compulsory units, which contain general concepts of MATLAB and A-level mathematics; and optional units, which are units that will require some detailed mathematical knowledge.</p>
+<p>You should work through the units in your own time.
+Click on the links below to view the units.</p>
+<h4 id="compulsory-units">Compulsory units:</h4>
+<p>In order to complete the course you should complete the following 3 units and submit the associated assessments given below.</p>
 <ul>
-<li><a href="http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph021446150"><em>Advanced Engineering Mathematics</em> by Erwin Kreyszig</a>, Chapters 1 and 2, for the theory of ODEs.</li>
-<li><a href="http://mathworld.wolfram.com/First-OrderOrdinaryDifferentialEquation.html">http://mathworld.wolfram.com/First-OrderOrdinaryDifferentialEquation.html</a> will cover all the theory you need.</li>
-<li>Matlab help files <code>doc ode45</code>, <code>doc bvp4c</code></li>
+<li><a href="../unit_1_basic_introduction_to_matlab/">Unit 1: Basic introduction to MATLAB</a></li>
+<li><a href="../unit_2_data_and_image_analysis/">Unit 2: Data and image analysis</a></li>
+<li><a href="../unit_3_basic_calculus/">Unit 3: Basic calculus</a></li>
 </ul>
-<h2 id="definitions-and-notation">Definitions and notation</h2>
+<h4 id="optional-units">Optional Units:</h4>
+<p>These units are optional and are intended for students with a background in the physical sciences.
+However, background material is given where needed, so the units should also be accessible to non specialists.</p>
 <ul>
-<li>Differential Equation – This is an equation containing variables and their derivatives.</li>
-<li>ODE – Ordinary Differential Equation. This is a differential equation where the derivatives of the dependent variable (usually <code>$y$</code> or <code>$x$</code>) are with respect to only one independent variable, usually <code>$x$</code> or <code>$t$</code>.</li>
-<li>Order of ODE – order of the highest derivative.</li>
-<li>Therefore a first-order ODE is of the form:
-<code>$$\frac{dy}{dx}=f(x,y).$$</code></li>
-<li>Notation: the following shorthand for derivatives will be used throughout the unit:
-<code>$$y'=\frac{dy}{dx}\qquad\mbox{and}\qquad\dot{y}=\frac{dy}{dt}.$$</code></li>
+<li><a href="../unit_4_linear_algebra/">Unit 4: Linear algebra</a></li>
+<li><a href="../unit_5_solving_odes/">Unit 5: Solving ODEs</a></li>
+<li><a href="../unit_6_software_engineering/">Unit 6: Software engineering</a></li>
 </ul>
+<p>If you would like advice on which optional units to take then contact the course leader via the MS Teams Team.</p>
+<h2 id="assessments">Assessments</h2>
+<h3 id="unit-1-basic-introduction-to-matlab">Unit 1: Basic introduction to MATLAB</h3>
+<p>Write a MATLAB <strong>function</strong> which calculates the mean and median of a set of numbers.</p>
+<ul>
+<li>The function should take in a vector of numbers and return both the mean and the median of the numbers.</li>
+<li>You cannot use the inbuilt functions <code>mean</code> or <code>median</code>.</li>
+<li>You might find the inbuilt function <code>sort</code> useful.</li>
+<li>You should be able to call the function by using the command
+<code>[mean_x, median_x] = MeanMedian(x);</code></li>
+<li>You should then have two new variables, <code>mean_x</code> and <code>median_x</code>: check this with the command <code>whos</code>.</li>
+<li>To test your function try it on
+<ul>
+<li>the vector <code>x=[1 2 3 1 2 3 3 3]</code> where you should get <code>mean_x=2.25</code> and <code>median_x=2.5</code>.</li>
+<li>the vector <code>x=[5 2 -4]</code> where you should get <code>mean_x=1</code> and <code>median_x=2</code>.</li>
+</ul>
+</li>
+<li>Make sure that your file contains some comments which explain how it works.</li>
+</ul>
+<p><strong>You should submit the .m file created for this assessment.</strong></p>
+<h3 id="unit-2-data-and-image-analysis">Unit 2: Data and image analysis</h3>
+<p>The file <a href="data.txt">data.txt</a> (right click to save to your computer) contains some data in the form:</p>
+<pre><code>x1 y1
+x2 y2
+x3 y3
+...
+</code></pre><p>Write a MATLAB script that:</p>
+<ol>
+<li>Loads the data into MATLAB.</li>
+<li>Calculates the cubic fit to the data <code>xi yi</code>. (You may find the command <code>polyfit</code> useful.)</li>
+<li>Evaluates the fitted polyniomial at the data points <code>xi</code>. (You might find the command <code>polyval</code> useful.)</li>
+<li>Saves the data back to file in the same form (i.e as a text file with the name <code>datafit.txt</code> with two columns <code>xi zi</code> where <code>zi</code> is the value of the fitted polynomial at the points <code>xi</code>).
+You will use this file in the next assessment.
+You might find the command  &ldquo;<code>save('datafit.txt', 'datafit', '-ASCII')</code>&rdquo; useful.</li>
+<li>Plots the original data and the fitted polynomial on the same graph, along with suitable legend and labelled axes.
+The original data are discrete points so should be plotted as dots or crosses.
+The fitted polynomial is continuous so should be plotted as a line.</li>
+<li>Saves the plot as a <code>.png</code> file.</li>
+</ol>
+<p>Note that all these steps should be done automatically in the script. <strong>You should submit the script and the resulting .png file for this assessment.</strong></p>
+<h3 id="unit-3-basic-calculus">Unit 3: Basic calculus</h3>
+<p>Write a MATLAB script to:</p>
+<ol>
+<li>Load the data saved from the exercise from Unit 2 (<code>datafit.txt</code>).</li>
+<li>Calculate the rate of change of the process (i.e. calculate the derivative).
+You should do this using the difference formulae given in the Unit.</li>
+<li>Calculate the maximum and minimum of the rate of change, and where these occur.
+Note that the magnitude of the rate of change is important: a negative gradient may still have a large slope.
+The minimum rate of change occurs where the slope is flattest and not necessarily where it has a negative gradient.</li>
+<li>Calculate the area under the curve (i.e. integrate it), using the trapezium rule.</li>
+</ol>
+<p><strong>For this assessment you should submit the script, the value of the maximum and minimum rate of change (together with where they occur) and the area under the curve.</strong></p>
+<h3 id="optional-units-and-beyond">Optional units and beyond</h3>
+<p>There are no assessments required for the optional units.
+However, support for the exercises will still be provided via the MS Teams Team.
+If you finish the compulsory units and would like support on your own project during the course then you can feel free to contact the course leader.</p>
+<h2 id="submission">Submission</h2>
+<p>Each student will have a private channel on the MS Teams Team for one-to-one contact with the course leader.
+All files for assessment should be added to the conversation on that private channel by the final day of the course at the latest.</p>
+<p>You will need to have submitted the required material for all three compulsory assessments before the course ends in order to complete the course.
+You can submit the assessments whenever you like throughout the course, however, and you are encouraged to submit the assessments as soon as you have completed them, so that you can receive feedback as you go through the course.</p>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -1803,8 +1882,6 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1822,34 +1899,8 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1858,217 +1909,6 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2213,22 +2053,6 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -2470,6 +2294,118 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2526,7 +2462,6 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
                 
                     
-                    
                 
                 
 
@@ -2539,7 +2474,6 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
             
                 
-                    
                     
                 
                 
@@ -2557,8 +2491,149 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2919,10 +2994,10 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ScientificComputingInMatlab/unit_5_solving_odes/" title="Solving ODEs"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ScientificComputingInMatlab/" title=""> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ScientificComputingInMatlab/unit_5_solving_odes/02_analytical_methods_1st_order/" title="Analytical methods: 1st order" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ScientificComputingInMatlab/unit_0_introduction/" title="Course introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2947,4 +3022,3 @@ You will learn how to use the inbuilt MATLAB functions to solve systems of ODEs 
 
   </body>
 </html>
-

@@ -12,21 +12,21 @@
     <title>Exercises 4   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454139" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846388" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846388" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454139" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846388" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846388"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454139"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846388"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846388"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454139"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846388"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1718,7 +1742,7 @@ Hints and solutions are available.</p>
 
 <div class="notices question" >
   <div class="label">Question</div>
-  <p>Use <code>bvp4c !nc</code> to solve the following boundary value problems.</p>
+  <p>Use <code>bvp4c</code> to solve the following boundary value problems.</p>
 <p>Consider the equation
 <code>$$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$</code></p>
 <ol>
@@ -1763,7 +1787,7 @@ Example code to solve this system with associated boundary conditions is given b
 <span style="color:#66d9ef">end</span>
 </code></pre></div><p>Running this code yields the following plot, which shows that both boundary conditions are satisfied:</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_05/5_11_1.svg?classes=matlab-screenshot-40" alt="bvp4c question 1 solution"></p>
-<p>In order to solve the equations with the second set of boundary conditions, replace the <code>bcs !nc</code> function by the commented version. This yields the following plot.</p>
+<p>In order to solve the equations with the second set of boundary conditions, replace the <code>bcs</code> function by the commented version. This yields the following plot.</p>
 <p><img src="/ScientificComputingInMatlab/images/unit_05/5_11_2.svg?classes=matlab-screenshot-40" alt="bvp4c question 2 solution"></p>
 <p>Note that now the derivative of <code>$y$</code> is now zero at <code>$x=0$</code>.</p>
 </div>
@@ -1810,6 +1834,22 @@ Example code to solve this system with associated boundary conditions is given b
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2924,16 +2964,16 @@ Example code to solve this system with associated boundary conditions is given b
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846388"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454139"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454139"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846388"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846388"></script>
     
     
 

@@ -66,8 +66,8 @@ MATLAB has inbuilt functionality that enables you to create GUIs with a few simp
       <pubDate>Sat, 21 Nov 2020 16:52:22 +0000</pubDate>
       
       <guid>https://sabs-r3.github.io/ScientificComputingInMatlab/unit_6_software_engineering/06_guis_part_2/</guid>
-      <description>In the previous screens we have created the figure for the GUI and added some controls. We now need to get the GUI to do something. In the command to create the push button we called a function named PlotGUI !nc, which is where the MATLAB code to be controlled by the GUI will go.
-The plot function We now define the function PlotGUI !nc which is called by the push button.</description>
+      <description>In the previous screens we have created the figure for the GUI and added some controls. We now need to get the GUI to do something. In the command to create the push button we called a function named PlotGUI, which is where the MATLAB code to be controlled by the GUI will go.
+The plot function We now define the function PlotGUI which is called by the push button.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ The plot function We now define the function PlotGUI !nc which is called by the 
       <description>Question Using the GUI provided in the previous section as a guide, create a GUI for the system of differential equations given by:
 $$\frac{dN}{dt}=N(1-P)$$ $$\frac{dP}{dt}=P(N-1),$$
 with initial conditions $N(0)=\alpha$ and $P(0)=\beta$. If you&amp;rsquo;re interested in the biological background for this problem (which is known as a &amp;lsquo;Predator–Prey system&amp;rsquo;), then see Chapter 3 of Mathematical Biology by J. D. Murray.
-Your GUI should plot both the solutions, $N !nc$ and $P !</description>
+Your GUI should plot both the solutions, $N$ and $P$ over time, together with the phase plane (how $P$ varies with $N$).</description>
     </item>
     
     <item>

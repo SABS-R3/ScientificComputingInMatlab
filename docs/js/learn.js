@@ -176,22 +176,17 @@ jQuery(document).ready(function() {
     // clipboard
     var clipInit = false;
     $('code').each(function() {
-        var code = $(this),
-            text = code.text();
+        var code = $(this);
+        var text = code.text();
+        
+        // If code is multi line, provide the clipboard
+        var multiLine = text.includes("\n");
 
-        // If code ends with "!nc" then don't provide the clipboard
-        var noclipDelimeterUsed = text.endsWith("!nc");
-        if (noclipDelimeterUsed) {
-            $(this).text(text.replace("!nc", "").trim());
-        }
+        console.log("######################")
+        console.log(text)
+        console.log("######################")
 
-        // If code is between $...$, it's actually maths: don't provide the clipboard
-        var codeBlockIsActuallyMaths = text.endsWith("$") && text.startsWith("$");
-
-        // We don't want clipboard if the noclip delimeter is used, or it's a maths expression
-        var doNotAddClipboard = noclipDelimeterUsed || codeBlockIsActuallyMaths;
-
-        if (!doNotAddClipboard) {
+        if (multiLine) {
             if (!clipInit) {
                 var text, clip = new ClipboardJS('.copy-to-clipboard', {
                     text: function(trigger) {

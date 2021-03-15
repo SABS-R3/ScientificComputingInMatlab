@@ -12,21 +12,21 @@
     <title>Vectors and matrices: part 1   Scientific Computing in MATLAB</title>
 
     
-    <link href="/ScientificComputingInMatlab/css/nucleus.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hybrid.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/theme.css?1607454138" rel="stylesheet">
-    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/nucleus.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/fontawesome-all.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hybrid.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/featherlight.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/perfect-scrollbar.min.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/auto-complete.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/atom-one-dark-reasonable.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme.css?1615846387" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/hugo-theme.css?1615846387" rel="stylesheet">
     
-    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1607454138" rel="stylesheet">
+    <link href="/ScientificComputingInMatlab/css/theme-dtc.css?1615846387" rel="stylesheet">
     
     
 
-    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery-3.3.1.min.js?1615846387"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -81,14 +81,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1607454138"></script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/lunr.min.js?1615846387"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/auto-complete.js?1615846387"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sabs-r3.github.io\/ScientificComputingInMatlab\/";
     
 </script>
-<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1607454138"></script>
+<script type="text/javascript" src="/ScientificComputingInMatlab/js/search.js?1615846387"></script>
 
     
   </div>
@@ -98,6 +98,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ScientificComputingInMatlab/medsci_course/" title="Medical Sciences Course" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ScientificComputingInMatlab/medsci_course/">
+          Medical Sciences Course
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
           
           
 
@@ -1760,14 +1784,14 @@ If you have never heard of these before, then look them up in:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u(<span style="color:#ae81ff">1</span>)=<span style="color:#ae81ff">1</span>;
 u(<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">4</span>;
 u(<span style="color:#ae81ff">3</span>)=<span style="color:#ae81ff">9</span>;
-</code></pre></div><p>Note that <code>u(1) !nc</code> corresponds to the first entry of <code>u !nc</code>, etc.</p>
+</code></pre></div><p>Note that <code>u(1)</code> corresponds to the first entry of <code>u</code>, etc.</p>
 </li>
 <li>
 <p>By typing the entries inside square brackets separated by spaces:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">u=[<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">9</span>];
 </code></pre></div></li>
 </ol>
-<p>The transpose of <code>u !nc</code> may be printed by typing <code>u'</code>.</p>
+<p>The transpose of <code>u</code> may be printed by typing <code>u'</code>.</p>
 <p>Suppose the vector <code>$v$</code> is given by: <code>$$v=\begin{pmatrix}4\\5\\6\end{pmatrix}$$</code></p>
 <p>This may be entered by typing:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">v = [<span style="color:#ae81ff">4</span>;<span style="color:#ae81ff">5</span>;<span style="color:#ae81ff">6</span>];
@@ -1780,19 +1804,19 @@ This may be confusing so always look at the dimensions of the array to check the
 
 </div>
 
-<p>The length of a vector <code>v !nc</code> can be found by using the command <code>length(v)</code>, which here gives:</p>
+<p>The length of a vector <code>v</code> can be found by using the command <code>length(v)</code>, which here gives:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; length(v)
 
 ans =
 
      3
-</code></pre></div><p>The size of a vector <code>v !nc</code> can be found by using the command <code>size(v)</code>, which here gives:</p>
+</code></pre></div><p>The size of a vector <code>v</code> can be found by using the command <code>size(v)</code>, which here gives:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; size(v)
 
 ans =
 
      3     1
-</code></pre></div><p>This tells us that <code>v !nc</code> has 3 rows and 1 column, and thus allows us to distinguish it from <code>u !nc</code>, which has 1 row and 3 columns.</p>
+</code></pre></div><p>This tells us that <code>v</code> has 3 rows and 1 column, and thus allows us to distinguish it from <code>u</code>, which has 1 row and 3 columns.</p>
 <p>Now look up the commands <code>length</code> and <code>size</code> in the help files:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">help length
 help size
@@ -1826,11 +1850,11 @@ A(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>)=<sp
 
 <div class="notices note" >
   <div class="label">Note</div>
-  <p>Use of <code>; !nc</code> inside the square brackets denotes a new row in the matrix.</p>
+  <p>Use of <code>;</code> inside the square brackets denotes a new row in the matrix.</p>
 
 </div>
 
-<p>The dimensions of a matrix <code>A !nc</code> can be found by using the command <code>size(A)</code>, which here gives</p>
+<p>The dimensions of a matrix <code>A</code> can be found by using the command <code>size(A)</code>, which here gives</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&gt;&gt; size(A)
 
 ans =
@@ -1839,17 +1863,17 @@ ans =
 </code></pre></div>
 <div class="notices note" >
   <div class="label">Note</div>
-  <p>Running the command <code>length(A)</code> on a matrix <code>A !nc</code> yields the result 2, which is the bigger dimension of the matrix, so if <code>A !nc</code> were a <code>$4\times 6$</code> or a <code>$6\times 4$</code> matrix, <code>length(A)</code> would yield the answer 6.</p>
+  <p>Running the command <code>length(A)</code> on a matrix <code>A</code> yields the result 2, which is the bigger dimension of the matrix, so if <code>A</code> were a <code>$4\times 6$</code> or a <code>$6\times 4$</code> matrix, <code>length(A)</code> would yield the answer 6.</p>
 
 </div>
 
 <h2 id="editing-vectors-and-matrices">Editing vectors and matrices</h2>
 <h3 id="walkthrough-2">Walkthrough</h3>
 <p>Editing vectors and matrices can be done by specifying the individual element.
-For example, to change the value of 2 in the matrix <code>A !nc</code>, above, to 5 we can type</p>
+For example, to change the value of 2 in the matrix <code>A</code>, above, to 5 we can type</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">A(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)=<span style="color:#ae81ff">5</span>;
-</code></pre></div><p>An alternative method is to double-click on <code>A !nc</code> in the Workspace window.
-This opens a window containing the contents of the matrix <code>A !nc</code>.
+</code></pre></div><p>An alternative method is to double-click on <code>A</code> in the Workspace window.
+This opens a window containing the contents of the matrix <code>A</code>.
 Click on the entry in the first row, second column, and change it to 5.</p>
 <h2 id="looking-at-parts-of-matrices">Looking at parts of matrices</h2>
 <p>Sometimes we may wish to access only certain parts of a matrix or vector.
@@ -1914,6 +1938,22 @@ There are a number of inbuilt MATLAB commands to help with this.</p>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3028,16 +3068,16 @@ There are a number of inbuilt MATLAB commands to help with this.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/clipboard.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/perfect-scrollbar.jquery.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/jquery.sticky.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/featherlight.min.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/highlight.pack.js?1615846387"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/learn.js?1607454138"></script>
-    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1607454138"></script>
+    <script src="/ScientificComputingInMatlab/js/modernizr.custom-3.6.0.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/learn.js?1615846387"></script>
+    <script src="/ScientificComputingInMatlab/js/hugo-learn.js?1615846387"></script>
     
     
 
