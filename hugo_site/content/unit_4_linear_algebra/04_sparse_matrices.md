@@ -14,13 +14,13 @@ The following will give you an introduction to the uses of sparse matrices.
 
 ### Walkthrough
 
-Create the matrix `A !nc` using the following commands:
+Create the matrix `A` using the following commands:
 
 ```matlab
 A=2*eye(5000)-diag(ones(4999,1),1)-diag(ones(4999,1),-1);
 ```
 
-Run the following commands to investigate the structure of `A !nc`:
+Run the following commands to investigate the structure of `A`:
 
 ```matlab
 A(1:5,1:5)
@@ -30,20 +30,20 @@ spy(A(1:10,1:10))
 ```
 
 {{% notice question %}}
-What is the structure of `A !nc`?
+What is the structure of `A`?
 
 {{%expand "Expand for solution"%}}
 {{% notice solution %}}
-`A !nc` is 'tri-diagonal', with 2 on the diagonal and −1 on the adjacent diagonals.
-Therefore, `A !nc` has `$5000+(2\times 4999)=14998$` non-zero entries, as found using `nnz(A)`.
+`A` is 'tri-diagonal', with 2 on the diagonal and −1 on the adjacent diagonals.
+Therefore, `A` has `$5000+(2\times 4999)=14998$` non-zero entries, as found using `nnz(A)`.
 {{% /notice %}}
 {{% /expand%}}
 {{% /notice %}}
 
-Calculate the inverse of `A !nc`.
+Calculate the inverse of `A`.
 
 {{% notice note %}}
-The inverse of `A !nc` is not sparse.
+The inverse of `A` is not sparse.
 This is true in general.
 {{% /notice %}}
 
@@ -65,8 +65,8 @@ You can use the commands `tic` and `toc` to record elapsed time in MATLAB.
 tic; A*A; toc
 ```
 
-Create the matrix `B !nc` using the following commands.
-Note that `A !nc` and `B !nc` have the same non-zero entries:
+Create the matrix `B` using the following commands.
+Note that `A` and `B` have the same non-zero entries:
 
 ```matlab
 B=spdiags(ones(5000,1)*[-1,2,-1],[-1,0,1],5000,5000);
@@ -74,7 +74,7 @@ B=spdiags(ones(5000,1)*[-1,2,-1],[-1,0,1],5000,5000);
 
 The command `spdiags` creates a sparse matrix with the entries from the vector (passed as the first variable) on the diagonal indicated by the second variable. These variables can be passed individually or in groups as in the above example. The final two variables represent the size of the matrix. Look at the MATLAB help files for more information on `spdiags`.
 
-Look at the structure of `B !nc`:
+Look at the structure of `B`:
 
 ```matlab
 B(1:5,1:5)
@@ -83,7 +83,7 @@ nnz(B)
 ```
 
 {{% notice question %}}
-Using the command `whos`, look at how the matrices `A !nc` and `B !nc` are stored.
+Using the command `whos`, look at how the matrices `A` and `B` are stored.
 Which uses less memory?
 
 {{%expand "Expand for solution"%}}
@@ -100,7 +100,7 @@ Which uses less memory?
   B         5000x5000            279976  double    sparse    
 ```
 
-So `A !nc` used 2000000 bytes, and `B !nc` only used 27976 bytes, saving about 98.6% of the space.
+So `A` used 2000000 bytes, and `B` only used 27976 bytes, saving about 98.6% of the space.
 {{% /notice %}}
 {{% /expand%}}
 {{% /notice %}}
@@ -164,7 +164,7 @@ Finally, you can also convert matrices from full to sparse using the following c
 A=sparse(A);
 ```
 
-Using the command `whos`, check that `A !nc` is now sparse and uses the same memory as `B !nc`.
+Using the command `whos`, check that `A` is now sparse and uses the same memory as `B`.
 
 Now clear the workspace
 

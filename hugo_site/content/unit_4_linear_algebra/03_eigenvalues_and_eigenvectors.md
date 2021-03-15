@@ -38,7 +38,7 @@ e=eig(A);
 [V,D]=eig(A);
 ```
 
-Print `e !nc`, `V !nc` and `D !nc`.
+Print `e`, `V` and `D`.
 
 Evaluate the following:
 
@@ -49,7 +49,7 @@ A*V - V*D
 {{% notice question %}}
 What does this give you?
 Why is this?
-Use the MATLAB help files to work out what `V !nc` and `D !nc` are.
+Use the MATLAB help files to work out what `V` and `D` are.
 
 {{%expand "Expand for solution"%}}
 {{% notice solution %}}

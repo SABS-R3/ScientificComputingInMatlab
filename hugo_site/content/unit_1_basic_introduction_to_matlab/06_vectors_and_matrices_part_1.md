@@ -32,7 +32,7 @@ Suppose the vector `$u$` is given by `$u=(1\;4\;9)$`. This may be entered into M
     u(2)=4;
     u(3)=9;
     ```
-    Note that `u(1) !nc` corresponds to the first entry of `u !nc`, etc.
+    Note that `u(1)` corresponds to the first entry of `u`, etc.
 
 1. By typing the entries inside square brackets separated by spaces:
 
@@ -42,7 +42,7 @@ Suppose the vector `$u$` is given by `$u=(1\;4\;9)$`. This may be entered into M
 
 
 
-The transpose of `u !nc` may be printed by typing `u'`.
+The transpose of `u` may be printed by typing `u'`.
 
 Suppose the vector `$v$` is given by: `$$v=\begin{pmatrix}4\\5\\6\end{pmatrix}$$`
 
@@ -60,7 +60,7 @@ This may be confusing so always look at the dimensions of the array to check the
 {{% /notice %}}
 
 
-The length of a vector `v !nc` can be found by using the command `length(v)`, which here gives:
+The length of a vector `v` can be found by using the command `length(v)`, which here gives:
 
 ```plaintext
 >> length(v)
@@ -70,7 +70,7 @@ ans =
      3
 ```
 
-The size of a vector `v !nc` can be found by using the command `size(v)`, which here gives:
+The size of a vector `v` can be found by using the command `size(v)`, which here gives:
 
 ```plaintext
 >> size(v)
@@ -80,7 +80,7 @@ ans =
      3     1
 ```
 
-This tells us that `v !nc` has 3 rows and 1 column, and thus allows us to distinguish it from `u !nc`, which has 1 row and 3 columns.
+This tells us that `v` has 3 rows and 1 column, and thus allows us to distinguish it from `u`, which has 1 row and 3 columns.
 
 
 Now look up the commands `length` and `size` in the help files:
@@ -120,11 +120,11 @@ The entry `$A(i,j)$` corresponds to the entry in row `$i$` and column `$j$` of t
     ```
 
 {{% notice note %}}
-Use of `; !nc` inside the square brackets denotes a new row in the matrix.
+Use of `;` inside the square brackets denotes a new row in the matrix.
 {{% /notice %}}
 
 
-The dimensions of a matrix `A !nc` can be found by using the command `size(A)`, which here gives
+The dimensions of a matrix `A` can be found by using the command `size(A)`, which here gives
 
 ```plaintext
 >> size(A)
@@ -135,7 +135,7 @@ ans =
 ```
 
 {{% notice note %}}
-Running the command `length(A)` on a matrix `A !nc` yields the result 2, which is the bigger dimension of the matrix, so if `A !nc` were a `$4\times 6$` or a `$6\times 4$` matrix, `length(A)` would yield the answer 6.
+Running the command `length(A)` on a matrix `A` yields the result 2, which is the bigger dimension of the matrix, so if `A` were a `$4\times 6$` or a `$6\times 4$` matrix, `length(A)` would yield the answer 6.
 {{% /notice %}}
 
 
@@ -144,14 +144,14 @@ Running the command `length(A)` on a matrix `A !nc` yields the result 2, which i
 ### Walkthrough
 
 Editing vectors and matrices can be done by specifying the individual element.
-For example, to change the value of 2 in the matrix `A !nc`, above, to 5 we can type
+For example, to change the value of 2 in the matrix `A`, above, to 5 we can type
 
 ```matlab
 A(1,2)=5;
 ```
 
-An alternative method is to double-click on `A !nc` in the Workspace window.
-This opens a window containing the contents of the matrix `A !nc`.
+An alternative method is to double-click on `A` in the Workspace window.
+This opens a window containing the contents of the matrix `A`.
 Click on the entry in the first row, second column, and change it to 5.
 
 

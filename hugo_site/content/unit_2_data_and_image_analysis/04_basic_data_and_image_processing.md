@@ -60,8 +60,8 @@ save 'TestSave.txt' data -ascii
 
 ## Loading and saving the whole workspace
 
-You can also use `save` and `load` to save all the variables in your workspace as a `.mat !nc` file.
-Note that this file can only be read by MATLAB, unlike the `.txt !nc` files we made in the previous example. 
+You can also use `save` and `load` to save all the variables in your workspace as a `.mat` file.
+Note that this file can only be read by MATLAB, unlike the `.txt` files we made in the previous example. 
 
 ### Walkthrough
 
@@ -139,7 +139,7 @@ A(:,[1:18, 114:end])=[];
 image(A);
 ```
 
-The matrix `A !nc` could be saved as an image by using the command
+The matrix `A` could be saved as an image by using the command
 
 ```matlab
 imwrite(A,'TestCroppedImage.png');

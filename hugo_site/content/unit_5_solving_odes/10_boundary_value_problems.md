@@ -25,9 +25,9 @@ Suppose we wish to solve the system of `$n$` equations, `$\frac{d\mathbf{y}}{dx}
 
 In order to use the inbuilt MATLAB ODE solvers, you need to follow the steps below:
 
-1. Construct a function (here called `deriv !nc`) which has input arguments `$x$` and `$\mathbf{y}=(y_1,\ldots,y_n)$` and returns the value of the derivative `$\frac{d\mathbf{y}}{dx}$`, that is `$\mathbf{f}(x,\mathbf{y})$`.
+1. Construct a function (here called `deriv`) which has input arguments `$x$` and `$\mathbf{y}=(y_1,\ldots,y_n)$` and returns the value of the derivative `$\frac{d\mathbf{y}}{dx}$`, that is `$\mathbf{f}(x,\mathbf{y})$`.
 
-2. Construct a function (here called `bcs !nc`) which has input arguments `$\mathbf{y}(a)$` and `$\mathbf{y}(b)$` and returns the value of the residual for each specified boundary condition. For example to apply `$y_1(a)=1$` and `$y_1(b)=0$` use
+2. Construct a function (here called `bcs`) which has input arguments `$\mathbf{y}(a)$` and `$\mathbf{y}(b)$` and returns the value of the residual for each specified boundary condition. For example to apply `$y_1(a)=1$` and `$y_1(b)=0$` use
 
     ```matlab
     function res = bcs(ya,yb)
@@ -35,7 +35,7 @@ In order to use the inbuilt MATLAB ODE solvers, you need to follow the steps bel
             yb(1)];
     ```
     
-    To apply conditions to the other variables, `$y_2$`, etc. change the index to `ya(2) !nc` or `yb(2) !nc`, for example.
+    To apply conditions to the other variables, `$y_2$`, etc. change the index to `ya(2)` or `yb(2)`, for example.
 
 3. Define the solution domain and provide an initial guess for the solution on the solution domain. Use the command
 
@@ -44,7 +44,7 @@ In order to use the inbuilt MATLAB ODE solvers, you need to follow the steps bel
     ```
 
     This defines the domain for solution as `$[a,b]$`, and the initial guess for the solution at the points specified in the domain as `$[0,0]$`.
-    (Note that we could use a more accurate initial guess, that is define the domain using `linspace(a,b,100) !nc` and then define the solution on these points.)
+    (Note that we could use a more accurate initial guess, that is define the domain using `linspace(a,b,100)` and then define the solution on these points.)
 
 4. Call the ODE solver `bvp4c`, using the following command
 
@@ -54,15 +54,15 @@ In order to use the inbuilt MATLAB ODE solvers, you need to follow the steps bel
 
     The various parameters are:
 
-    - `@deriv !nc`, a handle to a function that given `$x$` and `$\mathbf{y}$` returns the value of the derivative `$\frac{d\mathbf{y}}{dx}$`;
+    - `@deriv`, a handle to a function that given `$x$` and `$\mathbf{y}$` returns the value of the derivative `$\frac{d\mathbf{y}}{dx}$`;
 
-    - `@bcs !nc`, a handle to a function that defines the boundary conditions;
+    - `@bcs`, a handle to a function that defines the boundary conditions;
 
-    - `solinit !nc`, the structure defining the solution's domain and that initial guess at the solution; and
+    - `solinit`, the structure defining the solution's domain and that initial guess at the solution; and
 
-    - `sol !nc`, a structure that contains the solution.
+    - `sol`, a structure that contains the solution.
 
-5. Plot the results, which are now stored as `sol.x !nc` and `sol.y !nc`.
+5. Plot the results, which are now stored as `sol.x` and `sol.y`.
 
     ```matlab
     plot(sol.x,sol.y(1,:),'b-x');
@@ -112,20 +112,20 @@ end
 You can run the code by saving in a file named `SimpleBVP.m` and executing it with `SimpleBVP()`.
 The main elements of this code are:
 
-- `solinit = bvpinit([0,pi],[0,0]); !nc` which defines the domain for solution through `$[0,\pi]$` and the initial guess for the solution at the points specified in the domain, `$[0,0]$`.
+- `solinit = bvpinit([0,pi],[0,0]);` which defines the domain for solution through `$[0,\pi]$` and the initial guess for the solution at the points specified in the domain, `$[0,0]$`.
 
-- `sol = bvp4c(@deriv,@bcs,solinit); !nc` which is the call to the `bvp4c` solver, the various parameters are:
+- `sol = bvp4c(@deriv,@bcs,solinit);` which is the call to the `bvp4c` solver, the various parameters are:
 
-    - `@deriv !nc`, a handle to a function that returns the value of the derivative `$\frac{dy}{dx}$` for a given `$x$` and `$y$`;
+    - `@deriv`, a handle to a function that returns the value of the derivative `$\frac{dy}{dx}$` for a given `$x$` and `$y$`;
 
-    - `@bcs !nc` is a handle to a function that defines the boundary conditions; and
+    - `@bcs` is a handle to a function that defines the boundary conditions; and
     solinit is the structure defining the solution domain and initial guess.
 
-- `plot(sol.x,sol.y(1,:),'b-x'); !nc` which plots the solution.
+- `plot(sol.x,sol.y(1,:),'b-x');` which plots the solution.
 
-- `function dydx = deriv(x,y) !nc` which is a function that returns the value of `$\frac{d\mathbf{y}}{dx}$` for a given `$x$` and `$\mathbf{y}$` at that point (which here is the vector `$[−z,y]$`).
+- `function dydx = deriv(x,y)` which is a function that returns the value of `$\frac{d\mathbf{y}}{dx}$` for a given `$x$` and `$\mathbf{y}$` at that point (which here is the vector `$[−z,y]$`).
 
-- `function res = bcs(ya,yb) !nc` which is a function which defines the boundary conditions applied at `$a=0$` and `$b=1$`.
+- `function res = bcs(ya,yb)` which is a function which defines the boundary conditions applied at `$a=0$` and `$b=1$`.
 
 Running the code (using `SimpleBVP()`) yields the following plot:
 

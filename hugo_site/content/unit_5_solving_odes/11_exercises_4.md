@@ -10,7 +10,7 @@ Hints and solutions are available.
 
 {{% notice question %}}
 
-Use `bvp4c !nc` to solve the following boundary value problems.
+Use `bvp4c` to solve the following boundary value problems.
 
 Consider the equation
 `$$ \frac{d^2y}{dx^2} + 3\frac{dy}{dx} - 4y = 0 \,. $$`
@@ -57,7 +57,7 @@ Running this code yields the following plot, which shows that both boundary cond
 
 ![bvp4c question 1 solution](/ScientificComputingInMatlab/images/unit_05/5_11_1.svg?classes=matlab-screenshot-40)
 
-In order to solve the equations with the second set of boundary conditions, replace the `bcs !nc` function by the commented version. This yields the following plot.
+In order to solve the equations with the second set of boundary conditions, replace the `bcs` function by the commented version. This yields the following plot.
 
 ![bvp4c question 2 solution](/ScientificComputingInMatlab/images/unit_05/5_11_2.svg?classes=matlab-screenshot-40)
 

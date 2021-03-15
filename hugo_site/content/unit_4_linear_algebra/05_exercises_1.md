@@ -8,7 +8,7 @@ pre: "5. "
 
 The following exercise will allow you to practise what you have learned so far in this unit.
 
-Let `$A$` be a sparse symmetric [positive definite matrix](https://en.wikipedia.org/wiki/Definite_symmetric_matrix) of dimension `$(N-1)^2\times (N-1)^2$` entered in MATLAB (for a given `$N$`) by the function `buildA !nc` as follows:
+Let `$A$` be a sparse symmetric [positive definite matrix](https://en.wikipedia.org/wiki/Definite_symmetric_matrix) of dimension `$(N-1)^2\times (N-1)^2$` entered in MATLAB (for a given `$N$`) by the function `buildA` as follows:
 
 ```matlab
 function A=buildA(N)
@@ -32,7 +32,7 @@ on the unit square with zero [Dirichlet boundary conditions](https://en.wikipedi
 
 {{% notice question %}}
 
-1. Copy the function `buildA !nc` above into a new file `buildA.m !nc` in your current working directory.
+1. Copy the function `buildA` above into a new file `buildA.m` in your current working directory.
 
 2. Set `$N=4$` and produce a spy plot of the matrix `$A$`.
     How many non-zero diagonals are there?
@@ -58,7 +58,7 @@ on the unit square with zero [Dirichlet boundary conditions](https://en.wikipedi
 4. Letting `B=inv(A)`, the command `[i,j]=find(B>0.02)` tells us that the entries (2,2), (4,4), (5,5), (6,6) and (8,8) are greater than 0.02.
 
 5. The spy plot `spy(A-A')` shows no non-zero entries.
-    Likewise, `A-A'` yields `All zero sparse: 9×9 !nc`.
+    Likewise, `A-A'` yields `All zero sparse: 9×9`.
     Both tell us that `$A$` is symmetric.
     
     The command `e=eigs(A,9)` tells us the eigenvalues are:

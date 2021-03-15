@@ -39,13 +39,13 @@ What is the error between the two solutions and which was quicker?
 {{% notice solution %}}
 
 Depending on your computer, the `\` backslash operator will probably take less than half the time of explicitly calculating the inverse.
-Plotting `x1-x2 !nc`
+Plotting `x1-x2`
 
 ![Backslash vs inverse](/ScientificComputingInMatlab/images/unit_04/4_06_1.svg?classes=matlab-screenshot-40)
 
 shows that the maximum error is roughly 1e-12, which can be confirmed by calculating `max(abs(x1-x2))` which, for this random linear system, yields 1.0467e-12.
 
-Your answer will be different due to the randomness of `A !nc` and `b !nc`.
+Your answer will be different due to the randomness of `A` and `b`.
 
 {{% /notice %}}
 {{% /expand %}}
