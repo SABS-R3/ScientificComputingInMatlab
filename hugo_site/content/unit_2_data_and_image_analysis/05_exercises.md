@@ -47,11 +47,11 @@ mean(dataset1)
 std(dataset1)
 ```
 
-`mean = 175.3321 !nc` and `std=10.0953 !nc`
+`mean = 175.3321` and `std=10.0953`
 
 For the second data-set it is not clear what the distribution is, as there is a relatively low number of data points, but it is still drawn from a normal distribution, whose mean and standard deviation are
 
-`mean = 192.0019 !nc` and `std = 5.2121 !nc`
+`mean = 192.0019` and `std = 5.2121`
 
 The data are simulated height data.
 The first dataset represents heights of 10,000 men in the UK population, while the second represents the heights of 50 Olympic rowers, so the average height is larger in the second group than in the normal population.
@@ -90,7 +90,7 @@ std(dataset2)
 
 {{% expand "Expand for hint" %}}
 {{% notice hint %}}
-Use `imread !nc` and `imwrite !nc` to load and save the image.
+Use `imread` and `imwrite` to load and save the image.
 
 Once the image is loaded in, you can treat it like a traditional matrix so you can perform operations such as
 
@@ -98,7 +98,7 @@ Once the image is loaded in, you can treat it like a traditional matrix so you c
 find(A>125)
 ```
 
-which will give you all the entries of `A !nc` that are greater than 125, and use this to set them all to 255.
+which will give you all the entries of `A` that are greater than 125, and use this to set them all to 255.
 {{% /notice %}}
 {{% /expand %}}
 

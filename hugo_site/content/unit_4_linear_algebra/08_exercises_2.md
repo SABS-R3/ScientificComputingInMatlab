@@ -8,7 +8,7 @@ pre: "8. "
 
 The following exercise is the final one in the unit and it will allow you to practise using MATLAB to solve linear systems and give you an insight into which methods to use.
 
-Let `$A$` be a sparse symmetric positive definite matrix of dimension `$(N-1)^2\times (N-1)^2$` defined in `buildA.m !nc` from [the previous question](/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1), and let `$f$` be the vector of dimension `$(N-1)^2$` entered in MATLAB (for a given `$N$`) by the function:
+Let `$A$` be a sparse symmetric positive definite matrix of dimension `$(N-1)^2\times (N-1)^2$` defined in `buildA.m` from [the previous question](/ScientificComputingInMatlab/unit_4_linear_algebra/05_exercises_1), and let `$f$` be the vector of dimension `$(N-1)^2$` entered in MATLAB (for a given `$N$`) by the function:
 
 ```matlab
 function f=buildf(N)
@@ -70,7 +70,7 @@ legend('inv(A)*b','A\\b','Location','NorthWest')
 {{% /notice %}}
 {{% /expand %}}
 
-2. Solve the linear systems using Gaussian elimination (corresponding to MATLAB's `\ !nc` command).
+2. Solve the linear systems using Gaussian elimination (corresponding to MATLAB's `\` command).
     Plot the time this takes on the same graph.
 
 {{% expand "Expand for solution" %}}

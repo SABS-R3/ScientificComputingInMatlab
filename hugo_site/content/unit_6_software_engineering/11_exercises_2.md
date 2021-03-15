@@ -45,7 +45,7 @@ Currently, running HeatEquation with `$N=500$` intervals yields an error of 2.66
 {{%expand "Expand for solution"%}}
 {{% notice solution %}}
 
-The code below is an optimised version of the inefficient code provided in `HeatEquation.m !nc`.
+The code below is an optimised version of the inefficient code provided in `HeatEquation.m`.
 
 The things that have been changed are:
 

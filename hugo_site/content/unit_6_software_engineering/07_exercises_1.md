@@ -14,8 +14,8 @@ Using the GUI provided in the previous section as a guide, create a GUI for the 
 with initial conditions `$N(0)=\alpha$` and `$P(0)=\beta$`.
 If you're interested in the biological background for this problem (which is known as a 'Predator–Prey system'), then see Chapter 3 of [*Mathematical Biology* by J. D. Murray](http://solo.bodleian.ox.ac.uk/permalink/f/n28kah/oxfaleph021829964).
 
-Your GUI should plot both the solutions, `$N !nc$` and `$P !nc$` over time, together with the phase plane (how `$P !nc$` varies with `$N !nc$`).
-It should include two inputs (sliders) in order to vary the initial conditions, `$\alpha !nc$` and `$\beta !nc$`, and a button that is used to start the simulations.
+Your GUI should plot both the solutions, `$N$` and `$P$` over time, together with the phase plane (how `$P$` varies with `$N$`).
+It should include two inputs (sliders) in order to vary the initial conditions, `$\alpha$` and `$\beta$`, and a button that is used to start the simulations.
 
 {{%expand "Expand for solution"%}}
 {{% notice solution %}}

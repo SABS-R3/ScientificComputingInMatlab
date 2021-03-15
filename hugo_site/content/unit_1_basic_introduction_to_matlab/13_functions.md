@@ -18,8 +18,8 @@ function [y] = xsquared(x)
 ```
 
 {{% notice info %}}
-1. The `[y] !nc` indicates the variables that will be returned from the function: there may be multiple, e.g. `[y1, y2] !nc`.
-1. The `(x) !nc` indicates the parameters that are passed to the function: there may be multiple, e.g. `(x1, x2) !nc`.
+1. The `[y]` indicates the variables that will be returned from the function: there may be multiple, e.g. `[y1, y2]`.
+1. The `(x)` indicates the parameters that are passed to the function: there may be multiple, e.g. `(x1, x2)`.
 {{% /notice %}}
 
 Type these commands into an M-file called `xsquared.m` and save this file.
@@ -37,7 +37,7 @@ xsquared(d)
 ```
 
 Note that MATLAB also allows you to apply functions to arrays.
-To do this with the power function we modify the above by placing a `'.' !nc` before the `'^' !nc` in the above:
+To do this with the power function we modify the above by placing a `'.'` before the `'^'` in the above:
 
 
 ```matlab

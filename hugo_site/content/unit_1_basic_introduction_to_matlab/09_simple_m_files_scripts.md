@@ -5,10 +5,10 @@ draft: false
 pre: "9. "
 ---
 
-Instead of typing the commands into the Command Window, they may be typed into a file with a `.m !nc` extension, which allows commands to be built up into a high-level computer program.
+Instead of typing the commands into the Command Window, they may be typed into a file with a `.m` extension, which allows commands to be built up into a high-level computer program.
 
 {{% notice info %}}
-Most of the time when you use MATLAB, you will write scripts, which are just text files with a `.m !nc` extension, rather than typing commands directly into the Command Window.
+Most of the time when you use MATLAB, you will write scripts, which are just text files with a `.m` extension, rather than typing commands directly into the Command Window.
 {{% /notice %}}
 
 ## Opening a new M-file
@@ -75,13 +75,13 @@ A=2*eye(500) ... ;
 -diag(ones(499,1),-1);
 ```
 
-The dots `... !nc` indicate that we wish to continue the current line of code on the next line of the file, when you run the file it is as if all the commands are on the same line.
+The dots `...` indicate that we wish to continue the current line of code on the next line of the file, when you run the file it is as if all the commands are on the same line.
 
 
 ## Comments
 
 If you are writing lots of different M-files it is handy to insert comments into the code.
-Anything in the M-file preceded by a `% !nc` will be ignored when the M-file is executed.
+Anything in the M-file preceded by a `%` will be ignored when the M-file is executed.
 For example, the following code runs exactly the same commands as the mymfile.m file we created earlier.
 
 ```matlab

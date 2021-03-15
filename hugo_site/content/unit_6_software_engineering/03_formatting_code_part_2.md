@@ -43,7 +43,7 @@ You can start off with something like
 %% Solve linear system
 ```
 
-where comments on the main steps are marked `%% !nc` while those on sub-steps are marked `% !nc`. This is only one example of using the `% !nc` to signify parts of your code, and you may wish to use your own, for example
+where comments on the main steps are marked `%%` while those on sub-steps are marked `%`. This is only one example of using the `%` to signify parts of your code, and you may wish to use your own, for example
 
 ```matlab
 %%%%%%%%%%
@@ -56,7 +56,7 @@ where comments on the main steps are marked `%% !nc` while those on sub-steps ar
 Any method you choose is fine as long as you are consistent.
 
 {{% notice info %}}
-In MATLAB, a comment starting with a double percent (`%% !nc`) starts a new 'section' in a script, that is marked by a light yellow background.
+In MATLAB, a comment starting with a double percent (`%%`) starts a new 'section' in a script, that is marked by a light yellow background.
 
 This can be very useful for structuring code as it is possible to run just a section of your script.
 {{% /notice %}}

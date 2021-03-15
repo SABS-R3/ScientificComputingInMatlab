@@ -45,7 +45,7 @@ Some other assorted tips and tricks are.
 
 - In Linux you can start MATLAB with only the command line.
     To do this start MATLAB using the command `matlab –nodesktop`
-- You can write components of your code as external `.mex !nc` files, which may be precompiled C++ and Fortran.
+- You can write components of your code as external `.mex` files, which may be precompiled C++ and Fortran.
     For more details see `doc mex`.
     This kind of optimisation is suitable for loop-heavy code (that cannot be vectorised) and as a last resort for code that requires maximum speed.
 - The [Writing Fast MATLAB Code](/ScientificComputingInMatlab/docs/unit_06/writing_fast_matlab_code_getreuer/matopt.pdf) guide is an excellent source for ways to speed up MATLAB code.

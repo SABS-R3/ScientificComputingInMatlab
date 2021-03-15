@@ -8,12 +8,12 @@ pre: "6. "
 
 In the previous screens we have created the figure for the GUI and added some controls.
 We now need to get the GUI to do something.
-In the command to create the push button we called a function named `PlotGUI !nc`, which is where the MATLAB code to be controlled by the GUI will go.
+In the command to create the push button we called a function named `PlotGUI`, which is where the MATLAB code to be controlled by the GUI will go.
 
 
 ### The plot function
 
-We now define the function `PlotGUI !nc` which is called by the push button.
+We now define the function `PlotGUI` which is called by the push button.
 
 ```matlab
 %% Called by SimpeGUI to do the plotting
@@ -37,8 +37,8 @@ end
 
 The function 'PlotGUI' takes in two input arguments:
 
-- `hObject !nc`, the handle of the button which enables the state of the uicontrol to be accessed from `PlotGUI !nc`. (Note: this is not used here as we are using global functions but is used in the code given below.)
-- `eventdata !nc`, unused here but included for use with the `Callback !nc` command.
+- `hObject`, the handle of the button which enables the state of the uicontrol to be accessed from `PlotGUI`. (Note: this is not used here as we are using global functions but is used in the code given below.)
+- `eventdata`, unused here but included for use with the `Callback` command.
 
 This function can be modified so that it runs the code you wish the GUI to control.
 

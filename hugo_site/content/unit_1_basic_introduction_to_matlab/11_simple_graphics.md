@@ -21,8 +21,8 @@ To plot the function `$\sin(x)$` for `$x$` between 0 and 10 type:
 fplot(@(x)sin(x),[0 10])
 ```
 
-Here, the notation `@(x)sin(x) !nc` is referred to in MATLAB as an [anonymous function](https://uk.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html).
-It specifies a function that takes `x !nc` and outputs `sin(x) !nc`.
+Here, the notation `@(x)sin(x)` is referred to in MATLAB as an [anonymous function](https://uk.mathworks.com/help/matlab/matlab_prog/anonymous-functions.html).
+It specifies a function that takes `x` and outputs `sin(x)`.
 
 This gives you the following figure on screen:
 
@@ -43,11 +43,11 @@ which updates the figure as follows:
 
 
 You can save the figure by clicking on the 'Save' icon in the top left corner of the screen.
-This will save the figure as a `.fig !nc` file which can only be opened in MATLAB.
+This will save the figure as a `.fig` file which can only be opened in MATLAB.
 
 If you want to save the file in a format that you can include in a report, select the 'Save As' item in the 'File' menu.
 You can select the type of file to save as in the 'Save as type:' drop-down menu.
-The best file type to save the figure as are `.eps !nc` if you are using LaTeX, a `.png !nc` or `.tiff !nc` if you are using something like Microsoft Word, or `.svg !nc` if you are writing for the web.
+The best file type to save the figure as are `.eps` if you are using LaTeX, a `.png` or `.tiff` if you are using something like Microsoft Word, or `.svg` if you are writing for the web.
 
 The figure produced is given below:
 
@@ -59,7 +59,7 @@ There are also command line commands such as
 print ExampleFigure.png –dpng
 ```
 
-which will print the currently selected figure to the file `ExampleFigure.png !nc`. The second command `–dpng !nc` selects the type of file in which the figure will be saved - try doing this now. For more options see
+which will print the currently selected figure to the file `ExampleFigure.png`. The second command `–dpng` selects the type of file in which the figure will be saved - try doing this now. For more options see
 
 ```matlab
 doc print
@@ -74,7 +74,7 @@ You can also include multiple plots in the same figure, using the procedure cove
 
 ### Walkthrough
 
-To plot two data-sets `y1 !nc` and `y2 !nc` against `x !nc` on the same diagram, use the method shown below.
+To plot two data-sets `y1` and `y2` against `x` on the same diagram, use the method shown below.
 
 ```matlab
 x=[1 2 3 4 5 6];
@@ -90,7 +90,7 @@ ylabel('y' )
 legend('y1','y2','Location','NorthWest')
 ```
 
-The statement `plot(x,y1,'-',x,y2,'--')` tells MATLAB to plot `y1 !nc` against `x !nc` as a solid line, and to plot `y2 !nc` against `x !nc` as a broken line.
+The statement `plot(x,y1,'-',x,y2,'--')` tells MATLAB to plot `y1` against `x` as a solid line, and to plot `y2` against `x` as a broken line.
 Note the use of legend to label the lines and the position of the legend.
 
 You could also use the command `hold on`.

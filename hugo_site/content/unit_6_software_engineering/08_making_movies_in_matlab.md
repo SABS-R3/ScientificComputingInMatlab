@@ -86,6 +86,6 @@ end
 ```
 
 We have a loop that is plotting a surface for each of 80 frames, and the surface is being manipulated slightly in each successive frame.
-The command `getframe` will save the content of the currently selected figure as a frame, which is then added to the video with the call to `writeVideo`, that takes as parameters the video writer object `v !nc` and the frame to add to the video.
+The command `getframe` will save the content of the currently selected figure as a frame, which is then added to the video with the call to `writeVideo`, that takes as parameters the video writer object `v` and the frame to add to the video.
 
 To alter parameters about the generated video file, including things like the frame rate or the type of compression used, look at the help files for `VideoWriter`.

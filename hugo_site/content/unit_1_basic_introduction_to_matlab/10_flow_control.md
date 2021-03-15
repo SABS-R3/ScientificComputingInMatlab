@@ -53,7 +53,7 @@ If a given statement only needs to be executed under a given condition, an if st
 
 ### Walkthrough
 
-For example, the following statements print out the variable `x !nc` if `x !nc` is negative:
+For example, the following statements print out the variable `x` if `x` is negative:
 
 ```matlab
 if (x<0)

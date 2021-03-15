@@ -11,13 +11,13 @@ The unit closes with a few simple exercises for you to test the skills you have 
 {{% notice question %}}
 Problem 1: Hint based problem
 
-1. Write functions to calculate the maximum and minimum of an array of numbers, without using the commands `max !nc` or `min !nc`.
+1. Write functions to calculate the maximum and minimum of an array of numbers, without using the commands `max` or `min`.
     Your functions should take in a vector and return values for the maximum and minimum.
 
 {{%expand "Expand for hint"%}}
 
 {{% notice hint %}}
-The following `if !nc` statement will find the maximum between `max_x !nc` and `x(i) !nc`:
+The following `if` statement will find the maximum between `max_x` and `x(i)`:
 
 ```matlab
 if x(i)>max_x
@@ -58,14 +58,14 @@ See `doc function` for help on how to return multiple values.
         end
     ```
 
-    To use these, save the above a `.m !nc` files with the appropriate names, and run the commands:
+    To use these, save the above a `.m` files with the appropriate names, and run the commands:
 
     ```matlab
     minimum(x)
     maximum(x)
     ```
 
-    where `x !nc` is a vector.
+    where `x` is a vector.
 
 2. The following code will calculate the minimum and the maximum of an array passed to it:
 
@@ -83,7 +83,7 @@ See `doc function` for help on how to return multiple values.
         end
     ```
 
-    To call the function, save the above as `minmax.m !nc`, and run:
+    To call the function, save the above as `minmax.m`, and run:
 
     ```matlab
     [minimum,maximum] = minmax(x)
@@ -115,7 +115,7 @@ and use the plot functionality you learned in this unit.
 
 {{% /expand%}}
 
-2. Add a title and legend to the graph, label the axes, and save the figure as a `.png !nc` file.
+2. Add a title and legend to the graph, label the axes, and save the figure as a `.png` file.
 
 {{%expand "Expand for solution"%}}
 {{% notice solution %}}

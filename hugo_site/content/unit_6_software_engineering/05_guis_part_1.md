@@ -20,7 +20,7 @@ In this example we will construct a simple GUI which plots the function `$y=\sin
 The code to create a GUI consists of three parts:
 
 - the figure, which holds the GUI,
-- the controls using `uicontrol !nc`, and
+- the controls using `uicontrol`, and
 - the plot function, which does the solving and/or plotting.
 
 
@@ -34,7 +34,7 @@ figure('position',[0 0 700 500], 'name','SimpleGUI','NumberTitle','off');
 
 The variables passed to 'figure' dictate the properties of the figure:
 
-- The pair `'position',[0 0 700 500] !nc` specifies the xy-position of the figure (the first two elements of the vector) in pixels from the bottom-left of your screen, and the width and height of the figure (the last two elements) in pixels.
+- The pair `'position',[0 0 700 500]` specifies the xy-position of the figure (the first two elements of the vector) in pixels from the bottom-left of your screen, and the width and height of the figure (the last two elements) in pixels.
 - The pair 'name', 'SimpleGUI' specifies the title of the figure.
 - The pair 'NumberTitle', 'off' stops the figure being numbered.
 
@@ -63,10 +63,10 @@ This yields the following figure:
 ### Using uicontrol
 
 Now we have the figure and axes defined, we can add the controls to the GUI.
-Elements of the GUI are added using the `uicontrol !nc` command.
+Elements of the GUI are added using the `uicontrol` command.
 For more details see `doc uicontrol`.
 
-The `uicontrol !nc` command can be used to add some descriptive text to the figure:
+The `uicontrol` command can be used to add some descriptive text to the figure:
 
 ```matlab
 uicontrol('Style', 'text', 'String', 'Parameter Value', 'Position', [150 50 90 30]);
