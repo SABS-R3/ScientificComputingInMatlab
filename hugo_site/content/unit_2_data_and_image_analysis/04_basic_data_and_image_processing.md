@@ -135,7 +135,7 @@ image(A)
 Suppose we had made some modifications to the image, for example by cropping the image
 
 ```matlab
-A(:,[1:18, 114:end])=[];
+A(:,[1:13, 107:end])=[];
 image(A);
 ```
 
