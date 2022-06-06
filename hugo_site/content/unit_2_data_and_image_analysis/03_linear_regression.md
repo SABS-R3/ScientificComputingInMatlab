@@ -28,7 +28,7 @@ For such models we are often solving an inverse problem of parameter estimation 
 In these circumstances, it is often advisable to introduce simulated experimental error into the system to test the robustness of the recovery procedure.
 The following is one of the simplest possible examples, where the parameters form part of a linear model, but more commonly the parameters would be embedded within a system of ODEs or PDEs or in some complex stochastic process. 
 
-1. Generate and plot the data (`$x$` and `$y$` values) for a simple straight line of the form `$y=ax+b$` where `$a=2$` and `$b=1$` are constants and `$x\in\left[0,1\right]$`. You should calculate the value of `$y$` at 21 evenly spaced points between 0 and 1, (that is, at `$x=0,0.5,0.1,\ldots,1$`).
+1. Generate and plot the data (`$x$` and `$y$` values) for a simple straight line of the form `$y=ax+b$` where `$a=2$` and `$b=1$` are constants and `$x\in\left[0,1\right]$`. You should calculate the value of `$y$` at 21 evenly spaced points between 0 and 1, (that is, at `$x=0,0.05,0.1,\ldots,1$`).
 
 {{% expand "Expand for solution" %}}
 {{% notice solution %}}
